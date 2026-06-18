@@ -1,0 +1,25 @@
+{
+  "title": "Parlington Ltd — Platform Overview",
+  "uid": "parlington-platform",
+  "version": 1,
+  "schemaVersion": 27,
+  "__comment": "STUB — candidate to complete in Phase 6",
+  "__instructions": [
+    "This dashboard stub must be completed with real panels in Phase 6",
+    "Required panels per Parlington SLO framework:",
+    "1. Payment success rate (SLO: 99.95%)",
+    "2. Customer service p99 latency (SLO: < 500ms)",
+    "3. Error rate by service",
+    "4. Pod restart count (alert if > 3 in 1 hour)",
+    "5. Node CPU/memory utilisation",
+    "6. AWS Cost Explorer widget (monthly spend vs budget)",
+    "7. Security Hub findings count by severity",
+    "8. CloudTrail API error rate"
+  ],
+  "panels": [],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "refresh": "30s"
+}
