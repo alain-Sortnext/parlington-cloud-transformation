@@ -1,0 +1,14 @@
+# terraform/backend.tf.example
+# Copy this to backend.tf and fill in real values after creating the S3 bucket
+# DO NOT commit real account IDs to git
+
+terraform {
+  backend "s3" {
+    bucket         = "parlington-terraform-state-REPLACE_WITH_ACCOUNT_ID"
+    key            = "global/terraform.tfstate"
+    region         = "eu-west-2"
+    encrypt        = true
+    dynamodb_table = "parlington-terraform-locks"
+    kms_key_id     = "alias/parlington-terraform-state"
+  }
+}
