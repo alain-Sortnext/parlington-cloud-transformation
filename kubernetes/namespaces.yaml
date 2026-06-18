@@ -1,0 +1,33 @@
+# kubernetes/namespaces.yaml
+# Parlington Ltd — Namespace definitions
+# Status: INCOMPLETE — missing resource quotas and network policies
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: parlington-payments
+  labels:
+    environment: production
+    team: payments
+    # MISSING: istio-injection label if service mesh is used
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: parlington-notifications
+  labels:
+    environment: production
+    team: platform
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: parlington-audit
+  labels:
+    environment: production
+    team: compliance
+---
+# MISSING: ResourceQuota for each namespace
+# MISSING: LimitRange for each namespace
+# MISSING: NetworkPolicy — currently all namespaces can communicate freely
+# FCA requirement: audit namespace must be read-only for all services except audit-service
