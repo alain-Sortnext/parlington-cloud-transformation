@@ -1,0 +1,68 @@
+# kubernetes/deployments/customer-service.yaml
+# Parlington Ltd — Customer Service Microservice
+# Status: INCOMPLETE — missing resource limits, wrong container port, no liveness probe
+# Phase 5: Identify and fix all issues
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-service
+  namespace: parlington-payments
+  labels:
+    app: customer-service
+    version: v1
+    # MISSING: team label — required by Parlington label policy
+    # MISSING: cost-centre label — required for FinOps chargeback
+spec:
+  replicas: 1
+  # BUG: replicas should be 3 for HA in production
+  selector:
+    matchLabels:
+      app: customer-service
+  template:
+    metadata:
+      labels:
+        app: customer-service
+        version: v1
+    spec:
+      containers:
+        - name: customer-service
+          image: parlington/customer-service:latest
+          # ⚠️ WARNING: 'latest' tag must never be used in production
+          ports:
+            - containerPort: 3000
+              # BUG: actual service listens on 8080 — wrong port here
+          # MISSING: resource requests and limits
+          # Parlington policy requires ALL containers to have resource limits
+          # Without this the container can consume unlimited node resources
+          #
+          # resources:
+          #   requests:
+          #     memory: "128Mi"
+          #     cpu: "100m"
+          #   limits:
+          #     memory: "256Mi"
+          #     cpu: "200m"
+
+          # MISSING: liveness probe — container will never restart on hang
+          # MISSING: readiness probe — traffic sent before app is ready
+          # MISSING: environment variables (DB connection, secrets)
+          # MISSING: securityContext (run as non-root — FCA security policy)
+
+      # MISSING: serviceAccountName with IRSA for AWS permissions
+      # MISSING: topologySpreadConstraints for multi-AZ distribution
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-service
+  namespace: parlington-payments
+spec:
+  selector:
+    app: customer-service
+  ports:
+    - port: 80
+      targetPort: 3000
+      # BUG: targetPort should match containerPort — currently both wrong
+  type: ClusterIP
