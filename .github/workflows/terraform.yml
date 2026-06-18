@@ -1,0 +1,36 @@
+# .github/workflows/terraform.yml
+# Parlington Ltd — Terraform CI Pipeline
+# Status: STUB — candidate to complete in Phase 4/6
+
+name: Terraform CI
+
+on:
+  pull_request:
+    paths:
+      - 'terraform/**'
+
+jobs:
+  terraform-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.7.0"
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: terraform
+        # BUG: Will fail — backend not configured yet (Phase 4)
+
+      - name: Terraform Validate
+        run: terraform validate
+        working-directory: terraform
+
+      # TODO: Add terraform fmt check
+      # TODO: Add tfsec security scan
+      # TODO: Add checkov compliance scan (FCA/ISO27001 checks)
+      # TODO: Add terraform plan with output posted to PR
+      # TODO: Add cost estimation (Infracost)
