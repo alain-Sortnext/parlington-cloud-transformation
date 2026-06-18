@@ -1,0 +1,100 @@
+# .github/workflows/deploy.yml
+# Parlington Ltd — Main Deployment Pipeline
+# Status: BROKEN — multiple issues identified below
+# Phase 6: Find and fix ALL issues. Then extend with security scanning.
+
+name: Deploy to EKS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  AWS_REGION: eu-west-2
+  EKS_CLUSTER_NAME: parlington-production-eks
+  # BUG: ECR_REPOSITORY is hardcoded — should use GitHub secret or variable
+  ECR_REPOSITORY: 123456789012.dkr.ecr.eu-west-2.amazonaws.com/parlington
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+        # BUG: No test failure threshold — pipeline continues even if tests fail
+        # Should be: if tests < 80% coverage, fail the pipeline
+
+      # MISSING: SAST scan (e.g. Semgrep, Snyk) — required by Parlington DevSecOps policy
+      # MISSING: Dependency vulnerability scan — required for FCA supply chain security
+      # MISSING: Container image scan — required before push to ECR
+
+  build-and-push:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # BUG: Using long-lived access keys — must use OIDC for GitHub Actions
+          # FCA security policy prohibits long-lived credentials in CI/CD
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t $ECR_REPOSITORY:${{ github.sha }} .
+          docker push $ECR_REPOSITORY:${{ github.sha }}
+          # BUG: Also pushes 'latest' tag — prohibited in production
+          docker tag $ECR_REPOSITORY:${{ github.sha }} $ECR_REPOSITORY:latest
+          docker push $ECR_REPOSITORY:latest
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    # BUG: No environment protection rules — deploys directly to production
+    # Should require manual approval for production deployments
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Update kubeconfig
+        run: |
+          aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
+
+      - name: Deploy to EKS
+        run: |
+          kubectl apply -f kubernetes/deployments/
+          # BUG: No rollback on failure
+          # BUG: No health check after deployment
+          # BUG: Applies ALL manifests — should use Helm or Kustomize
+
+      # MISSING: Post-deployment smoke tests
+      # MISSING: Slack/Teams notification on success or failure
+      # MISSING: Deployment record in audit log (FCA requirement)
