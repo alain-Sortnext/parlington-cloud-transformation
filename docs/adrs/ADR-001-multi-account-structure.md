@@ -9,28 +9,26 @@
 
 ## Context and Problem Statement
 
-Parlington Ltd currently operates all workloads in a single AWS account inherited from a 2019
-proof-of-concept. This creates blast radius risk, makes cost allocation impossible, and fails
-FCA requirements for environment segregation. A multi-account structure is required as the
-foundation of the cloud transformation programme.
+Parlington Ltd operates all workloads in a single AWS account inherited from a 2019 proof-of-concept.
+This creates blast radius risk, makes cost allocation impossible, and fails FCA requirements for
+environment segregation.
 
 ---
 
 ## Decision Drivers
 
-- FCA PS21/3: segregation of production from non-production environments
-- ISO 27001 Annex A.12: separation of development, test, and operational environments
-- Cost transparency: Marcus Webb (CFO) requires per-business-unit cost visibility
-- Security: blast radius containment in event of account compromise
-- NCSC Cloud Security Principle 3: separation between users
+- FCA PS21/3: segregation of production from non-production
+- ISO 27001 A.12.1.4: Separation of dev, test, and operational environments
+- CFO requirement: per-business-unit cost visibility
+- NCSC Cloud Security Principle 3: Separation between users
 
 ---
 
 ## Considered Options
 
-1. **Single account with tag-based separation** — use resource tags to separate environments
-2. **Multi-account with manual structure** — create accounts manually, manage via IAM
-3. **AWS Organizations + Control Tower** — managed landing zone with guardrails and SCPs
+1. Single account with tag-based separation
+2. Multi-account with manual structure
+3. AWS Organizations + Control Tower
 
 ---
 
@@ -39,8 +37,7 @@ foundation of the cloud transformation programme.
 **Chosen option:** Option 3 — AWS Organizations + Control Tower
 
 **Rationale:**
-> TODO: Complete this section — what are the specific reasons Control Tower was chosen?
-> Consider: automated guardrails, account vending, FCA compliance alignment, operational overhead
+> TODO: Complete this section in Phase 2
 
 ---
 
@@ -52,7 +49,7 @@ ROOT (Management Account)
 │   ├── Audit Account
 │   └── Log Archive Account
 ├── Infrastructure OU
-│   └── Shared Services Account (Transit Gateway, DNS, tooling)
+│   └── Shared Services Account
 ├── Workloads OU
 │   ├── Production OU
 │   │   ├── Payments-Prod
@@ -62,37 +59,22 @@ ROOT (Management Account)
 │   │   ├── Dev Account
 │   │   └── Test Account
 │   └── Sandbox OU
-│       └── Innovation Account
-└── [TBC] — Data Platform OU?
+└── [TBC] Data Platform OU
 ```
 
-> ⚠️ TODO: Validate account structure with David Osei (Head of Infrastructure)
-> ⚠️ TODO: Confirm OU boundaries with Priya Anand (CRO) for compliance segregation
-
----
-
-## Consequences
-
-### Positive
-- FCA-compliant environment segregation from day one
-- Centralised logging and audit trail (required by Priya Anand, CRO)
-
-### Negative / Trade-offs
-- Control Tower has limitations with existing accounts — migration complexity TBC
-- Account vending process needs definition before onboarding teams
+> ⚠️ TODO: Validate with David Osei (Head of Infrastructure)
+> ⚠️ TODO: Confirm OU boundaries with Priya Anand (CRO)
 
 ---
 
 ## Compliance Notes
 
-- FCA PS21/3 Operational Resilience: environment segregation supports impact tolerance mapping
-- ISO 27001 A.12.1.4: Separation of development, testing and operational environments
-- NCSC Cloud Security Principle 3: Satisfied by OU-level separation with SCPs
+- FCA PS21/3: environment segregation supports impact tolerance mapping
+- ISO 27001 A.12.1.4: Satisfied by OU-level separation with SCPs
 
 ---
 
 ## Links
 
-- [AWS Control Tower documentation](https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html)
-- [AWS Organizations SCP reference](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
+- [AWS Control Tower docs](https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html)
 - ADR-002: Landing Zone Network Design (to be created in Phase 3)
