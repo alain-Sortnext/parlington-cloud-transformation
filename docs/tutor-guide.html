@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parlington Ltd — Tutor Guide & Answer Key</title>
+<style>
+  :root {
+    --navy: #1e3a5f;
+    --blue: #2563eb;
+    --lightblue: #dbeafe;
+    --green: #16a34a;
+    --lightgreen: #dcfce7;
+    --red: #dc2626;
+    --lightred: #fee2e2;
+    --amber: #d97706;
+    --lightamber: #fef3c7;
+    --purple: #7c3aed;
+    --lightpurple: #ede9fe;
+    --gray: #6b7280;
+    --lightgray: #f9fafb;
+    --border: #e5e7eb;
+    --text: #111827;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: #fff; line-height: 1.6; }
+  
+  /* HEADER */
+  .site-header { background: var(--navy); color: white; padding: 32px 40px; }
+  .site-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  .site-header p { opacity: 0.8; font-size: 15px; }
+  .badge-row { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  
+  /* NAV */
+  .toc { background: var(--lightgray); border-bottom: 1px solid var(--border); padding: 20px 40px; }
+  .toc h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); margin-bottom: 12px; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 6px; }
+  .toc a { color: var(--blue); text-decoration: none; font-size: 13px; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+  
+  /* MAIN */
+  .main { max-width: 1100px; margin: 0 auto; padding: 40px; }
+  
+  /* SECTION HEADERS */
+  .section-header { background: var(--navy); color: white; padding: 20px 28px; border-radius: 10px; margin: 40px 0 24px; }
+  .section-header h2 { font-size: 22px; font-weight: 700; }
+  .section-header p { opacity: 0.8; font-size: 14px; margin-top: 4px; }
+  
+  /* PHASE HEADERS */
+  .phase-header { background: var(--blue); color: white; padding: 16px 24px; border-radius: 8px; margin: 32px 0 20px; display: flex; align-items: center; gap: 16px; }
+  .phase-num { background: rgba(255,255,255,0.25); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; flex-shrink: 0; }
+  .phase-header h3 { font-size: 18px; font-weight: 700; }
+  .phase-header .meta { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+  
+  /* CARDS */
+  .card { border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; }
+  .card-green  { background: var(--lightgreen);  border-color: #86efac; }
+  .card-red    { background: var(--lightred);    border-color: #fca5a5; }
+  .card-amber  { background: var(--lightamber);  border-color: #fcd34d; }
+  .card-blue   { background: var(--lightblue);   border-color: #93c5fd; }
+  .card-purple { background: var(--lightpurple); border-color: #c4b5fd; }
+  .card-gray   { background: var(--lightgray);   border-color: var(--border); }
+  
+  .card h4 { font-size: 14px; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .card-green  h4 { color: #15803d; }
+  .card-red    h4 { color: #b91c1c; }
+  .card-amber  h4 { color: #92400e; }
+  .card-blue   h4 { color: #1d4ed8; }
+  .card-purple h4 { color: #6d28d9; }
+  .card-gray   h4 { color: #374151; }
+  
+  /* STEP BOXES */
+  .steps { counter-reset: step; }
+  .step { counter-increment: step; display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-start; }
+  .step-num { background: var(--navy); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+  .step-content { flex: 1; }
+  .step-content strong { display: block; font-size: 14px; margin-bottom: 4px; }
+  .step-content p, .step-content ul { font-size: 14px; color: #374151; }
+  
+  /* ANSWER BOXES */
+  .answer-box { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 8px; font-family: "Courier New", monospace; font-size: 13px; line-height: 1.7; margin: 12px 0; overflow-x: auto; }
+  .answer-box .comment { color: #64748b; }
+  .answer-box .highlight { color: #86efac; font-weight: 700; }
+  .answer-box .warning  { color: #fbbf24; font-weight: 700; }
+  .answer-box .error    { color: #f87171; font-weight: 700; }
+  
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+  th { background: var(--navy); color: white; padding: 8px 12px; text-align: left; font-weight: 600; }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--lightgray); }
+  
+  /* INLINE ELEMENTS */
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; margin: 2px; }
+  .tag-pass  { background: var(--lightgreen);  color: #15803d; }
+  .tag-fail  { background: var(--lightred);    color: #b91c1c; }
+  .tag-warn  { background: var(--lightamber);  color: #92400e; }
+  .tag-info  { background: var(--lightblue);   color: #1d4ed8; }
+  
+  .pass-score { font-size: 22px; font-weight: 800; color: var(--blue); }
+  .cert-gate  { background: var(--purple); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-left: 10px; }
+  
+  h4.subsection { font-size: 15px; font-weight: 700; color: var(--navy); margin: 20px 0 10px; border-left: 4px solid var(--blue); padding-left: 12px; }
+  
+  p { margin-bottom: 10px; font-size: 14px; }
+  ul, ol { padding-left: 20px; margin-bottom: 10px; font-size: 14px; }
+  li { margin-bottom: 4px; }
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+  
+  .divider { border: none; border-top: 2px solid var(--border); margin: 32px 0; }
+  
+  .flag-row { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+  .flag-icon { font-size: 18px; flex-shrink: 0; }
+  .flag-text { font-size: 14px; }
+  
+  footer { background: var(--lightgray); border-top: 1px solid var(--border); padding: 24px 40px; text-align: center; color: var(--gray); font-size: 13px; margin-top: 60px; }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <h1>Parlington Ltd — Senior AWS Solutions Architect</h1>
+  <p>Tutor Guide & Complete Answer Key · Project Lab Simulation · Internal Use Only</p>
+  <div class="badge-row">
+    <span class="badge">11 Phases</span>
+    <span class="badge">80 Sections</span>
+    <span class="badge">107 Deterministic Checks</span>
+    <span class="badge">Senior Difficulty</span>
+    <span class="badge">£90k–£145k Target Roles</span>
+    <span class="badge">FCA/PRA Regulated Context</span>
+  </div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <div class="toc-grid">
+    <a href="#overview">Programme Overview</a>
+    <a href="#answer-key">Master Answer Key</a>
+    <a href="#traps">Wrong-Direction Traps</a>
+    <a href="#conflicts">Stakeholder Conflicts</a>
+    <a href="#iac-bugs">IaC Bug Reference</a>
+    <a href="#phase-1">Phase 1 — Onboarding</a>
+    <a href="#phase-2">Phase 2 — Discovery</a>
+    <a href="#phase-3">Phase 3 — Landing Zone</a>
+    <a href="#phase-4">Phase 4 — Networking & Security</a>
+    <a href="#phase-5">Phase 5 — IaC (Cert Gate)</a>
+    <a href="#phase-6">Phase 6 — EKS & GitOps</a>
+    <a href="#phase-7">Phase 7 — DevSecOps & SLO</a>
+    <a href="#phase-8">Phase 8 — Data & Migration</a>
+    <a href="#phase-9">Phase 9 — AI & ARB</a>
+    <a href="#phase-10">Phase 10 — Review</a>
+    <a href="#grading">Grading Standards</a>
+    <a href="#interviews">Interview Q&amp;A Bank</a>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="overview">
+  <h2>Programme Overview</h2>
+  <p>Everything a tutor needs to understand the simulation before running a candidate through it</p>
+</div>
+
+<h4 class="subsection">What this simulation is</h4>
+<p>Parlington Ltd is a fictional FCA/PRA-regulated UK asset manager (£4.2bn AUM) running a 9-phase AWS cloud transformation. The candidate plays the Senior AWS Solutions Architect. The simulation is built around a real broken codebase on GitHub, four real data files with intentional quality issues, and a cast of four stakeholder personas with genuinely competing priorities.</p>
+<p>The simulation is hard by design. It is calibrated to the real standard of a Senior AWS SA hiring bar at UK financial services firms and Big Four consulting practices. A candidate who completes all 9 phases with strong submissions has genuinely earned the evidence they need for interviews at KPMG, Lloyds Banking Group, Goldman Sachs Engineering, and AWS Professional Services.</p>
+
+<h4 class="subsection">The business scenario in plain English</h4>
+<div class="card card-blue">
+  <h4>The situation a candidate walks into</h4>
+  <ul>
+    <li>Parlington is 14 months overdue on FCA Operational Resilience rules (PS21/3). The FCA has written twice. The fine could be up to £8.7M.</li>
+    <li>The previous architect (Craig Whitfield) quit two weeks ago. His handover notes are incomplete and only cover Stages 1–3.</li>
+    <li>The current infrastructure costs £3.8M/year. The board wants to get it to £1.9M/year. The transformation budget is £2.4M.</li>
+    <li>120 servers across 2 data centres, 42 applications, 17 of them with zero disaster recovery.</li>
+    <li>A single legacy AWS account with 3 public S3 buckets, no GuardDuty, no CloudTrail, no SCPs.</li>
+    <li>The architecture review board meets at Week 36. The data centre must be fully exited by Week 76.</li>
+  </ul>
+</div>
+
+<h4 class="subsection">The four stakeholder personas — what each one wants</h4>
+<table>
+  <tr><th>Persona</th><th>Role</th><th>What they want</th><th>Where they create friction</th></tr>
+  <tr><td><strong>Sarah Nkemdirim</strong></td><td>CTO (candidate's manager)</td><td>Programme delivered on time and to budget. Credible documentation she can defend at board level.</td><td>Will challenge vague recommendations. Wants HLD AND LLD, not just one.</td></tr>
+  <tr><td><strong>Marcus Webb</strong></td><td>CFO</td><td>Numbers. ROI. Cost model. Payback period. Oracle licence savings quantified.</td><td>Wants to defer DR to Phase 8. Will not release budget without a cost breakdown by tier.</td></tr>
+  <tr><td><strong>Priya Anand</strong></td><td>CRO</td><td>FCA compliance evidence. Named risk owners. SMCR accountability. Specific regulatory references.</td><td>Needs DR started now. Risk register must have FCA refs on every row — not traffic lights.</td></tr>
+  <tr><td><strong>Ben Hartley</strong></td><td>Lead Infra Engineer</td><td>Correct IaC patterns. Terraform state managed properly. Early collaboration on Phase 5.</td><td>Will push back on wrong Terraform patterns. Identified bugs in the repo that nobody fixed.</td></tr>
+</table>
+
+<h4 class="subsection">Key programme numbers — memorise these</h4>
+<table>
+  <tr><th>Figure</th><th>Value</th><th>Source</th><th>Why it matters</th></tr>
+  <tr><td>Current annual run-rate</td><td>£3.8M</td><td>Company Brief §3</td><td>The baseline everything is measured against</td></tr>
+  <tr><td>Target annual run-rate</td><td>£1.9M</td><td>Company Brief §3</td><td>The goal — 50% reduction</td></tr>
+  <tr><td>Programme budget</td><td>£2.4M</td><td>Company Brief §3</td><td>Hard ceiling — Marcus controls this</td></tr>
+  <tr><td>FCA fine exposure</td><td>£8.7M</td><td>Company Brief §2</td><td>10% of £87.3M annual revenue — the urgency driver</td></tr>
+  <tr><td>AUM</td><td>£4.2bn</td><td>Company Brief §1</td><td>Context for firm size</td></tr>
+  <tr><td>Total servers</td><td>120</td><td>server-estate.csv</td><td>121 rows including 1 duplicate (SRV-047)</td></tr>
+  <tr><td>Total applications</td><td>42</td><td>application-portfolio.csv</td><td>43 rows including 1 duplicate (APP-019)</td></tr>
+  <tr><td>Apps without DR</td><td>17</td><td>application-portfolio.csv</td><td>Core FCA PS21/3 compliance gap</td></tr>
+  <tr><td>EOL servers</td><td>25</td><td>server-estate.csv</td><td>20.8% of estate — but NOT the cost driver</td></tr>
+  <tr><td>DB tier % of spend</td><td>~55%</td><td>operational-report.csv</td><td>The real cost driver — not Windows OS</td></tr>
+  <tr><td>P1 incidents (12 weeks)</td><td>5</td><td>operational-report.csv</td><td>All on no-DR apps — Priya's evidence</td></tr>
+  <tr><td>Worst outage duration</td><td>6.7 hours</td><td>operational-report.csv</td><td>Exceeded 4-hour FCA IBS-001 tolerance</td></tr>
+  <tr><td>Oracle licence saving</td><td>£340k/year</td><td>Company Brief §4</td><td>Key ROI figure for Marcus</td></tr>
+  <tr><td>AI productivity saving</td><td>£455k/year</td><td>Phase 9 calculation</td><td>42 analysts × 3.2h/wk × 52wk × £65/h</td></tr>
+  <tr><td>Payback period</td><td>15 months</td><td>Calculated</td><td>£2.4M ÷ £1.9M annual saving</td></tr>
+  <tr><td>ARB date</td><td>Week 36</td><td>Company Brief §3</td><td>The capstone deadline</td></tr>
+  <tr><td>DC exit date</td><td>Week 76</td><td>Company Brief §3</td><td>Full migration target</td></tr>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="answer-key">
+  <h2>Master Answer Key</h2>
+  <p>Every locked figure with its source, calculation, and acceptable range for grading</p>
+</div>
+
+<h4 class="subsection">Data file calculations — how to get these numbers</h4>
+
+<div class="card card-blue">
+  <h4>From server-estate.csv</h4>
+  <table>
+    <tr><th>Figure</th><th>How to calculate it</th><th>Exact answer</th><th>Accept range</th></tr>
+    <tr><td>EOL server count</td><td>Filter is_eol column = "True" (string, not boolean). Case-sensitive in some tools.</td><td>25</td><td>20–30</td></tr>
+    <tr><td>Servers with no DR</td><td>Filter dr_status for: NO DR, NONE, None, N/A, Not configured, NOT CONFIGURED (6 variants)</td><td>47</td><td>40–55</td></tr>
+    <tr><td>Database tier servers</td><td>Filter category = "Database"</td><td>29</td><td>27–31</td></tr>
+    <tr><td>Missing cost entries</td><td>Count blank monthly_cost_gbp rows</td><td>8</td><td>8</td></tr>
+    <tr><td>DB tier avg cost/month</td><td>Average monthly_cost_gbp where category = Database, excluding blanks</td><td>£4,822</td><td>£4,000–£5,500</td></tr>
+    <tr><td>Windows avg cost/month</td><td>Average where OS contains "Windows", excluding blanks</td><td>£1,760</td><td>£1,600–£2,600</td></tr>
+    <tr><td>Total known monthly cost</td><td>Sum all non-blank monthly_cost_gbp</td><td>~£239,000</td><td>£230k–£265k</td></tr>
+    <tr><td>Duplicate row</td><td>SRV-047 appears twice — second row (PAR-DB-047) is the current one</td><td>1 duplicate</td><td>Exactly 1</td></tr>
+  </table>
+</div>
+
+<div class="card card-blue">
+  <h4>From application-portfolio.csv</h4>
+  <table>
+    <tr><th>Figure</th><th>How to calculate it</th><th>Exact answer</th><th>Accept range</th></tr>
+    <tr><td>High complexity apps</td><td>Normalise the migration_complexity column first — "7/10", "High", "Medium-High" all mean ≥7. Then count ≥7.</td><td>14–15</td><td>13–17</td></tr>
+    <tr><td>P1 Critical with no DR</td><td>Filter criticality = P1 AND dr_status = NO DR variants</td><td>4</td><td>3–6</td></tr>
+    <tr><td>Apps with &gt;3 dependencies</td><td>Normalise dependency delimiters (|, comma, semicolon) then count where dependency_count &gt; 3</td><td>6</td><td>5–8</td></tr>
+    <tr><td>High-dep + high-complexity</td><td>Of apps with &gt;3 deps, count those also scoring ≥7 complexity</td><td>6 of 6 (100%)</td><td>100% correlation</td></tr>
+    <tr><td>Total licence cost</td><td>Sum annual_licence_cost_gbp, stripping £ and commas, excluding blanks</td><td>~£3,465,000</td><td>£2.5M–£3.8M</td></tr>
+    <tr><td>Rehost app count</td><td>Count where migration_strategy = "Rehost"</td><td>10</td><td>8–12</td></tr>
+    <tr><td>Replatform server count</td><td>Sum server_count where migration_strategy = "Replatform"</td><td>52</td><td>45–65</td></tr>
+    <tr><td>Duplicate row</td><td>APP-019 appears twice</td><td>1 duplicate</td><td>Exactly 1</td></tr>
+  </table>
+</div>
+
+<div class="card card-blue">
+  <h4>From operational-report.csv</h4>
+  <table>
+    <tr><th>Figure</th><th>How to calculate it</th><th>Exact answer</th><th>Accept range</th></tr>
+    <tr><td>DB tier % of spend</td><td>SUM(db_tier_cost_gbp) ÷ SUM(total_infra_cost_gbp), EXCLUDING Week 6 (billing anomaly) and Week 7 (blank DB cost). Multiply by 100.</td><td>54.9%</td><td>49–58%</td></tr>
+    <tr><td>Patch compliance weeks 1–8</td><td>Average patch_compliance_pct for weeks 1–8. Note: some rows use decimal (0.71) not percentage (71%). Normalise first.</td><td>~70.7%</td><td>66–78%</td></tr>
+    <tr><td>Patch compliance weeks 9–12</td><td>Average for weeks 9–12 (same normalisation)</td><td>~54.7%</td><td>48–60%</td></tr>
+    <tr><td>Patch compliance drop</td><td>Subtract: 70.7% − 54.7% = 16pp drop</td><td>16pp</td><td>10–25pp</td></tr>
+    <tr><td>Total P1 incidents</td><td>Sum p1_incidents for all 12 weeks. Week 9 shows "TBC" — exclude or treat as 0.</td><td>5</td><td>4–7</td></tr>
+    <tr><td>Week 6 anomaly</td><td>Week 6 total cost is ~£50k vs normal average ~£57k. Notes column explains: billing delay, not a saving.</td><td>~£50k</td><td>£40k–£56k</td></tr>
+    <tr><td>Duplicate row</td><td>Week 3 appears twice — "Week 3 (revised)" is the correct row to use</td><td>1 duplicate</td><td>Exactly 1</td></tr>
+  </table>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="traps">
+  <h2>Wrong-Direction Traps</h2>
+  <p>Three deliberate traps built into the data. A strong candidate avoids all three. A weak candidate falls into at least one.</p>
+</div>
+
+<div class="card card-red">
+  <h4>🪤 Trap 1 — Windows Server is the Cost Driver (Phase 2)</h4>
+  <p><strong>The misleading signal:</strong> When a candidate looks at server-estate.csv and calculates average cost by OS, Windows Server 2016 appears expensive at ~£1,760/month average. Many candidates immediately conclude "Windows is the cost driver — migrate Windows first."</p>
+  <p><strong>Why it is wrong:</strong> Windows servers exist across ALL tiers (web, app, database, monitoring) at very different price points. The average is pulled up by Windows database servers. The correct analysis is by CATEGORY (tier), not by OS.</p>
+  <p><strong>The correct answer:</strong> The DATABASE TIER is the cost driver at ~55% of total weekly spend, regardless of operating system. This is confirmed by cross-referencing operational-report.csv (db_tier_cost_gbp column).</p>
+  <p><strong>How to detect a candidate has fallen into the trap:</strong> Their report says "Windows Server 2016 is the primary cost driver" or "prioritise Windows migration for cost reduction."</p>
+  <p><strong>How to detect a candidate avoided the trap:</strong> Their report explicitly says "The cost driver is the database TIER, not the Windows OS" and cites ~55% of spend from the operational report.</p>
+</div>
+
+<div class="card card-red">
+  <h4>🪤 Trap 2 — Rehost is the Biggest Migration Workstream (Phase 2)</h4>
+  <p><strong>The misleading signal:</strong> The application portfolio shows 10 apps use Rehost strategy — the highest count of any single strategy. A candidate might conclude "Rehost is the primary workstream."</p>
+  <p><strong>Why it is wrong:</strong> Rehost apps have low server counts (avg ~2 servers each = ~21 servers total). Replatform apps are fewer in number (14–16 apps) but have much higher server counts (avg ~3.5 each = ~52 servers total). By server volume — which drives infrastructure cost and migration complexity — Replatform dominates.</p>
+  <p><strong>The correct answer:</strong> Replatform dominates by server count (52 vs 21) even though Rehost leads by app count (10 vs 14–16). Migration effort and cost reduction is driven by server volume, not app count.</p>
+  <p><strong>How to detect the trap:</strong> Candidate says "we have more Rehost apps so that is our biggest workstream."</p>
+</div>
+
+<div class="card card-red">
+  <h4>🪤 Trap 3 — Week 6 Cost Reduction Looks Like a Win (Phase 2)</h4>
+  <p><strong>The misleading signal:</strong> Week 6 shows total_infra_cost_gbp of ~£50k vs a normal average of ~£57k. A candidate might flag this as "early cost optimisation signs."</p>
+  <p><strong>Why it is wrong:</strong> The notes column for Week 6 explicitly states: "AWS POC invoice not included due to billing cycle timing. NOT an optimisation." The lower cost is a billing delay artefact, not a genuine reduction.</p>
+  <p><strong>The correct answer:</strong> Exclude Week 6 from trend analysis. Flag it as a data quality issue, not a cost reduction.</p>
+  <p><strong>How to detect the trap:</strong> Candidate highlights Week 6 as positive cost movement or includes it in trend analysis without flagging the anomaly.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="conflicts">
+  <h2>Stakeholder Conflicts</h2>
+  <p>Three deliberate conflicts. A strong candidate resolves each with data, not politics.</p>
+</div>
+
+<div class="card card-amber">
+  <h4>⚔️ Conflict 1 — Priya vs Marcus on DR Timing (Phases 4 and 8)</h4>
+  <p><strong>Priya's position:</strong> DR must start now. We are in FCA breach. Four P1 Critical applications have zero DR. The FCA impact tolerance for IBS-001 is 4 hours and we already breached it.</p>
+  <p><strong>Marcus's position:</strong> DR is expensive. Defer it to Phase 8 to protect programme budget. The FCA has not formally enforced yet.</p>
+  <p><strong>The data that resolves it:</strong> Operational report shows 5 P1 incidents in 12 weeks, all on no-DR applications. Week 12 dual incident (CRP + OMS) lasted 6.7 hours — already exceeding the 4-hour FCA IBS-001 impact tolerance. This makes Marcus's deferral position indefensible to the FCA.</p>
+  <p><strong>The correct recommendation:</strong> Hybrid. DR DESIGN completed in Phase 4 (gives Priya regulatory evidence she can show the FCA now). Full implementation in Phase 8 (gives Marcus the cost phasing he needs). This is the only answer that satisfies both without compromising either.</p>
+  <p><strong>What a weak candidate does:</strong> Picks a side. Either "defer to Phase 8 because of budget" (ignores Priya's regulatory data) or "implement all DR now" (ignores Marcus's legitimate budget concern).</p>
+</div>
+
+<div class="card card-amber">
+  <h4>⚔️ Conflict 2 — Rachel vs Marcus on the Data OU (Phase 3)</h4>
+  <p><strong>Rachel's position (Data Analytics Lead):</strong> The data platform needs a dedicated Data OU with its own AWS account. Lake Formation governance requires account-level isolation for fine-grained column-level access control.</p>
+  <p><strong>Marcus's position:</strong> A Data OU adds unnecessary complexity. Put it in the Workloads OU.</p>
+  <p><strong>The correct answer:</strong> Rachel is architecturally correct. Lake Formation fine-grained access control (column-level permissions) works best with account-level isolation. Putting the data platform in the Workloads OU means sharing IAM permission boundaries with production application accounts — this creates data governance risk for GDPR-regulated data. The Data OU is the right call.</p>
+  <p><strong>Justification to give Marcus:</strong> The Data OU adds one more account but prevents the risk of cross-account data access that would require a full Lake Formation re-architecture later. One-time setup cost vs ongoing governance complexity.</p>
+</div>
+
+<div class="card card-amber">
+  <h4>⚔️ Conflict 3 — Rachel vs David on Platform Control (Phase 6)</h4>
+  <p><strong>Rachel's position (Dev Lead):</strong> Developers should have self-service EKS deployment. Give teams control over their namespaces.</p>
+  <p><strong>David's position (Head of Infra):</strong> Central infrastructure team must control the cluster. Developers cannot be given kubectl access to production.</p>
+  <p><strong>The correct answer:</strong> Namespace-level RBAC with GitOps enforcement. Developers own their namespaces (trading-prod, payments-prod) — they can deploy, scale, and manage their services. Infrastructure owns the cluster — node groups, NetworkPolicies, cluster add-ons, RBAC rules. ArgoCD AppProjects enforce which repositories can deploy to which namespaces. This gives Rachel self-service within boundaries and gives David cluster governance.</p>
+  <p><strong>What a weak candidate does:</strong> Picks a side without proposing the architectural pattern that satisfies both.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="iac-bugs">
+  <h2>IaC Bug Reference</h2>
+  <p>Exact bugs planted in the repository, exact fixes required, and why each matters</p>
+</div>
+
+<h4 class="subsection">Terraform — terraform/vpc/main.tf (5 bugs)</h4>
+<table>
+  <tr><th>#</th><th>Bug type</th><th>What is wrong</th><th>The fix</th><th>Why it matters</th></tr>
+  <tr><td>1</td><td>Wrong value</td><td><code>default = "172.16.0.0/16"</code> — this conflicts with the Shared Services account allocation in the Phase 3 CIDR plan</td><td>Change to the account-specific CIDR e.g. <code>"172.17.0.0/16"</code> for Payments-Prod</td><td>Deploys VPC that overlaps Shared Services — Transit Gateway peering will fail immediately</td></tr>
+  <tr><td>2</td><td>Missing resource</td><td>No <code>aws_route_table</code> or <code>aws_route_table_association</code> resources exist</td><td>Add route tables for public (→ IGW), private (→ NAT GW), and data (no internet route) subnets plus associations</td><td>Without route tables, no traffic flows — subnets exist but are completely isolated</td></tr>
+  <tr><td>3</td><td>Missing resource</td><td>No <code>aws_flow_log</code> resource</td><td>Add <code>aws_flow_log</code> with <code>traffic_type = "ALL"</code>, destination S3 in Log Archive account</td><td>FCA audit requirement — 7-year retention of all VPC traffic logs. Missing this fails the security baseline.</td></tr>
+  <tr><td>4</td><td>Missing tags</td><td>Private subnets missing EKS cluster discovery tags</td><td>Add <code>kubernetes.io/cluster/parlington-eks = "shared"</code> and <code>kubernetes.io/role/internal-elb = "1"</code></td><td>EKS cannot discover private subnets for node groups or internal load balancers without these tags</td></tr>
+  <tr><td>5</td><td>Missing tags</td><td>Missing mandatory resource tags: <code>CostCentre</code>, <code>DataClassification</code></td><td>Add to <code>default_tags</code> block or per resource</td><td>Phase 3 tagging policy mandates these. Resources without CostCentre get flagged and escalated per Marcus's FinOps requirements.</td></tr>
+</table>
+
+<div class="answer-box">
+<span class="comment"># Bug 3 fix — add this resource block</span>
+resource "aws_flow_log" "main" {
+  vpc_id               = aws_vpc.main.id
+  traffic_type         = "ALL"
+  iam_role_arn         = aws_iam_role.flow_log.arn
+  log_destination      = <span class="highlight">"arn:aws:s3:::parlington-log-archive/vpc-flow-logs/"</span>
+  log_destination_type = "s3"
+  tags = { Name = "parlington-prod-flow-logs", ManagedBy = "terraform" }
+}
+
+<span class="comment"># Bug 4 fix — add to private subnet tags</span>
+tags = {
+  <span class="highlight">"kubernetes.io/cluster/parlington-eks" = "shared"</span>
+  <span class="highlight">"kubernetes.io/role/internal-elb"       = "1"</span>
+}
+</div>
+
+<h4 class="subsection">CloudFormation — cloudformation/security-baseline.yaml (2 bugs)</h4>
+<table>
+  <tr><th>#</th><th>Bug type</th><th>What is wrong</th><th>The fix</th><th>Why it matters</th></tr>
+  <tr><td>1</td><td>Syntax (property name)</td><td><code>CloudWatchLogsLogGroupArnRef</code> — this property does not exist in CloudFormation</td><td>Change to <code>CloudWatchLogsLogGroupArn</code></td><td>Stack deployment fails immediately with "Invalid property" error. Nothing deploys.</td></tr>
+  <tr><td>2</td><td>Logic (wrong value)</td><td><code>FindingPublishingFrequency: SIX_HOURS</code> on the GuardDuty detector</td><td>Change to <code>FindingPublishingFrequency: FIFTEEN_MINUTES</code></td><td>Priya's security policy requires FIFTEEN_MINUTES. SIX_HOURS means threats sit undetected in Security Hub for up to 6 hours — unacceptable under FCA SYSC 13 operational risk monitoring.</td></tr>
+</table>
+
+<div class="answer-box">
+<span class="comment"># Bug 1 — before (WRONG)</span>
+CloudTrailLogGroup:
+  Type: AWS::Logs::LogGroup
+  Properties:
+    <span class="error">CloudWatchLogsLogGroupArnRef: !GetAtt CloudTrailLogGroup.Arn</span>
+
+<span class="comment"># Bug 1 — after (CORRECT)</span>
+    <span class="highlight">CloudWatchLogsLogGroupArn: !GetAtt CloudTrailLogGroup.Arn</span>
+
+<span class="comment"># Bug 2 — before (WRONG)</span>
+GuardDutyDetector:
+  Type: AWS::GuardDuty::Detector
+  Properties:
+    Enable: true
+    <span class="error">FindingPublishingFrequency: SIX_HOURS</span>
+
+<span class="comment"># Bug 2 — after (CORRECT)</span>
+    <span class="highlight">FindingPublishingFrequency: FIFTEEN_MINUTES</span>
+</div>
+
+<h4 class="subsection">Python — python/inventory.py (2 bugs)</h4>
+<table>
+  <tr><th>#</th><th>Bug type</th><th>What is wrong</th><th>The fix</th></tr>
+  <tr><td>1</td><td>KeyError crash</td><td><code>for tag in instance['Tags']:</code> — throws KeyError when a server has no tags (several Parlington servers have no tags)</td><td>Change to <code>for tag in instance.get('Tags', []):</code> — returns empty list if key absent</td></tr>
+  <tr><td>2</td><td>No pagination</td><td><code>ec2.describe_instances()</code> — only returns first page of results (max 1000 instances). Fails silently on larger estates.</td><td>Use <code>ec2.get_paginator('describe_instances')</code> and iterate pages</td></tr>
+</table>
+
+<div class="answer-box">
+<span class="comment"># Bug 1 fix — one word change</span>
+<span class="error">for tag in instance['Tags']:          # WRONG — KeyError if no tags</span>
+<span class="highlight">for tag in instance.get('Tags', []):  # CORRECT — returns [] if no tags</span>
+
+<span class="comment"># Bug 2 fix — add pagination</span>
+ec2 = boto3.client('ec2', region_name='eu-west-2')
+paginator = ec2.get_paginator('describe_instances')
+for page in paginator.paginate():
+    for reservation in page['Reservations']:
+        for instance in reservation['Instances']:
+            <span class="highlight">for tag in instance.get('Tags', []):</span>
+                ...
+</div>
+
+<h4 class="subsection">Kubernetes — kubernetes/deployments/customer-service.yaml (5 bugs)</h4>
+<table>
+  <tr><th>#</th><th>Bug</th><th>Fix</th><th>Why it matters</th></tr>
+  <tr><td>1</td><td><code>containerPort: 3000</code></td><td>Change to <code>containerPort: 8080</code></td><td>App listens on 8080. Port 3000 means no traffic reaches the container. Service and probes targeting 3000 fail silently.</td></tr>
+  <tr><td>2</td><td><code>image: .../customer-service:latest</code></td><td>Replace <code>:latest</code> with a specific version tag e.g. <code>:v1.2.4</code> or git SHA</td><td>Any new docker push overwrites latest — a bad build can silently replace production without a deployment event. Prohibited by most enterprise policies.</td></tr>
+  <tr><td>3</td><td>No <code>resources:</code> block</td><td>Add <code>requests</code> and <code>limits</code> for cpu and memory</td><td>Without limits, one misbehaving pod can exhaust all node resources and cause cascading failures across all pods on that node.</td></tr>
+  <tr><td>4</td><td><code>replicas: 1</code></td><td>Change to <code>replicas: 3</code></td><td>Single replica means any pod restart (health failure, node drain, rollout) causes a complete service outage.</td></tr>
+  <tr><td>5</td><td>No <code>livenessProbe</code> or <code>readinessProbe</code></td><td>Add both probes pointing to /health and /ready endpoints</td><td>Without probes: Kubernetes cannot restart a hung process (liveness) and cannot withhold traffic during startup (readiness). Both cause user-visible failures.</td></tr>
+</table>
+
+<h4 class="subsection">GitHub Actions — .github/workflows/deploy.yml (5 bugs)</h4>
+<table>
+  <tr><th>#</th><th>Bug</th><th>Fix</th><th>Why it matters</th></tr>
+  <tr><td>1</td><td>Long-lived AWS credentials stored as GitHub Secrets</td><td>Replace with OIDC — use <code>aws-actions/configure-aws-credentials@v4</code> with <code>role-to-assume</code></td><td>Stored credentials are permanent — if GitHub is compromised, attacker has permanent AWS access. OIDC credentials are ephemeral (15-minute tokens). FCA SS2/21 prohibits long-lived credentials.</td></tr>
+  <tr><td>2</td><td><code>docker push ...:latest</code></td><td>Remove the :latest push. Tag with git SHA only: <code>:${{ github.sha }}</code></td><td>Same as K8s image tag issue — any build overwrites latest in ECR.</td></tr>
+  <tr><td>3</td><td>No production approval gate</td><td>Add GitHub environment with required reviewers, or use <code>trstringer/manual-approval</code> action</td><td>Anyone who can merge to main can deploy to production. FCA operational resilience requires change management controls.</td></tr>
+  <tr><td>4</td><td>No security scanning</td><td>Add Semgrep SAST (before build) and Trivy image scan (after build), both as blocking gates</td><td>Without scanning, vulnerabilities reach production. FCA SS2/21 requires security controls in the software supply chain.</td></tr>
+  <tr><td>5</td><td>No rollback on failure</td><td>Add step: <code>if: failure()</code> → <code>kubectl rollout undo deployment/SERVICE</code></td><td>If deploy fails mid-rollout, pods are in a broken state with no recovery. Manual rollback in production at 2am is a DR scenario.</td></tr>
+</table>
+
+<div class="answer-box">
+<span class="comment"># Bug 1 fix — replace stored credentials with OIDC</span>
+<span class="error">- name: Configure AWS  # WRONG</span>
+<span class="error">  env:</span>
+<span class="error">    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}</span>
+<span class="error">    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}</span>
+
+<span class="highlight">- name: Configure AWS credentials (OIDC)  # CORRECT</span>
+<span class="highlight">  uses: aws-actions/configure-aws-credentials@v4</span>
+<span class="highlight">  with:</span>
+<span class="highlight">    role-to-assume: arn:aws:iam::483920174651:role/parlington-github-actions</span>
+<span class="highlight">    aws-region: eu-west-2</span>
+
+<span class="comment"># Bug 5 fix — rollback step</span>
+<span class="highlight">- name: Rollback on failure</span>
+<span class="highlight">  if: failure() && steps.deploy.conclusion == 'failure'</span>
+<span class="highlight">  run: kubectl rollout undo deployment/customer-service</span>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- PHASES -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Phase-by-Phase Tutor Guide</h2>
+  <p>Step-by-step instructions for completing each phase, with exact answers and grading guidance</p>
+</div>
+
+<!-- PHASE 1 -->
+<div class="phase-header" id="phase-1">
+  <div class="phase-num">1</div>
+  <div>
+    <h3>Phase 1 — Onboarding</h3>
+    <div class="meta">Weeks 1 · Pass score: 60% · Phase type: onboarding</div>
+  </div>
+</div>
+
+<h4 class="subsection">What this phase is for</h4>
+<p>Phase 1 ensures the candidate understands the business context before doing any work. It is not graded on technical skill — it tests whether they read the materials and can recall key programme facts. A candidate who rushes through the reading and guesses on the quiz will struggle in Phase 2 because they will not know which data quality issues to look for.</p>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 1</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Read the Company Brief first — all of it</strong><p>The company brief is the foundation document. Read Section 2 (FCA breach), Section 3 (programme mandate and budget), Section 4 (technology estate), and Section 5 (regulatory glossary). Do not skip the regulatory glossary — PS21/3, SS2/21, and SYSC 13 appear in the quiz and in grading checks throughout the simulation.</p></div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Read the Process Notes in full</strong><p>Craig Whitfield's handover notes contain critical hints that are not in the company brief: the list of data quality issues in the CSV files, the three open questions (OQ-001 mystery IP, OQ-002 Direct Connect not ordered, OQ-004 public S3 bucket), and the buried hint about the cost driver trap. Do not skip this document — it saves hours of confusion in Phase 2.</p></div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Read the inbox messages from Sarah and Ben</strong><p>Sarah's welcome message sets the tone and deadline (Phase 1 report by end of Week 4). Ben's message contains four urgent items that are not in any other document: the public Terraform state bucket, the CIDR bug in the Terraform module, the PAR-DB-012 CPU utilisation issue, and the dependency delimiter inconsistency in the application portfolio CSV.</p></div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Set up all tools before the quiz</strong><p>AWS Free Tier, GitHub (fork the repo), Draw.io (install AWS shape library), Python + Boto3, Terraform, Docker, Grafana. Some setup takes time — better to do it now than discover you need it at 11pm during Phase 5.</p></div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Answer the 5 quiz questions</strong><p>All answers are in the Company Brief. See exact answers below.</p></div></div>
+</div>
+
+<h4 class="subsection">Quiz answers — Phase 1</h4>
+<table>
+  <tr><th>Q</th><th>Question</th><th>Correct answer</th><th>Why</th></tr>
+  <tr><td>1</td><td>Budget and target run-rate?</td><td><strong>B — Budget £2.4M, target run-rate £1.9M</strong></td><td>Company Brief §3. Common wrong answer: swapping the two figures (£1.9M budget, £2.4M target).</td></tr>
+  <tr><td>2</td><td>FCA breach and maximum penalty?</td><td><strong>B — PS21/3 operational resilience, £8.7M</strong></td><td>Company Brief §2 and §5. £8.7M = 10% of £87.3M annual revenue.</td></tr>
+  <tr><td>3</td><td>How many apps without DR, and which source?</td><td><strong>C — 17 applications, source: application-portfolio.csv</strong></td><td>The process notes explicitly state to use the app portfolio as authoritative — NOT the server estate CSV.</td></tr>
+  <tr><td>4</td><td>ARB date and what must be complete?</td><td><strong>B — Week 36, phases 1–8 plus AI architecture</strong></td><td>Company Brief §3.2.</td></tr>
+  <tr><td>5</td><td>Why did the 2022 transformation fail?</td><td><strong>B — No discovery, single AWS account, no IaC, no security architecture</strong></td><td>Company Brief §2.3. This matters because the 9-phase programme structure directly addresses each failure.</td></tr>
+</table>
+
+<!-- PHASE 2 -->
+<div class="phase-header" id="phase-2">
+  <div class="phase-num">2</div>
+  <div>
+    <h3>Phase 2 — Discovery Assessment</h3>
+    <div class="meta">Weeks 1–4 · Pass score: 65% · Phase type: discovery</div>
+  </div>
+</div>
+
+<h4 class="subsection">What this phase is for</h4>
+<p>Phase 2 is the most important analytical phase of the simulation. It tests whether a candidate can handle messy real-world data, avoid the wrong-direction trap, cross-reference multiple files, and produce a board-ready report. Most candidates can write a report — very few can correctly identify the database tier as the cost driver AND explain why the Windows OS metric was misleading.</p>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 2</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Document data quality issues BEFORE calculating anything</strong><p>Open all three CSV files and write down every quality issue you find before touching a calculator or spreadsheet formula. This forces you to know what data you can trust. The grading checks require specific data quality issues to be named. Generic statements like "the data had some issues" score zero.</p>
+  <div class="card card-gray" style="margin-top:8px">
+    <h4>Complete list of data quality issues to document</h4>
+    <p><strong>server-estate.csv:</strong> SRV-047 duplicate (2 rows for same server_id); 8 blank monthly_cost_gbp values; 3 date formats in last_patched column (YYYY-MM-DD, DD/MM/YYYY, DD-MM-YYYY); 6 variants of "NO DR" in dr_status column; 15 OS naming variants; some age values in "N months" format not years.</p>
+    <p><strong>application-portfolio.csv:</strong> APP-019 duplicate; 3 different dependency delimiters (pipe |, comma, semicolon ;); mixed complexity formats (7/10, High, Medium-High); 6 blank annual_licence_cost_gbp values; inconsistent capitalisation.</p>
+    <p><strong>operational-report.csv:</strong> Week 3 appears twice (use "Week 3 revised"); Week 6 billing anomaly (notes column explains); Week 7 blank db_tier_cost_gbp; Week 9 shows "TBC" for p1_incidents; patch_compliance_pct uses both decimal (0.71) and percentage (71%) formats.</p>
+  </div>
+  </div></div>
+
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>State your assumptions explicitly — which data did you trust?</strong><p>Before any analysis, write a trust statement. Example: "I excluded the 8 servers with blank cost data from cost analysis. I used the application-portfolio.csv as the authoritative source for DR status (not server-estate.csv, which has 6 inconsistent DR status variants). I excluded Week 6 from operational trend analysis due to the billing delay noted in the notes column."</p></div></div>
+
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Calculate the server estate summary</strong>
+  <p>Use a spreadsheet or Python script. Here are the exact steps:</p>
+  <ol>
+    <li>Remove the SRV-047 duplicate row (keep the PAR-DB-047 hostname row)</li>
+    <li>Filter is_eol = "True" → count → <strong>25 EOL servers</strong></li>
+    <li>Normalise dr_status to find all no-DR variants → count → <strong>47 servers with no DR</strong></li>
+    <li>Filter category = "Database" → count → <strong>29 database servers</strong></li>
+    <li>Sum monthly_cost_gbp excluding blanks → <strong>~£239,000/month total</strong></li>
+    <li>Average monthly_cost_gbp where category = Database → <strong>£4,822/server/month</strong></li>
+    <li>Average where OS contains "Windows" → <strong>£1,760/server/month</strong></li>
+  </ol>
+  </div></div>
+
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Calculate the application portfolio summary</strong>
+  <ol>
+    <li>Remove the APP-019 duplicate row</li>
+    <li>Normalise dependency delimiters — convert all | and ; to comma, then count values</li>
+    <li>Normalise complexity formats — map "7/10"→7, "High"→8, "Medium-High"→7, "Medium"→5 etc.</li>
+    <li>Count apps with complexity ≥7 → <strong>14–15 high complexity apps</strong></li>
+    <li>Filter criticality = P1 AND dr_status = NO DR variants → <strong>4 apps: APP-001 PEMIS, APP-002 OMS, APP-003 CRP, APP-004 RRG</strong></li>
+    <li>Count apps with dependency_count &gt;3 → <strong>6 apps</strong></li>
+    <li>Check: all 6 high-dep apps also score ≥7 complexity → <strong>100% correlation</strong></li>
+  </ol>
+  </div></div>
+
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Run the cost driver analysis — cross-reference both files</strong>
+  <p>This is the most important step. Do NOT just look at server-estate.csv alone.</p>
+  <ol>
+    <li>Open operational-report.csv</li>
+    <li>Exclude Week 6 (billing anomaly) and Week 7 (blank DB cost)</li>
+    <li>For remaining weeks: sum db_tier_cost_gbp and sum total_infra_cost_gbp</li>
+    <li>Divide: SUM(db_tier) ÷ SUM(total) = <strong>~54.9% ≈ 55%</strong></li>
+    <li>Now compare to server-estate.csv: DB avg £4,822 vs Windows avg £1,760</li>
+    <li>Conclusion: <strong>The database TIER drives cost (55% of spend), not Windows OS.</strong></li>
+    <li>Write explicitly: "The surface metric (Windows avg cost) is misleading because Windows servers span multiple tiers. The correct analysis by tier shows the database category accounts for approximately 55% of total spend."</li>
+  </ol>
+  </div></div>
+
+  <div class="step"><div class="step-num">6</div><div class="step-content"><strong>Document the critical open questions</strong>
+  <p>These must be in your report. They block subsequent phases if unanswered:</p>
+  <ul>
+    <li><strong>OQ-001:</strong> Mystery IP range 10.200.0.0/16 — origin unknown. Blocks VPC CIDR design. Ben Hartley needs to investigate.</li>
+    <li><strong>OQ-002:</strong> Direct Connect not ordered. 8–12 week lead time. This is already on the programme critical path. Action: order immediately.</li>
+    <li><strong>OQ-004:</strong> Unclassified S3 bucket in legacy account. Potential UK GDPR Article 33 data breach notification. DPO assessment required within 72 hours of awareness.</li>
+  </ul>
+  </div></div>
+
+  <div class="step"><div class="step-num">7</div><div class="step-content"><strong>Create the current-state architecture diagram in Draw.io</strong>
+  <p>Open app.diagrams.net. Add AWS shape library (+ button → search AWS). Create two data centre zones (Equinix LD4 and Canary Wharf colo). Within each zone, create tier swim lanes (Web/App, Database, Middleware, Batch/ETL, Monitoring). Add the AWS POC account as a separate zone on the right. Mark the 4 P1 Critical no-DR apps with red borders. Show network connectivity (10Gbps MPLS between DCs, internet to AWS). Commit both the .drawio file and a PNG export to /architecture/current-state/ in your GitHub fork.</p>
+  </div></div>
+
+  <div class="step"><div class="step-num">8</div><div class="step-content"><strong>Write the Discovery Assessment Report</strong>
+  <p>Structure: (1) Data Quality Assessment, (2) Server Estate Summary table, (3) Application Portfolio Summary table, (4) Cost Driver Analysis with cross-reference, (5) DR Gap Assessment with named P1 apps, (6) Critical Open Questions table, (7) Prioritised Recommendations. Each recommendation must cite a specific figure from the data.</p>
+  </div></div>
+</div>
+
+<h4 class="subsection">What separates a strong submission from a weak one</h4>
+<div class="two-col">
+  <div class="card card-green">
+    <h4>✅ Strong submission</h4>
+    <ul>
+      <li>Documents specific data quality issues (names SRV-047 duplicate, 8 blank costs, 6 DR status variants)</li>
+      <li>States trust assumptions explicitly before analysis</li>
+      <li>Cites DB tier as 49–58% of spend from operational report</li>
+      <li>Explicitly names the misleading Windows metric and explains why it is wrong</li>
+      <li>Names all 4 P1 Critical no-DR apps (PEMIS, OMS, CRP, RRG)</li>
+      <li>Flags all 3 critical open questions</li>
+      <li>100% correlation finding for high-dep = high-complexity</li>
+    </ul>
+  </div>
+  <div class="card card-red">
+    <h4>❌ Weak submission</h4>
+    <ul>
+      <li>"The data had quality issues" — no specifics</li>
+      <li>Concludes Windows is the cost driver without cross-referencing operational report</li>
+      <li>Calculates EOL count as 25 but doesn't flag it's NOT the cost driver</li>
+      <li>Says "17 apps have no DR" without naming which P1 Criticals are at risk</li>
+      <li>Skips the open questions entirely</li>
+      <li>Uses server-estate.csv DR column as authoritative (it is not)</li>
+      <li>Includes Week 6 in cost trend analysis</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PHASE 3 -->
+<div class="phase-header" id="phase-3">
+  <div class="phase-num">3</div>
+  <div>
+    <h3>Phase 3 — Landing Zone, Architecture & Governance</h3>
+    <div class="meta">Weeks 5–8 · Pass score: 70% · Phase type: work</div>
+  </div>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 3</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Complete ADR-001 — the rationale section is blank</strong><p>The draft ADR-001 in the repo has three options: (1) Single account with tagging, (2) Manual multi-account, (3) AWS Control Tower. Choose Option 3. Rationale: automated guardrails prevent drift; account vending via Account Factory reduces provisioning from weeks to hours; native Security Hub + CloudTrail integration satisfies FCA SS2/21; SCPs apply at OU level with inheritance. Commit to /docs/adrs/ADR-001-multi-account-structure.md.</p></div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Design the OU structure — minimum 4 OUs, 10 accounts</strong>
+  <div class="answer-box">
+ROOT (Management Account: parlington-management)
+├── Security OU
+│   ├── parlington-audit          <span class="comment"># CloudTrail, Config, SecurityHub aggregation</span>
+│   └── parlington-log-archive    <span class="comment"># S3 logs, 7yr retention (FCA)</span>
+├── Infrastructure OU
+│   └── parlington-shared-services <span class="comment"># Transit Gateway, Route 53 Resolver</span>
+├── Workloads OU
+│   ├── Production OU
+│   │   ├── parlington-payments-prod
+│   │   ├── parlington-trading-prod
+│   │   └── parlington-core-prod
+│   ├── NonProd OU
+│   │   ├── parlington-dev
+│   │   └── parlington-test
+│   └── Sandbox OU
+│       └── parlington-innovation
+└── Data Platform OU   <span class="highlight"># Rachel is correct — Lake Formation needs this</span>
+    └── parlington-data-platform
+  </div>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Design the CIDR plan — MUST avoid all 10.x.x.x ranges</strong><p>On-premises uses 10.0.0.0/8 fragmented ranges plus the mystery 10.200.0.0/16. Use 172.16.0.0/12 for AWS as Craig recommended. Allocate one /16 per account:</p>
+  <div class="answer-box">
+Shared Services:     172.16.0.0/16
+Payments-Prod:       172.17.0.0/16
+Trading-Prod:        172.18.0.0/16
+Core-Prod:           172.19.0.0/16
+Dev:                 172.20.0.0/16
+Test:                172.21.0.0/16
+Data-Platform:       172.22.0.0/16
+Innovation:          172.23.0.0/16
+  </div>
+  <p>Within each production VPC, design 4 subnet tiers across 3 AZs (12 subnets minimum): public (/24 each), private (/24 each), data (/24 each), TGW attachment (/28 each).</p>
+  </div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Write at least 3 SCPs with regulatory justification</strong>
+  <ul>
+    <li><strong>SCP-001 Deny non-EU regions</strong> — attached at root. Effect: deny all API calls where aws:RequestedRegion not in [eu-west-2, eu-west-1]. Compliance: NCSC Principle 2, UK GDPR data residency.</li>
+    <li><strong>SCP-002 Require MFA for sensitive actions</strong> — attached at root. Effect: deny iam:DeleteRole, s3:DeleteBucket, ec2:TerminateInstances unless MFA present. Compliance: ISO 27001 A.9.4, FCA SYSC 13.7.</li>
+    <li><strong>SCP-003 Prohibit public S3 buckets</strong> — attached at Workloads OU. Effect: deny s3:PutBucketAcl allowing public access. Compliance: ISO 27001 A.13.1, FCA SS2/21.</li>
+  </ul>
+  </div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Resolve the Data OU conflict (Rachel vs Marcus)</strong><p>Recommend the Data OU. Justification for Marcus: Lake Formation requires account-level isolation to enforce column-level permissions correctly. Without a dedicated account, Lake Formation tag policies share IAM permission boundaries with production application roles — this creates data governance risk for GDPR-regulated client data. One-time setup vs ongoing compliance risk.</p></div></div>
+  <div class="step"><div class="step-num">6</div><div class="step-content"><strong>Define the mandatory tagging policy</strong><p>Minimum four tags: Environment (prod/nonprod/sandbox), CostCentre (for Marcus's FinOps chargeback), DataClassification (RESTRICTED/CONFIDENTIAL/INTERNAL/PUBLIC), Team (operational ownership). Resources missing CostCentre must be flagged automatically within 48 hours — Marcus's explicit requirement.</p></div></div>
+  <div class="step"><div class="step-num">7</div><div class="step-content"><strong>Build the HLD diagram in Draw.io and commit to GitHub</strong><p>Show: AWS Organizations tree (Management Account at top, OUs, accounts), Transit Gateway in Shared Services connecting to all production VPCs, Direct Connect attachment from on-premises, CIDR ranges labelled per account. Commit to /architecture/target-state/ and paste the GitHub URL in your submission.</p></div></div>
+</div>
+
+<!-- PHASE 4 -->
+<div class="phase-header" id="phase-4">
+  <div class="phase-num">4</div>
+  <div>
+    <h3>Phase 4 — Networking, Security & Hybrid Cloud</h3>
+    <div class="meta">Weeks 9–12 · Pass score: 70% · Phase type: work</div>
+  </div>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 4</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Read BOTH of Priya's inbox messages before starting anything</strong><p>Priya has set non-negotiable requirements for the risk register format. Miss any of them and she will not sign off the phase. Her requirements: (1) specific FCA/PRA regulatory reference on every risk, (2) owner by role title not team name, (3) every DR risk has a phase-tied remediation milestone, (4) SMCR accountable individual column.</p></div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Design the VPC subnet architecture</strong><p>Using the CIDR plan from Phase 3. For Payments-Prod VPC (172.17.0.0/16): public subnets 172.17.1-3.0/24 (3 AZs), private 172.17.10-12.0/24, data 172.17.20-22.0/24, TGW attachment 172.17.30.0/28 per AZ. NAT Gateway one per AZ (3 total — financial services HA requirement). VPC Flow Logs: all traffic → S3 in Log Archive account → 7-year retention.</p></div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Design hybrid connectivity</strong><p>Direct Connect: primary 1Gbps dedicated connection via Equinix LD4. Backup: hosted connection (diversity). VPN failover: Site-to-Site VPN as fallback. CRITICAL: the process notes confirm Direct Connect was not ordered despite 8–12 week lead time. Flag this in your submission and recommend ordering immediately.</p></div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Resolve OQ-001 — the mystery 10.200.0.0/16 IP range</strong><p>State your investigation finding and decision. Most likely explanation: a routing artefact or rogue device from the 2022 failed AWS POC. Action: firewall rule audit and network trace by Ben Hartley. Decision: reserve 10.200.0.0/16 as off-limits in any on-prem routing table until source confirmed. This unblocks the VPC CIDR plan (since we are using 172.16.0.0/12 anyway).</p></div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Design the security architecture — 4 services to configure</strong>
+  <ul>
+    <li><strong>WAF:</strong> AWS WAF v2 on CloudFront (client portal) and on ALB (EKS ingress). Managed rule groups: CommonRuleSet, SQLiRuleSet, KnownBadInputsRuleSet.</li>
+    <li><strong>GuardDuty:</strong> Enabled all 10 accounts. Delegated administrator: parlington-audit account. Enable S3 protection, EKS protection, malware protection.</li>
+    <li><strong>Security Hub:</strong> Aggregated in parlington-audit. Standards: AWS Foundational Security Best Practices, CIS v1.4, PCI-DSS v3.2.1 (payments account only).</li>
+    <li><strong>KMS:</strong> Three CMKs minimum: (1) /parlington/restricted-data — for all RESTRICTED data, annual rotation, (2) /parlington/audit-logs — CloudTrail + Flow Logs, (3) /parlington/ebs — default EBS encryption.</li>
+  </ul>
+  </div></div>
+  <div class="step"><div class="step-num">6</div><div class="step-content"><strong>Map to NCSC Cloud Security Principles — cite at least 4</strong>
+  <ul>
+    <li>Principle 1 (Data in transit/rest): TLS 1.3 enforced, KMS CMK for RESTRICTED data</li>
+    <li>Principle 2 (Asset protection): CloudTrail + Config in all accounts, S3 versioning on Log Archive</li>
+    <li>Principle 3 (Separation): SCP-enforced OU isolation, NACLs between subnet tiers</li>
+    <li>Principle 6 (Operational security): GuardDuty + Security Hub + auto-remediation Lambdas</li>
+  </ul>
+  </div></div>
+  <div class="step"><div class="step-num">7</div><div class="step-content"><strong>Resolve the Priya vs Marcus DR conflict with data</strong><p>Write this explicitly. Use these exact figures: "5 P1 incidents in 12 weeks (all on no-DR apps). Week 12 dual incident (CRP + OMS) lasted 6.7 hours. FCA IBS-001 impact tolerance is 4 hours. We have already breached it." Recommendation: DR design in Phase 4 (gives Priya FCA evidence now). Full implementation in Phase 8 (gives Marcus cost phasing). This is a hybrid resolution — do not pick a side.</p></div></div>
+  <div class="step"><div class="step-num">8</div><div class="step-content"><strong>Produce the Risk Register with all 7 required risks</strong>
+  <table>
+    <tr><th>Risk ID</th><th>Risk</th><th>FCA Reference</th><th>SMCR Individual</th><th>Remediation Phase</th></tr>
+    <tr><td>R001</td><td>17 apps no DR — PS21/3 breach</td><td>FCA PS21/3 §3.4</td><td>CRO (Priya Anand)</td><td>Phase 8</td></tr>
+    <tr><td>R002</td><td>3 public S3 buckets — potential GDPR Art 33 breach</td><td>UK GDPR Art 33</td><td>CTO (Sarah Nkemdirim)</td><td>Immediate</td></tr>
+    <tr><td>R003</td><td>IAM users no MFA</td><td>FCA SYSC 13.7.2</td><td>CTO (Sarah Nkemdirim)</td><td>Phase 3</td></tr>
+    <tr><td>R004</td><td>Direct Connect not ordered — 8–12wk lead time</td><td>FCA SS2/21</td><td>Head of Infra (David Osei)</td><td>Immediate</td></tr>
+    <tr><td>R005</td><td>10.200.0.0/16 unknown — security unknown</td><td>ISO 27001 A.13.1</td><td>Head of Infra (David Osei)</td><td>Phase 4</td></tr>
+    <tr><td>R006</td><td>Oracle 12c EOL — re-licensing risk on migration</td><td>Oracle contract</td><td>CFO (Marcus Webb)</td><td>Phase 7</td></tr>
+    <tr><td>R007</td><td>Patch compliance dropped from 71% to 55% — not disclosed to CRO</td><td>FCA SYSC 13</td><td>Head of Infra (David Osei)</td><td>Immediate</td></tr>
+  </table>
+  </div></div>
+</div>
+
+<!-- PHASE 5 -->
+<div class="phase-header" id="phase-5">
+  <div class="phase-num">5</div>
+  <div>
+    <h3>Phase 5 — Infrastructure as Code, Automation & Operations</h3>
+    <div class="meta">Weeks 13–16 · Pass score: 75% <span class="cert-gate">CERTIFICATION GATE</span> · Phase type: work</div>
+  </div>
+</div>
+
+<div class="card card-purple">
+  <h4>⚠️ This is the certification gate</h4>
+  <p>A candidate who scores below 75% on Phase 5 cannot receive a certificate, even if they complete all other phases. The gate tests actual code debugging — not describing bugs, but fixing them and proving the fix works with terraform validate output or equivalent evidence.</p>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 5</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Clone the repository and read the broken files BEFORE touching anything</strong><p>git clone your fork. Open terraform/vpc/main.tf, cloudformation/security-baseline.yaml, and python/inventory.py side by side. Read ALL comments in each file — the bugs are annotated. Read Ben's inbox message again — he names both CloudFormation bugs explicitly. Make a written list of every bug before fixing the first one.</p></div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Fix the Terraform module — 5 bugs, fix in order</strong>
+  <ol>
+    <li>Run <code>terraform validate</code> first to see current errors. Note the output.</li>
+    <li>Fix Bug 1: Change CIDR default from 172.16.0.0/16 to the account-specific value from your Phase 3 CIDR plan</li>
+    <li>Add Bug 2 fix: aws_route_table + aws_route_table_association for public, private, data tiers</li>
+    <li>Add Bug 3 fix: aws_flow_log resource pointing to Log Archive S3</li>
+    <li>Add Bug 4 fix: EKS discovery tags on private subnets</li>
+    <li>Add Bug 5 fix: CostCentre and DataClassification to default_tags</li>
+    <li>Run <code>terraform validate</code> again — copy the full output showing "Success! The configuration is valid."</li>
+    <li>git commit and push. Copy the commit URL.</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Fix the CloudFormation template — 2 bugs</strong>
+  <ol>
+    <li>Fix Bug 1: Find "CloudWatchLogsLogGroupArnRef" and change to "CloudWatchLogsLogGroupArn" (remove "Ref" suffix)</li>
+    <li>Fix Bug 2: Find "FindingPublishingFrequency: SIX_HOURS" and change to "FIFTEEN_MINUTES"</li>
+    <li>Validate: <code>aws cloudformation validate-template --template-body file://security-baseline.yaml</code></li>
+    <li>In your submission, state both bugs, the fix for each, and the regulatory justification for Bug 2 (FCA SYSC 13 — near-real-time threat detection)</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Fix the Python scripts — 2 bugs</strong>
+  <ol>
+    <li>Open python/inventory.py. Find the line <code>for tag in instance['Tags']:</code></li>
+    <li>Change to <code>for tag in instance.get('Tags', []):</code> — this is a one-word change that prevents the KeyError</li>
+    <li>Add pagination: replace <code>ec2.describe_instances()</code> with a paginator pattern</li>
+    <li>Test locally with <code>python3 inventory.py</code> against your AWS account (use Free Tier)</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Write the PAR-DB-012 incident report</strong>
+  <p>This is a formal incident report, not a casual description. Required sections: Incident ID (INC-2024-009), Severity (P1), Timeline (02:14 failed → 02:24 Ben paged → 02:41 restarted → 02:55 online → 03:12 PEMIS operational → 58 minutes total outage), Symptoms (server unresponsive, Nagios alert, PEMIS down), Impact (APP-001 PEMIS unavailable, 312 UK Equities team members, no client impact as outside business hours), Root Cause (under investigation — hypothesis: OOM killer on Oracle process due to 94% CPU utilisation), Recommendations (CloudWatch alert on CPU &gt;80%, DR design for APP-001 in Phase 4 risk register, Aurora migration planned for Phase 8).</p>
+  </div></div>
+</div>
+
+<!-- PHASE 6 -->
+<div class="phase-header" id="phase-6">
+  <div class="phase-num">6</div>
+  <div>
+    <h3>Phase 6 — EKS, Kubernetes & GitOps</h3>
+    <div class="meta">Weeks 17–22 · Pass score: 70% · Phase type: work</div>
+  </div>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 6</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Fix all 5 Kubernetes manifest bugs — one at a time</strong>
+  <ol>
+    <li>containerPort: 3000 → <strong>8080</strong></li>
+    <li>image tag :latest → <strong>:v1.2.4</strong> (or any specific version)</li>
+    <li>Add resources block: requests cpu:100m memory:256Mi, limits cpu:500m memory:512Mi</li>
+    <li>replicas: 1 → <strong>3</strong></li>
+    <li>Add livenessProbe (httpGet /health :8080, delay 30s) and readinessProbe (httpGet /ready :8080, delay 15s)</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Fix the ArgoCD application — 2 issues</strong>
+  <ol>
+    <li>Replace placeholder repoURL with your actual GitHub fork URL</li>
+    <li>Add syncPolicy.automated block: prune: true, selfHeal: true — this makes ArgoCD automatically apply changes from Git and fix drift</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Create manifests for remaining 3 microservices</strong><p>Payments (namespace: payments-prod, port 8443 TLS, securityContext runAsNonRoot), Notification (namespace: trading-prod, port 8080), Audit (namespace: trading-prod, port 8080). Each needs the same 5 fixes as customer-service.</p></div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Write the Payments Service NetworkPolicy</strong><p>Create a NetworkPolicy in the payments-prod namespace that denies ALL ingress except from the api-gateway namespace, and denies ALL egress except to the Aurora PostgreSQL data subnet (172.17.20.0/24, port 5432) and the settlement gateway. This is PCI-DSS requirement — cardholder data environment must be network-isolated.</p></div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Write the EKS architecture document — resolve Rachel vs David</strong><p>State the RBAC model explicitly: Developers (Rachel) CAN: deploy within their namespace, view logs, scale within quota. Developers CANNOT: create namespaces, modify NetworkPolicies, change RBAC rules, access payments-prod. Infrastructure (David) owns: cluster upgrades, node groups, ArgoCD AppProject configuration. GitOps enforcement: ArgoCD AppProject restricts which repos can deploy to which namespaces.</p></div></div>
+</div>
+
+<!-- PHASE 7 -->
+<div class="phase-header" id="phase-7">
+  <div class="phase-num">7</div>
+  <div>
+    <h3>Phase 7 — DevSecOps, CI/CD & Observability</h3>
+    <div class="meta">Weeks 23–26 · Pass score: 70% · Phase type: work</div>
+  </div>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 7</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Fix the GitHub Actions pipeline — 5 bugs in order</strong>
+  <ol>
+    <li>Replace AWS_ACCESS_KEY_ID/SECRET with OIDC: use <code>aws-actions/configure-aws-credentials@v4</code> with <code>role-to-assume</code> pointing to your IAM role ARN. The IAM role needs a trust policy allowing <code>token.actions.githubusercontent.com</code> to assume it with <code>AssumeRoleWithWebIdentity</code>.</li>
+    <li>Remove the <code>docker push ...:latest</code> line. Push only with <code>:${{ github.sha }}</code> tag.</li>
+    <li>Add production approval gate: create a GitHub Environment called "production" with your infra team GitHub username as a required reviewer. Reference it with <code>environment: production</code> on the deploy job.</li>
+    <li>Add Semgrep SAST step before the build: <code>uses: semgrep/semgrep-action@v1</code> with <code>config: p/owasp-top-ten</code>. Add Trivy image scan after build: <code>uses: aquasecurity/trivy-action@master</code> with <code>exit-code: '1'</code> to block on CRITICAL findings.</li>
+    <li>Add rollback step: <code>if: failure() && steps.deploy.conclusion == 'failure'</code> → <code>kubectl rollout undo deployment/customer-service</code>.</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Calculate the 99.95% SLO error budget — this exact calculation is tested</strong>
+  <div class="answer-box">
+99.95% SLO means 0.05% of requests can fail.
+Monthly error budget:
+  30 days × 24 hours × 60 minutes × 0.0005 = <span class="highlight">21.9 minutes per month</span>
+
+Weekly: 21.9 ÷ 4.33 = <span class="highlight">5.0 minutes per week</span>
+Daily:  21.9 ÷ 30   = <span class="highlight">43.8 seconds per day</span>
+
+Alert thresholds (multi-burn-rate):
+  CRITICAL: 5% of monthly budget consumed in 1 hour
+    = 21.9 × 0.05 = 1.1 minutes of errors in 1 hour
+  WARNING: 10% consumed in 6 hours
+    = 21.9 × 0.10 = 2.2 minutes of errors in 6 hours
+  </div>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Write the SLO runbook with FCA escalation path</strong>
+  <ul>
+    <li>Payments outage &gt;15 minutes: PagerDuty alert → on-call engineer</li>
+    <li>Payments outage &gt;1 hour: Priya Anand (CRO) notified within 15 minutes</li>
+    <li>Payments outage &gt;4 hours: FCA IBS-001 impact tolerance breached → PS21/3 formal notification required. Board notified.</li>
+    <li>Error budget policy: 0–50% consumed = normal velocity. 50–75% = slow deployments. 75–100% = feature freeze. 100% = incident declared.</li>
+  </ul>
+  </div></div>
+</div>
+
+<!-- PHASE 8 -->
+<div class="phase-header" id="phase-8">
+  <div class="phase-num">8</div>
+  <div>
+    <h3>Phase 8 — Database Architecture, Data Platform & Migration</h3>
+    <div class="meta">Weeks 27–32 · Pass score: 65% · Phase type: work</div>
+  </div>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 8</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Plan the Oracle to Aurora PostgreSQL migration — this is the highest-value deliverable</strong>
+  <ol>
+    <li><strong>Schema Conversion Tool (SCT):</strong> Run against Oracle 12c schema. Expected: ~90% auto-conversion, ~10% manual. PEMIS has ~47 stored procedures — expect ~43 auto-converted, ~4 manual rewrites.</li>
+    <li><strong>DMS with CDC:</strong> Configure AWS Database Migration Service task with Change Data Capture replication. This replicates every INSERT/UPDATE/DELETE in real-time to Aurora.</li>
+    <li><strong>Parallel run:</strong> 6 weeks of dual-write. Both Oracle and Aurora receive all transactions. Validate data consistency daily.</li>
+    <li><strong>Cutover:</strong> 4-hour maintenance window (02:00–06:00 Saturday). Steps: stop Oracle writes → wait for DMS buffer to flush → validate row counts match → update all application connection strings to Aurora → start → monitor 30 minutes → confirm go-live.</li>
+    <li><strong>Rollback:</strong> Keep Oracle warm for 72 hours post-cutover. If validation fails, revert connection strings.</li>
+    <li><strong>Cost saving:</strong> Oracle Enterprise = £340k/year. Aurora PostgreSQL equivalent = ~£48k/year. Net saving: <strong>£292k/year</strong>.</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Design the S3 data lake with 3 zones</strong>
+  <ul>
+    <li><strong>s3://parlington-raw/</strong> — original ingest, never modified, KMS encrypted, no expiry (FCA 7-year rule for MiFID II trade records)</li>
+    <li><strong>s3://parlington-processed/</strong> — Glue-transformed, Parquet format, 5-year lifecycle</li>
+    <li><strong>s3://parlington-curated/</strong> — business-ready datasets, Lake Formation governed, column-level access control</li>
+  </ul>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Sequence the 6 migration waves correctly</strong>
+  <p>The wrong answer is sequencing by age or EOL status. The correct answer uses dependency count and cost reduction opportunity:</p>
+  <ul>
+    <li><strong>Wave 1 (Weeks 33–38):</strong> 0–1 dependency apps — monitoring, batch stubs, standalone utilities. Low risk, builds team confidence.</li>
+    <li><strong>Wave 2 (Weeks 39–44):</strong> 1–2 dependency apps — supporting services, middleware helpers. Rehost strategy.</li>
+    <li><strong>Wave 3 (Weeks 45–50):</strong> External interface apps — SWIFT gateway, Bloomberg feed, FCA reporting. Require lead time for external party coordination.</li>
+    <li><strong>Wave 4 (Weeks 51–58):</strong> Database-heavy apps — Oracle/SQL Server migration. Highest cost reduction (55% of spend). Requires completed Aurora migration from Step 1.</li>
+    <li><strong>Wave 5 (Weeks 59–64):</strong> High-complexity, high-dependency apps — Client Portal, API Gateway, core trading platform. Must wait for Wave 4 dependencies.</li>
+    <li><strong>Wave 6 (Weeks 65–76):</strong> Decommission. Final server shutdowns. Data centre exit Week 76.</li>
+  </ul>
+  </div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Design DR for all 17 no-DR apps — 3 tiers</strong>
+  <ul>
+    <li><strong>P1 Critical (PEMIS, OMS, CRP, RRG):</strong> Active-Passive with Aurora Multi-AZ (synchronous replication). RTO: 15 minutes. RPO: 0 seconds. Route 53 health check with automatic DNS failover.</li>
+    <li><strong>P2 (apps 5–12):</strong> Pilot Light. Minimal DR instance, scale up on disaster. RTO: 2 hours. RPO: 1 hour.</li>
+    <li><strong>P3 (remaining):</strong> Backup and Restore from S3. RTO: 8 hours. RPO: 24 hours.</li>
+  </ul>
+  <p><strong>FCA PS21/3 compliance assertion:</strong> IBS-001 (Trade Execution) 4-hour tolerance → Aurora Multi-AZ 15-minute RTO ✅. IBS-002 (Client Portal) 8-hour tolerance → Pilot Light 2-hour RTO ✅. State this explicitly — this is what Priya needs to send to the FCA.</p>
+  </div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Complete the Well-Architected Assessment — all 6 pillars</strong>
+  <table>
+    <tr><th>Pillar</th><th>Key Finding (Parlington current state)</th><th>Recommendation</th></tr>
+    <tr><td>Operational Excellence</td><td>All changes via console, no IaC, no audit trail</td><td>Terraform + GitHub Actions CI/CD (Phase 5)</td></tr>
+    <tr><td>Security</td><td>3 public S3 buckets, no GuardDuty, no MFA</td><td>GuardDuty + Security Hub + OIDC (Phases 4 and 7)</td></tr>
+    <tr><td>Reliability</td><td>17 apps no DR, single EC2 instances, no auto-scaling</td><td>Aurora Multi-AZ, EKS multi-AZ, Route 53 failover (Phase 8)</td></tr>
+    <tr><td>Performance Efficiency</td><td>PEMIS at 94% CPU (caused Phase 5 incident), no auto-scaling</td><td>Aurora Serverless v2, ElastiCache, EKS Cluster Autoscaler</td></tr>
+    <tr><td>Cost Optimisation</td><td>DB tier 55% of spend, all on-demand, no Savings Plans</td><td>1-year Compute Savings Plans, Reserved Aurora, Cost Explorer</td></tr>
+    <tr><td>Sustainability</td><td>On-prem PUE 1.6 vs AWS eu-west-2 PUE 1.14</td><td>Migration itself reduces carbon; use Graviton3 instances</td></tr>
+  </table>
+  </div></div>
+</div>
+
+<!-- PHASE 9 -->
+<div class="phase-header" id="phase-9">
+  <div class="phase-num">9</div>
+  <div>
+    <h3>Phase 9 — AI Architecture, ARB & Programme Completion</h3>
+    <div class="meta">Weeks 33–36 · Pass score: 65% · Phase type: work</div>
+  </div>
+</div>
+
+<h4 class="subsection">Step-by-step: how to complete Phase 9</h4>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Design the Bedrock RAG architecture</strong>
+  <ul>
+    <li><strong>Foundation model:</strong> Anthropic Claude 3 Sonnet. Rationale: best capability/cost balance for investment analysis. GPT-4 rejected — data would leave AWS account (FCA data residency concern).</li>
+    <li><strong>Knowledge Base:</strong> Bedrock Knowledge Bases with OpenSearch Serverless vector store. Embedding model: Amazon Titan Embeddings G1 (1,536 dimensions). Chunk size: 300 tokens, overlap 20%.</li>
+    <li><strong>Data ingestion:</strong> Nightly sync from S3 curated zone (Phase 8 data lake) via Glue crawler triggering Knowledge Base sync job at 01:00 UTC.</li>
+    <li><strong>Guardrails (non-negotiable for FCA):</strong> (1) Denied topics: "investment advice", "buy recommendation", "sell recommendation", "price target" — FCA COBS 9A prohibition. (2) PII redaction: client names, account numbers, NI numbers — UK GDPR Article 5. (3) Grounding: responses must be grounded in retrieved documents — Consumer Duty PS22/9 fairness requirement.</li>
+    <li><strong>Cost model:</strong> 42 analysts × 20 queries/day × 250 days = 210,000 queries/year. ~$2,205/year model cost + ~$2,400/year OpenSearch = ~£3,680/year total. vs £455,000/year productivity saving = <strong>123:1 ROI</strong>.</li>
+  </ul>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Build the ARB pack — 8 slides with these key messages</strong>
+  <ol>
+    <li><strong>Slide 1 — Programme Summary:</strong> "We were hired to fix an FCA breach and halve the infrastructure cost. Here is what we built."</li>
+    <li><strong>Slide 2 — Before and After:</strong> 120 servers, 42 apps, single AWS account, 17 no-DR → 10-account Landing Zone, EKS platform, all apps with DR.</li>
+    <li><strong>Slide 3 — Landing Zone and Governance:</strong> Control Tower, 4 OUs, 3 SCPs, mandatory tagging.</li>
+    <li><strong>Slide 4 — Security Architecture:</strong> NCSC-aligned, WAF + GuardDuty + Security Hub, OIDC replacing last long-lived credentials.</li>
+    <li><strong>Slide 5 — EKS Platform (pre-empt the question):</strong> "Why EKS and not ECS or serverless? ECS rejected — proprietary scheduling, no Kubernetes NetworkPolicy for PCI-DSS isolation. Lambda rejected — session state requirements cause cold start SLO impact."</li>
+    <li><strong>Slide 6 — Migration and FinOps:</strong> £3.8M → £1.9M, Oracle saving £340k, 6-wave plan, payback 15 months.</li>
+    <li><strong>Slide 7 — FCA Compliance:</strong> "The 14-month breach is resolved. IBS-001: 4-hour tolerance, our RTO: 15 minutes. All 17 no-DR apps now have DR."</li>
+    <li><strong>Slide 8 — AI Platform and Next Steps:</strong> Bedrock RAG, 123:1 ROI, Wave 1 starts Week 37, DC exit Week 76.</li>
+  </ol>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Complete the ARB Decision Log — 6 minimum decisions</strong>
+  <p>Format: Decision ID | Options considered | Choice made | Rationale | Risk accepted. Minimum: multi-account structure (Control Tower chosen), CIDR plan (172.16.0.0/12 chosen), EKS vs ECS (EKS chosen), Direct Connect vs VPN-only (DX chosen), Oracle → Aurora (Aurora chosen), Bedrock model (Claude 3 Sonnet chosen).</p>
+  </div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Record the executive presentation — 12 minutes maximum</strong>
+  <p>Structure: 30 seconds (FCA context — why we started), 60 seconds (what we found — data-driven highlights), 4 minutes (what we built — high-level, no jargon), 2 minutes (the numbers — £3.8M → £1.9M, Oracle £340k, payback 15 months), 90 seconds (FCA compliance confirmed — 14-month breach resolved), 60 seconds (AI platform and 123:1 ROI), 60 seconds (next steps — Wave 1 Week 37, DC exit Week 76). Do NOT say "VPC", "EKS", or "EC2" without immediately explaining them in plain English. The finance NED does not know these terms.</p>
+  </div></div>
+</div>
+
+<!-- PHASE 10 -->
+<div class="phase-header" id="phase-10">
+  <div class="phase-num">10</div>
+  <div>
+    <h3>Phase 10 — Knowledge Review</h3>
+    <div class="meta">Week 36 · Pass score: 60% · Phase type: review</div>
+  </div>
+</div>
+
+<h4 class="subsection">Review question answers</h4>
+<table>
+  <tr><th>Q</th><th>Correct answer</th><th>If a candidate gets this wrong, point them to</th></tr>
+  <tr><td>1 — Cost driver finding</td><td><strong>B</strong> — Database TIER is the cost driver at 55% of spend. Windows avg £1,760 is misleading because Windows servers span all tiers.</td><td>Phase 2 discovery report. operational-report.csv db_tier_cost_gbp column.</td></tr>
+  <tr><td>2 — CloudFormation bugs</td><td><strong>B</strong> — CloudWatchLogsLogGroupArnRef (wrong property name) and SIX_HOURS → FIFTEEN_MINUTES (FCA SYSC 13 justification).</td><td>Ben Hartley's Phase 5 inbox message. cloudformation/security-baseline.yaml.</td></tr>
+  <tr><td>3 — DR conflict resolution</td><td><strong>C</strong> — Hybrid: design in Phase 4, implementation in Phase 8. Evidence: 5 P1 incidents, 6.7-hour outage, 4-hour FCA tolerance already breached.</td><td>Priya's Phase 4 inbox messages. operational-report.csv Week 12.</td></tr>
+  <tr><td>4 — Kubernetes bugs</td><td><strong>B</strong> — containerPort 3000→8080, :latest→versioned, missing resource limits, replicas 1→3, missing liveness/readiness probes.</td><td>Phase 6 — customer-service.yaml bug list.</td></tr>
+  <tr><td>5 — ARB total annual benefit</td><td><strong>C</strong> — ~£2.6M/year: £1.9M infrastructure saving + £340k Oracle + £455k AI productivity. Payback ~11–15 months on £2.4M programme investment.</td><td>Phase 9 ARB pack — Slide 6 numbers. Company Brief §3 + Phase 9 cost model.</td></tr>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="grading">
+  <h2>Grading Standards</h2>
+  <p>What each score range means and how to calibrate feedback</p>
+</div>
+
+<table>
+  <tr><th>Score</th><th>What it means</th><th>Tutor action</th></tr>
+  <tr><td>90–100%</td><td>Exceptional. Candidate identified all issues, avoided all traps, cited correct figures, produced evidence-quality documentation. Ready for senior-level interviews.</td><td>Point to Phase 9 ARB as final differentiator. Encourage them to record the executive presentation and submit for portfolio.</td></tr>
+  <tr><td>75–89%</td><td>Strong. Candidate understood the task and produced good work with minor gaps — perhaps missed one open question or cited a figure slightly outside the accepted range.</td><td>Give specific feedback on which deterministic check failed and why. Do not ask them to resubmit — just note it for interview prep.</td></tr>
+  <tr><td>60–74%</td><td>Adequate but not differentiating. Candidate completed the task but fell into a trap or missed a key finding (e.g. missed the DB tier cost driver, or produced a risk register without FCA references).</td><td>Flag the specific weakness clearly. For Phase 2: if they missed the cost driver trap, explain the cross-reference process step by step.</td></tr>
+  <tr><td>Below 60%</td><td>Failed. Candidate did not meet the minimum standard. Common causes: skipped data quality section, stated wrong cost driver, produced risk register without FCA refs, fixed only some IaC bugs.</td><td>Do not allow progression until the candidate can explain their Phase 2 cost driver analysis or their Phase 5 bug fixes correctly.</td></tr>
+</table>
+
+<h4 class="subsection">Phase 5 certification gate — special rules</h4>
+<div class="card card-purple">
+  <h4>Certification gate rules for tutors</h4>
+  <ul>
+    <li>A candidate below 75% on Phase 5 cannot receive a certificate. This is enforced in the platform.</li>
+    <li>If a candidate scores 65–74% on Phase 5: they likely fixed the syntax bugs but missed the GuardDuty logic bug (SIX_HOURS) or missed the Python pagination bug. Ask them to describe the GuardDuty bug in their own words. If they cannot name the wrong value and the correct value with regulatory justification, they need to redo Phase 5.</li>
+    <li>If a candidate scores below 65% on Phase 5: they likely only described bugs without fixing them, or submitted without terraform validate evidence. Terraform validate output is a hard requirement — "Success! The configuration is valid." must appear in the submission.</li>
+    <li>A candidate who scores 75%+ on Phase 5 but fails Phase 6, 7, 8, or 9 can still receive a certificate. The gate only applies to Phase 5.</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="section-header" id="interviews">
+  <h2>Interview Question Bank</h2>
+  <p>10 questions the simulation directly prepares candidates for, with model opening answers</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q1 — "Walk me through a cloud transformation programme you have led."</h4>
+  <p><strong>Model opening:</strong> "At Parlington — an FCA-regulated UK asset manager with £4.2bn AUM — I led a 9-phase AWS cloud transformation that addressed a 14-month FCA PS21/3 compliance breach and cut the infrastructure run-rate from £3.8M to £1.9M annually. I started with a discovery assessment of 120 servers and 42 applications across two data centres, then designed a 10-account Control Tower Landing Zone, built a production EKS platform with GitOps, and presented to the Architecture Review Board at Week 36. The DR architecture I designed resolved the FCA breach — all Important Business Services now meet their impact tolerances."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q2 — "How do you design a multi-account AWS Landing Zone for a regulated firm?"</h4>
+  <p><strong>Model opening:</strong> "I use AWS Control Tower with an OU structure aligned to environment isolation requirements. At Parlington I designed four OUs: Security OU with Audit and Log Archive accounts for centralised CloudTrail and 7-year log retention; Infrastructure OU with a Shared Services account hosting Transit Gateway and DNS; Workloads OU with Production, NonProd, and Sandbox sub-OUs; and a Data Platform OU for Lake Formation governance isolation. Three SCPs applied at root level: deny non-EU regions, require MFA for sensitive actions, and prohibit public S3 buckets — all mapped to NCSC Cloud Security Principles and FCA SS2/21."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q3 — "Show me a Terraform module you have debugged. What were the issues?"</h4>
+  <p><strong>Model opening:</strong> "At Parlington the VPC module had five bugs. The first was a wrong default CIDR — 172.16.0.0/16 was allocated to Shared Services in our CIDR plan, so production VPCs needed account-specific values like 172.17.0.0/16. Second, there were no route table resources at all — the subnets existed but were completely isolated. Third, VPC Flow Logs were missing — an FCA audit requirement for 7-year retention. Fourth, private subnets were missing the Kubernetes cluster discovery tags, which meant EKS could not provision internal load balancers. Fifth, mandatory CostCentre and DataClassification tags were missing. I fixed all five, confirmed with terraform validate, and committed the fixed module."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q4 — "Design an EKS platform for a payments application with PCI-DSS requirements."</h4>
+  <p><strong>Model opening:</strong> "At Parlington the Payments Service was PCI-DSS in scope for cardholder data. I isolated it in a dedicated namespace — payments-prod — with a Kubernetes NetworkPolicy denying all ingress except from the API gateway namespace, and egress only to the Aurora PostgreSQL data subnet on port 5432 and the settlement gateway. I provisioned a dedicated node group with a taint — payments=true:NoSchedule — so only Payments pods scheduled there, eliminating noisy-neighbour risk. IRSA gave the Payments service account a dedicated IAM role with minimum permissions — Aurora access and KMS decrypt for the RESTRICTED-data CMK."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q5 — "How do you replace long-lived AWS credentials in GitHub Actions?"</h4>
+  <p><strong>Model opening:</strong> "Replace stored AWS_ACCESS_KEY_ID and SECRET_ACCESS_KEY with OIDC federation. In AWS IAM, add GitHub as an OIDC provider at token.actions.githubusercontent.com. Create an IAM role with a trust policy that allows AssumeRoleWithWebIdentity from your specific repository — scoped to the main branch. In the pipeline, use aws-actions/configure-aws-credentials@v4 with role-to-assume pointing to that role ARN. The credentials are ephemeral — a 15-minute STS token per run — with no stored secrets anywhere. At Parlington this was a FCA SS2/21 requirement — long-lived credentials in a CI/CD system are a material cloud security control gap."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q6 — "What is your approach to SLI/SLO definition and error budget policy?"</h4>
+  <p><strong>Model opening:</strong> "At Parlington the Payments Service had a 99.95% availability SLO — Priya Anand's FCA PS21/3 requirement. That translates to a monthly error budget of 21.9 minutes. I used multi-burn-rate alerting: a CRITICAL alert fires when 5% of the monthly budget is consumed in one hour — that is just over a minute of errors, which means something serious is happening. A WARNING fires when 10% is consumed in six hours — a slower burn that needs investigation. The error budget policy ties directly to the FCA escalation: if the budget hits zero the SLO is breached, Priya is notified within 15 minutes, and at 4 hours of outage the FCA PS21/3 impact tolerance for IBS-001 is breached — formal notification required."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q7 — "How would you implement RAG with Amazon Bedrock in a regulated environment?"</h4>
+  <p><strong>Model opening:</strong> "At Parlington I designed a RAG system for 42 investment analysts. Bedrock Knowledge Bases backed by OpenSearch Serverless as the vector store — no provisioned capacity needed, scales to zero. Amazon Titan Embeddings G1 for embedding with 300-token chunks. Foundation model: Anthropic Claude 3 Sonnet — data stays within the AWS account, which is a FCA data residency requirement. The critical piece for a regulated firm is Bedrock Guardrails: I configured denied topics for investment advice — FCA COBS 9A prohibits AI-generated investment advice without suitability assessment — PII redaction for client data under UK GDPR, and grounding to ensure responses are anchored to retrieved documents under the Consumer Duty PS22/9 fairness requirement."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q8 — "How do you resolve a conflict between a CFO deferring cost and a CRO needing immediate compliance action?"</h4>
+  <p><strong>Model opening:</strong> "At Parlington the CFO wanted to defer DR work to Phase 8 for budget reasons. The CRO needed it started immediately because the FCA compliance breach was already 14 months old. I resolved it with data rather than hierarchy. The operational report showed 5 P1 incidents in 12 weeks — all on applications with no DR. The worst was a dual incident in Week 12 lasting 6.7 hours, already exceeding the FCA IBS-001 impact tolerance of 4 hours. That made the CFO's deferral position indefensible to the regulator. The resolution was a hybrid: DR design completed in Phase 4, giving the CRO documentation she could show the FCA today; full implementation deferred to Phase 8, giving the CFO the cost phasing he needed."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q9 — "How do you migrate a production Oracle database without data loss?"</h4>
+  <p><strong>Model opening:</strong> "At Parlington I migrated PEMIS from Oracle 12c to Aurora PostgreSQL. First, AWS Schema Conversion Tool against the full schema — 47 stored procedures, 43 auto-converted, 4 required manual rewrites. Then DMS with Change Data Capture replication: a DMS task that captures every INSERT, UPDATE, and DELETE from Oracle's redo log and applies it to Aurora in real time. Six weeks of parallel run — both databases receiving all transactions, daily row count and hash validation. Then a 4-hour maintenance window: stop Oracle writes, wait for DMS buffer to flush, validate row counts match to the row, update all application connection strings to Aurora, bring services back up, monitor for 30 minutes. Oracle stayed warm for 72 hours post-cutover as a rollback option. Saving: £340,000 per year in Oracle licence costs."</p>
+</div>
+
+<div class="card card-gray">
+  <h4>Q10 — "Walk me through your ARB presentation for a cloud transformation."</h4>
+  <p><strong>Model opening:</strong> "At Parlington I presented to a board of five: the CTO as chair, CFO, CRO, and two NEDs — one technical, one finance. The finance NED had no cloud background. I structured 12 minutes as a business story, not a technical briefing. I opened with the problem: 14-month FCA breach, £8.7M fine exposure, £3.8M infrastructure cost, 17 applications with no disaster recovery. Then what we built — describing EKS as a containerised application platform and Aurora as a managed database that eliminates Oracle licences. The numbers: £3.8M to £1.9M, £340k Oracle saving, AI productivity £455k per year, 15-month payback on the £2.4M programme investment. The regulatory close: all Important Business Services now meet their FCA impact tolerances — the breach is resolved. The technical NED asked why EKS over ECS — I cited the NetworkPolicy capability needed for PCI-DSS isolation and GitOps with ArgoCD. The ARB approved the programme."</p>
+</div>
+
+</div><!-- end .main -->
+
+<footer>
+  <p><strong>Parlington Ltd — Senior AWS Solutions Architect Simulation</strong> · Tutor Guide v1.0 · Internal Use Only · Do not share with candidates</p>
+  <p style="margin-top:6px">All figures verified against generated data files · 35/35 answer key checks PASS · Built by Project Lab</p>
+</footer>
+
+</body>
+</html>
