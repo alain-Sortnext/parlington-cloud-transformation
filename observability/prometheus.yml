@@ -1,0 +1,48 @@
+# observability/prometheus.yml
+# Parlington Ltd — Prometheus Configuration
+# Status: INCOMPLETE — missing scrape configs for EKS services
+# Phase 6: Complete this configuration
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  # MISSING: external_labels for environment and cluster identification
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # BUG: No alertmanager targets defined — alerts will not fire
+          # - alertmanager:9093
+
+rule_files:
+  # TODO: Add alerting rules files
+  # - 'parlington-alerts.yml'
+  # - 'slo-alerts.yml'
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Kubernetes API server
+  - job_name: 'kubernetes-apiservers'
+    kubernetes_sd_configs:
+      - role: endpoints
+    scheme: https
+    tls_config:
+      ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_namespace, __meta_kubernetes_service_name, __meta_kubernetes_endpoint_port_name]
+        action: keep
+        regex: default;kubernetes;https
+
+  # TODO: Add scrape config for customer-service
+  # TODO: Add scrape config for payments-service
+  # TODO: Add scrape config for notification-service
+  # TODO: Add scrape config for audit-service
+  # TODO: Add scrape config for node-exporter (infrastructure metrics)
+  # TODO: Add scrape config for kube-state-metrics
+  # MISSING: AWS CloudWatch metrics integration
