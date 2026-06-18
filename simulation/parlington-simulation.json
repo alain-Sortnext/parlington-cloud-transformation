@@ -200,99 +200,99 @@
     "shared_files": [
       {
         "file_id": "file_company_brief",
-        "name": "Parlington Ltd \u2014 Company Brief",
         "description": "Master reference document: company overview, business problem, FCA compliance context, technology estate summary, key metrics, regulatory glossary, stakeholder profiles, and programme mandate.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/company-brief.md",
-        "available_from_phase": "phase_1"
+        "available_from_phase": "phase_1",
+        "title": "Parlington Ltd \u2014 Company Brief"
       },
       {
         "file_id": "file_process_notes",
-        "name": "Process Notes \u2014 Handover from Craig Whitfield",
         "description": "Incomplete handover document from the outgoing architect. Covers Stages 1\u20133 only. Contains critical gap markers, buried hints about the cost driver analysis, unresolved open questions, and a final note flagging the three most urgent actions.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/process-notes.md",
-        "available_from_phase": "phase_1"
+        "available_from_phase": "phase_1",
+        "title": "Process Notes \u2014 Handover from Craig Whitfield"
       },
       {
         "file_id": "file_server_estate",
-        "name": "Server Estate CSV \u2014 120 Servers",
         "description": "Asset inventory of all 120 servers: category, OS, age, EOL status, DR status, application hosted, monthly cost, migration target. Contains intentional data quality issues: 8 missing costs, 1 duplicate row (SRV-047), inconsistent date formats, and inconsistent OS naming. Use application-portfolio.csv as authoritative DR source.",
         "file_type": "csv",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/data/server-estate.csv",
-        "available_from_phase": "phase_1"
+        "available_from_phase": "phase_1",
+        "title": "Server Estate CSV \u2014 120 Servers"
       },
       {
         "file_id": "file_app_portfolio",
-        "name": "Application Portfolio CSV \u2014 42 Applications",
         "description": "Full application inventory: criticality, DR status, migration strategy, dependency mapping, complexity scoring, licence costs, tech stack, and migration wave assignment. Contains intentional issues: mixed dependency delimiters, inconsistent complexity formats, 6 blank licence costs, 1 duplicate (APP-019). Authoritative source for DR status.",
         "file_type": "csv",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/data/application-portfolio.csv",
-        "available_from_phase": "phase_1"
+        "available_from_phase": "phase_1",
+        "title": "Application Portfolio CSV \u2014 42 Applications"
       },
       {
         "file_id": "file_ops_report",
-        "name": "Operational Report CSV \u2014 12 Weeks",
         "description": "Weekly infrastructure operations data: cost breakdown by tier, patch compliance, incident counts (P1/P2/P3), MTTR, server uptime, change requests. Key cross-reference file that resolves cost driver analysis. Contains: 1 duplicate week (Week 3 revised), Week 7 blank DB cost, Week 9 TBC incident count, Week 6 billing anomaly.",
         "file_type": "csv",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/data/operational-report.csv",
-        "available_from_phase": "phase_1"
+        "available_from_phase": "phase_1",
+        "title": "Operational Report CSV \u2014 12 Weeks"
       },
       {
         "file_id": "file_adr_template",
-        "name": "ADR Template \u2014 Architecture Decision Records",
         "description": "Standard template for Architecture Decision Records used throughout the programme. All major architecture decisions must be documented as ADRs committed to /docs/adrs/ in the GitHub repository.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/adrs/ADR-000-template.md",
-        "available_from_phase": "phase_2"
+        "available_from_phase": "phase_2",
+        "title": "ADR Template \u2014 Architecture Decision Records"
       },
       {
         "file_id": "file_adr_001",
-        "name": "ADR-001 \u2014 Multi-Account Structure (Draft)",
         "description": "Draft ADR for the multi-account AWS Organisation structure. The rationale section is intentionally incomplete \u2014 candidate must complete it in Phase 2 with specific justification for Control Tower over alternatives.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/adrs/ADR-001-multi-account-structure.md",
-        "available_from_phase": "phase_2"
+        "available_from_phase": "phase_2",
+        "title": "ADR-001 \u2014 Multi-Account Structure (Draft)"
       },
       {
         "file_id": "file_terraform_vpc",
-        "name": "Terraform VPC Module \u2014 Incomplete (Phase 4)",
         "description": "Partially complete Terraform VPC module. Known bugs: wrong default CIDR (172.16.0.0/16), missing route tables, missing VPC Flow Logs, missing EKS subnet tags. Candidate must identify and fix all issues in Phase 4.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/terraform/vpc/main.tf",
-        "available_from_phase": "phase_4"
+        "available_from_phase": "phase_4",
+        "title": "Terraform VPC Module \u2014 Incomplete (Phase 4)"
       },
       {
         "file_id": "file_cfn_security",
-        "name": "CloudFormation Security Baseline \u2014 Broken (Phase 4)",
         "description": "CloudFormation template for security baseline (CloudTrail, GuardDuty, SNS alerts). Contains one syntax error (CloudWatchLogsLogGroupArnRef \u2192 CloudWatchLogsLogGroupArn) and one logical error (GuardDuty SIX_HOURS \u2192 FIFTEEN_MINUTES). Candidate must identify and fix both.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/cloudformation/security-baseline.yaml",
-        "available_from_phase": "phase_4"
+        "available_from_phase": "phase_4",
+        "title": "CloudFormation Security Baseline \u2014 Broken (Phase 4)"
       },
       {
         "file_id": "file_k8s_manifests",
-        "name": "Kubernetes Manifests \u2014 Incomplete (Phase 5)",
         "description": "Starter Kubernetes manifests for customer-service and payments-service. Known issues: wrong containerPort (3000 \u2192 8080), forbidden 'latest' image tag, missing resource limits, single replica, no liveness/readiness probes, no securityContext. Candidate must fix all issues and add remaining two microservices.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/kubernetes/deployments/customer-service.yaml",
-        "available_from_phase": "phase_5"
+        "available_from_phase": "phase_5",
+        "title": "Kubernetes Manifests \u2014 Incomplete (Phase 5)"
       },
       {
         "file_id": "file_cicd_pipeline",
-        "name": "GitHub Actions Pipeline \u2014 Broken (Phase 6)",
         "description": "Broken CI/CD deployment pipeline. Known issues: long-lived AWS credentials (must replace with OIDC), docker push :latest (prohibited), no production approval gate, no security scanning (SAST/DAST/image scan), no rollback on failure. Candidate must identify all issues and fix them in Phase 6.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/.github/workflows/deploy.yml",
-        "available_from_phase": "phase_6"
+        "available_from_phase": "phase_6",
+        "title": "GitHub Actions Pipeline \u2014 Broken (Phase 6)"
       },
       {
         "file_id": "file_answer_key",
-        "name": "Answer Key Verification \u2014 Internal Reference",
         "description": "Internal verification document showing all locked answer key figures calculated from the data files. 35/35 checks pass. For simulation admin use only \u2014 do not share with candidates.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/answer-key-verification.md",
-        "available_from_phase": "phase_1"
+        "available_from_phase": "phase_1",
+        "title": "Answer Key Verification \u2014 Internal Reference"
       }
     ],
     "tools": [
@@ -1131,7 +1131,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1200",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -1140,7 +1139,8 @@
             },
             "instruction_text": "Write your Discovery Assessment Report for Sarah Nkemdirim (CTO), Marcus Webb (CFO), and Priya Anand (CRO).\n\nYour report must include:\n1. **Data quality section** \u2014 list every data quality issue you found across the three CSV files, and state which data you used and why\n2. **Server estate summary** \u2014 total servers, EOL count with %, category breakdown, and total known monthly cost\n3. **Application portfolio summary** \u2014 total apps, high complexity count with %, P1 Critical apps with no DR, dependency pattern finding\n4. **Cost driver analysis** \u2014 database tier as % of total spend (from operational-report.csv), with the cross-reference that disproves the OS-as-driver hypothesis\n5. **DR gap assessment** \u2014 17 applications, named P1 Criticals, FCA PS21/3 regulatory consequence\n6. **Critical open questions** \u2014 at minimum: Direct Connect not ordered (OQ-002), public S3 buckets (OQ-004), mystery IP range (OQ-001)\n7. **Prioritised recommendations** \u2014 at least 3, each tied to a specific figure from the data\n\nLength: 800\u20131,200 words. Executive format. No jargon without definition. Every number must be traceable to a source file.",
             "content": {
-              "template": "## Parlington Ltd \u2014 Discovery Assessment Report\n**Author:** [Your Name] | **Date:** [Date] | **Phase:** 2\n\n---\n\n## 1. Data Quality Assessment\n\n### Issues identified in server-estate.csv\n- [List each issue]\n\n### Issues identified in application-portfolio.csv\n- [List each issue]\n\n### Issues identified in operational-report.csv\n- [List each issue]\n\n**Data trust statement:** [Which data did you use and why? What did you exclude?]\n\n---\n\n## 2. Server Estate Summary\n\n| Metric | Value | Source |\n|--------|-------|--------|\n| Total servers | | server-estate.csv |\n| EOL servers | | server-estate.csv |\n| EOL as % of estate | | Calculated |\n| Database tier servers | | server-estate.csv |\n| Total known monthly cost | | server-estate.csv |\n| Missing cost entries | | server-estate.csv |\n\n---\n\n## 3. Application Portfolio Summary\n\n| Metric | Value | Source |\n|--------|-------|--------|\n| Total applications | 42 | application-portfolio.csv |\n| High complexity (score \u22657) | | Normalised from portfolio |\n| P1 Critical with no DR | | application-portfolio.csv |\n| Apps with >3 dependencies | | application-portfolio.csv |\n| Dependency pattern finding | | Cross-reference |\n\n---\n\n## 4. Cost Driver Analysis\n\n[Your analysis here \u2014 must include the cross-reference between server-estate.csv and operational-report.csv]\n\n**Database tier monthly cost:** \u00a3[figure] = [%] of total spend\n\n**Why this matters for migration prioritisation:** [Your recommendation]\n\n---\n\n## 5. DR Gap Assessment\n\n[17 applications with no DR \u2014 FCA PS21/3 consequence \u2014 P1 Criticals named]\n\n---\n\n## 6. Critical Open Questions\n\n| # | Question | Blocker For | Action Required |\n|---|----------|------------|----------------|\n| OQ-001 | | | |\n| OQ-002 | | | |\n| OQ-004 | | | |\n\n---\n\n## 7. Prioritised Recommendations\n\n1. **[Recommendation 1]** \u2014 Evidence: [figure from data]\n2. **[Recommendation 2]** \u2014 Evidence: [figure from data]\n3. **[Recommendation 3]** \u2014 Evidence: [figure from data]"
+              "template": "## Parlington Ltd \u2014 Discovery Assessment Report\n**Author:** [Your Name] | **Date:** [Date] | **Phase:** 2\n\n---\n\n## 1. Data Quality Assessment\n\n### Issues identified in server-estate.csv\n- [List each issue]\n\n### Issues identified in application-portfolio.csv\n- [List each issue]\n\n### Issues identified in operational-report.csv\n- [List each issue]\n\n**Data trust statement:** [Which data did you use and why? What did you exclude?]\n\n---\n\n## 2. Server Estate Summary\n\n| Metric | Value | Source |\n|--------|-------|--------|\n| Total servers | | server-estate.csv |\n| EOL servers | | server-estate.csv |\n| EOL as % of estate | | Calculated |\n| Database tier servers | | server-estate.csv |\n| Total known monthly cost | | server-estate.csv |\n| Missing cost entries | | server-estate.csv |\n\n---\n\n## 3. Application Portfolio Summary\n\n| Metric | Value | Source |\n|--------|-------|--------|\n| Total applications | 42 | application-portfolio.csv |\n| High complexity (score \u22657) | | Normalised from portfolio |\n| P1 Critical with no DR | | application-portfolio.csv |\n| Apps with >3 dependencies | | application-portfolio.csv |\n| Dependency pattern finding | | Cross-reference |\n\n---\n\n## 4. Cost Driver Analysis\n\n[Your analysis here \u2014 must include the cross-reference between server-estate.csv and operational-report.csv]\n\n**Database tier monthly cost:** \u00a3[figure] = [%] of total spend\n\n**Why this matters for migration prioritisation:** [Your recommendation]\n\n---\n\n## 5. DR Gap Assessment\n\n[17 applications with no DR \u2014 FCA PS21/3 consequence \u2014 P1 Criticals named]\n\n---\n\n## 6. Critical Open Questions\n\n| # | Question | Blocker For | Action Required |\n|---|----------|------------|----------------|\n| OQ-001 | | | |\n| OQ-002 | | | |\n| OQ-004 | | | |\n\n---\n\n## 7. Prioritised Recommendations\n\n1. **[Recommendation 1]** \u2014 Evidence: [figure from data]\n2. **[Recommendation 2]** \u2014 Evidence: [figure from data]\n3. **[Recommendation 3]** \u2014 Evidence: [figure from data]",
+              "max_words": 1200
             },
             "hints": [
               {
@@ -1643,7 +1643,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1500",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -1840,6 +1839,9 @@
                   "failure_feedback": "Commit your HLD diagram to /architecture/target-state/ and your completed ADR-001 to /docs/adrs/ in your GitHub repository. Paste the commit URLs in your submission."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1500
             }
           },
           {
@@ -2150,7 +2152,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1500",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -2352,6 +2353,9 @@
                   "failure_feedback": "Resolve the Priya vs Marcus DR conflict with specific data. Cite: 5 P1 incidents in 12 weeks (all on NO DR apps), Week 12 dual incident lasting 6.7 hours, FCA IBS-001 impact tolerance of 4 hours (already breached). Recommend: DR design now in Phase 4, implementation in Phase 8 \u2014 this gives Priya regulatory evidence and Marcus the cost phasing he needs."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1500
             }
           },
           {
@@ -2912,7 +2916,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1200",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -3085,6 +3088,9 @@
                   "failure_feedback": "Commit your fixed CloudFormation template to /cloudformation/security-baseline.yaml and fixed Python scripts to /python/. Also commit an Operations Runbook to /docs/. Paste all commit URLs."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1200
             }
           },
           {
@@ -3456,7 +3462,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1000",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -3611,6 +3616,9 @@
                   "failure_feedback": "Define your namespace strategy. At minimum: kube-system (cluster add-ons), argocd (GitOps controller), trading-prod (Customer, Notification, Audit services), payments-prod (Payments Service \u2014 isolated, PCI-DSS scope). Each namespace should have resource quotas and RBAC bindings."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1000
             }
           },
           {
@@ -3954,7 +3962,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "800",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -4116,6 +4123,9 @@
                   "failure_feedback": "Define your alert policy: when does the alert fire, who gets paged, what is the escalation path. Use multi-burn-rate alerting: CRITICAL if 5% of monthly budget consumed in 1 hour (fast burn), WARNING if 10% consumed in 6 hours (slow burn). Escalation: CRITICAL \u2192 on-call engineer via PagerDuty; SLO breach \u2192 CRO within 15 minutes."
                 }
               ]
+            },
+            "content": {
+              "max_words": 800
             }
           },
           {
@@ -4279,7 +4289,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1500",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -4432,6 +4441,9 @@
                   "failure_feedback": "Quantify the Oracle licence cost saving. Oracle Enterprise Edition costs Parlington \u00a3340k/year. Migration to Aurora PostgreSQL eliminates this licence cost \u2014 net saving approximately \u00a3292k/year (Aurora at ~\u00a348k/year for equivalent capacity). This is one of the key numbers in Marcus Webb's ROI calculation."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1500
             }
           },
           {
@@ -4442,7 +4454,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1500",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -4598,6 +4609,9 @@
                   "failure_feedback": "Address all six AWS Well-Architected Framework pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimisation, and Sustainability. For each: one key finding from the current Parlington state and one recommendation."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1500
             }
           },
           {
@@ -4759,7 +4773,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "800",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -4918,6 +4931,9 @@
                   "failure_feedback": "Estimate the AI platform cost and ROI. 42 analysts \u00d7 20 queries/day \u00d7 250 days \u00d7 ~$0.006/query = ~$1,260/year model cost. OpenSearch Serverless ~$200/month = $2,400/year. Total ~$3,660/year. Vs \u00a3455k/year analyst productivity saving. ROI approximately 100:1."
                 }
               ]
+            },
+            "content": {
+              "max_words": 800
             }
           },
           {
@@ -4928,7 +4944,6 @@
             "is_hard_dependency": true,
             "is_required_for_progression": true,
             "review_mode": "ai_graded",
-            "max_length_words": "1500",
             "runtime_contract": {
               "completion_mode": "submission",
               "requires_database_record": true,
@@ -5117,6 +5132,9 @@
                   "failure_feedback": "Commit your ARB pack outline to /docs/arb/ and the Decision Log to /docs/arb/decision-log.md. Paste both GitHub URLs."
                 }
               ]
+            },
+            "content": {
+              "max_words": 1500
             }
           },
           {
