@@ -1,0 +1,122 @@
+server_id,hostname,category,location,os,os_version,server_age_years,is_eol,cpu_cores,ram_gb,primary_application,dr_status,monthly_cost_gbp,migration_target,last_patched,patch_compliant
+SRV-001,PAR-WEB-001,Web/App,Equinix LD4,Windows Server 2016,Win 2016,2,False,16,64,CRP,NO DR,1559,Replatform → EKS,2024-08-15,True
+SRV-002,PAR-WEB-002,Web/App,Canaray Wharf,RHEL 8,RHEL 8,6,False,8,32,Custody Recon,Cold standby,889,Replatform → EKS,15/01/2024,False
+SRV-003,PAR-WEB-003,Web/App,Canary Wharf Colo,Windows Server 2019,WS2019,6,False,64,64,CRP,none,827,Replatform → EKS,15-11-2024,True
+SRV-004,PAR-WEB-004,Web/App,equinix LD4,Windows Server 2019,Win 2019,8,False,64,128,RCE,Cold Standby,806,Replatform → EKS,2024-08-15,True
+SRV-005,PAR-WEB-005,Web/App,Equinix LD4,Windows Server 2019,Windows Server 2019,8,False,64,32,OMS,Not configured,1144,Replatform → EKS,15/01/2024,True
+SRV-006,PAR-WEB-006,Web/App,Canaray Wharf,Windows Server 2019,WS2019,4,False,8,256,Internal Intranet,NO DR,844,Replatform → EKS,15-01-2024,False
+SRV-007,PAR-WEB-007,Web/App,Equnix LD4,Windows Server 2019,Win 2019,7,False,16,32,Market Data,active-passive,1433,Replatform → EKS,2024-02-15,False
+SRV-008,PAR-WEB-008,Web/App,Equinix LD4,Windows Server 2019,Windows Server 2019,4,False,8,256,SWIFT Gateway,Active-Passive,,Replatform → EKS,15/09/2024,True
+SRV-009,PAR-WEB-009,Web/App,equinix LD4,Windows Server 2016,Windows Server 2016,4,False,16,128,Perf Attribution,none,966,Replatform → EKS,15-01-2024,True
+SRV-010,PAR-WEB-010,Web/App,Canaray Wharf,RHEL 8,RHEL8,2,False,16,64,Client Portal,N/A,1423,Replatform → EKS,2024-09-15,True
+SRV-011,PAR-WEB-011,Web/App,Canary Wharf Colo,Windows Server 2019,Windows Server 2019,84 months,False,32,32,CRP,Not configured,1504,Replatform → EKS,15/01/2024,True
+SRV-012,PAR-WEB-012,Web/App,Equnix LD4,Windows Server 2019,WS2019,4,False,128,512,OMS,NO DR,9200,Replatform → EKS,15-01-2024,False
+SRV-013,PAR-WEB-013,Web/App,Equinix LD4,Windows Server 2016,Win 2016,7,False,16,64,Compliance Mon,Cold Standby,1269,Replatform → EKS,2024-12-15,True
+SRV-014,PAR-WEB-014,Web/App,equinix LD4,Windows Server 2016,WS2016,7,False,64,128,Market Data,Active/Passive,1398,Replatform → EKS,15/08/2024,False
+SRV-015,PAR-WEB-015,Web/App,Equinix LD4,RHEL 7,RHEL 7,6,False,8,32,Finance (EBS),none,1305,Replatform → EKS,15-01-2024,False
+SRV-016,PAR-WEB-016,Web/App,Canary Wharf colo,Windows Server 2019,Win 2019,7,False,64,256,OMS,N/A,1232,Replatform → EKS,2024-08-15,True
+SRV-017,PAR-WEB-017,Web/App,Equnix LD4,Windows Server 2016,WS2016,4,False,8,128,RRG,Not configured,1366,Replatform → EKS,15/10/2024,True
+SRV-018,PAR-WEB-018,Web/App,Equinix LD4,Windows Server 2019,WS2019,4,False,8,128,Internal Intranet,NO DR,1245,Replatform → EKS,15-01-2024,True
+SRV-019,PAR-WEB-019,Web/App,Canary Wharf Colo,RHEL 8,RHEL8,6,False,16,64,Compliance Mon,cold_standby,908,Replatform → EKS,2024-04-15,True
+SRV-020,PAR-WEB-020,Web/App,Equinix LD4,Windows Server 2019,Windows Server 2019,8,False,32,256,Market Data,Active-Passive,,Replatform → EKS,15/02/2024,False
+SRV-021,PAR-WEB-021,Web/App,Equinix LD4,RHEL 7,RHEL 7,8,True,16,32,PEMIS,none,1114,Replatform → EKS,15-01-2024,False
+SRV-022,PAR-WEB-022,Web/App,Canaray Wharf,Windows Server 2016,Win 2016,2,False,16,64,Finance (EBS),N/A,1578,Replatform → EKS,2024-10-15,True
+SRV-023,PAR-WEB-023,Web/App,Canary Wharf Colo,RHEL 7,Red Hat 7,3,False,64,64,SWIFT Gateway,active-passive,1071,Replatform → EKS,15/02/2024,True
+SRV-024,PAR-WEB-024,Web/App,Canary Wharf colo,RHEL 8,Red Hat Enterprise Linux 8,84 months,False,64,128,Compliance Mon,Cold Standby,1005,Replatform → EKS,15-01-2024,True
+SRV-025,PAR-WEB-025,Web/App,Equinix LD4,Windows Server 2016,Win 2016,2,False,32,32,OMS,NO DR,1053,Replatform → EKS,2024-01-15,True
+SRV-026,PAR-WEB-026,Web/App,Equinix LD4,Windows Server 2019,Windows Server 2019,3,False,8,64,RCE,Cold standby,807,Replatform → EKS,15/02/2024,False
+SRV-027,PAR-WEB-027,Web/App,Canary Wharf Colo,Windows Server 2019,WS2019,4,False,32,256,CRP,none,872,Replatform → EKS,15-01-2024,False
+SRV-028,PAR-WEB-028,Web/App,Equinix LD4,Windows Server 2019,Win 2019,6,False,64,256,CRP,N/A,1390,Replatform → EKS,2024-01-15,False
+SRV-029,PAR-WEB-029,Web/App,equinix LD4,Windows Server 2019,Windows Server 2019,5,False,64,32,Custody Recon,Cold Standby,1162,Replatform → EKS,15/11/2024,True
+SRV-030,PAR-WEB-030,Web/App,Equinix LD4,RHEL 7,RHEL 7,2,False,32,32,RCE,Cold standby,862,Replatform → EKS,15-10-2024,True
+SRV-031,PAR-WEB-031,Web/App,Equinix LD4,Windows Server 2019,Win 2019,5,False,32,256,Client Portal,NO DR,943,Replatform → EKS,2024-05-15,True
+SRV-032,PAR-WEB-032,Web/App,Equnix LD4,RHEL 7,Red Hat 7,5,False,8,32,PEMIS,None,1363,Replatform → EKS,15/03/2024,True
+SRV-033,PAR-WEB-033,Web/App,Equinix LD4,RHEL 8,Red Hat Enterprise Linux 8,3,False,16,256,Internal Intranet,none,1216,Replatform → EKS,15-05-2024,True
+SRV-034,PAR-WEB-034,Web/App,equinix LD4,Windows Server 2019,Win 2019,2,False,64,128,Finance (EBS),N/A,,Replatform → EKS,2024-10-15,True
+SRV-035,PAR-DAT-035,Database,Equinix LD4,RHEL 8,RHEL 8,10,False,16,32,RCE,cold_standby,3834,Replatform → Aurora/RDS,15/01/2024,True
+SRV-036,PAR-DAT-036,Database,Equinix LD4,RHEL 7,RHEL 7,8,True,16,32,Finance (EBS),NO DR,3434,Replatform → Aurora/RDS,15-09-2024,True
+SRV-037,PAR-DAT-037,Database,Canary Wharf Colo,Windows Server 2016,Win 2016,5,False,16,256,OMS,NO DR,3480,Replatform → Aurora/RDS,2024-09-15,False
+SRV-038,PAR-DAT-038,Database,Canaray Wharf,RHEL 8,RHEL 8,6,False,8,256,PEMIS,None,5571,Replatform → Aurora/RDS,15/01/2024,True
+SRV-039,PAR-DAT-039,Database,equinix LD4,RHEL 7,RHEL 7,8,True,16,128,Market Data,active-passive,4268,Replatform → Aurora/RDS,15-07-2024,True
+SRV-040,PAR-DAT-040,Database,Equinix LD4,RHEL 7,RHEL7,7,False,8,256,OMS,N/A,5072,Replatform → Aurora/RDS,2024-03-15,True
+SRV-041,PAR-DAT-041,Database,Canary Wharf Colo,RHEL 7,Red Hat 7,4,False,32,64,RRG,Not configured,3500,Replatform → Aurora/RDS,15/12/2024,True
+SRV-042,PAR-DAT-042,Database,Equnix LD4,RHEL 8,Red Hat Enterprise Linux 8,6,False,64,128,CRP,NO DR,4713,Replatform → Aurora/RDS,15-11-2024,True
+SRV-043,PAR-DAT-043,Database,Equinix LD4,RHEL 8,RHEL8,3,False,16,128,OMS,NO DR,5471,Replatform → Aurora/RDS,2024-02-15,False
+SRV-044,PAR-DAT-044,Database,equinix LD4,Windows Server 2016,WS2016,5,False,32,64,RRG,None,4315,Replatform → Aurora/RDS,15/11/2024,True
+SRV-045,PAR-DAT-045,Database,Equinix LD4,RHEL 8,Red Hat Enterprise Linux 8,10,False,64,128,OMS,none,4228,Replatform → Aurora/RDS,15-03-2024,False
+SRV-046,PAR-DAT-046,Database,Equinix LD4,Windows Server 2016,Win 2016,60 months,False,64,32,Finance (EBS),N/A,4272,Replatform → Aurora/RDS,2024-01-15,False
+SRV-047,PAR-DAT-047,Database,Equnix LD4,RHEL 8,RHEL 8,5,False,16,256,Market Data,active-passive,5434,Replatform → Aurora/RDS,15/01/2024,False
+SRV-048,PAR-DAT-048,Database,Equinix LD4,Windows Server 2016,Windows Server 2016,3,False,8,128,RRG,NO DR,4665,Replatform → Aurora/RDS,15-01-2024,True
+SRV-049,PAR-DAT-049,Database,Canary Wharf Colo,RHEL 8,RHEL8,9,False,16,64,CRP,NO DR,5742,Replatform → Aurora/RDS,2024-08-15,True
+SRV-050,PAR-DAT-050,Database,Equinix LD4,RHEL 8,RHEL 8,9,False,64,64,Market Data,Active/Passive,3301,Replatform → Aurora/RDS,15/05/2024,True
+SRV-051,PAR-DAT-051,Database,Equinix LD4,RHEL 7,RHEL 7,4,False,16,64,Finance (EBS),none,4766,Replatform → Aurora/RDS,15-01-2024,True
+SRV-052,PAR-DAT-052,Database,Equnix LD4,RHEL 7,RHEL7,7,False,16,256,PEMIS,N/A,,Replatform → Aurora/RDS,2024-01-15,True
+SRV-053,PAR-DAT-053,Database,Canary Wharf Colo,RHEL 8,RHEL 8,7,False,32,32,Trade Confirm,Not configured,4638,Replatform → Aurora/RDS,15/01/2024,False
+SRV-054,PAR-DAT-054,Database,equinix LD4,RHEL 8,Red Hat Enterprise Linux 8,5,False,8,256,PEMIS,NO DR,5578,Replatform → Aurora/RDS,15-07-2024,True
+SRV-055,PAR-DAT-055,Database,Canary Wharf Colo,RHEL 7,RHEL7,9,True,64,64,OMS,NO DR,5683,Replatform → Aurora/RDS,2024-07-15,True
+SRV-056,PAR-DAT-056,Database,Canary Wharf colo,RHEL 7,Red Hat 7,3,False,32,256,RRG,None,5329,Replatform → Aurora/RDS,15/07/2024,False
+SRV-057,PAR-DAT-057,Database,Equnix LD4,RHEL 7,RHEL 7,8,True,32,128,OMS,none,5752,Replatform → Aurora/RDS,15-10-2024,True
+SRV-058,PAR-DAT-058,Database,Equinix LD4,Windows Server 2016,Win 2016,7,False,64,256,RRG,N/A,5470,Replatform → Aurora/RDS,2024-01-15,True
+SRV-059,PAR-DAT-059,Database,Canary Wharf Colo,RHEL 8,RHEL 8,7,False,32,128,PEMIS,Not configured,4863,Replatform → Aurora/RDS,15/05/2024,False
+SRV-060,PAR-DAT-060,Database,Equinix LD4,RHEL 7,RHEL 7,8,True,16,256,Finance (EBS),NO DR,5104,Replatform → Aurora/RDS,15-01-2024,True
+SRV-061,PAR-DAT-061,Database,Equinix LD4,RHEL 8,RHEL8,5,False,8,64,Market Data,Active-Passive,3547,Replatform → Aurora/RDS,2024-01-15,True
+SRV-062,PAR-DAT-062,Database,Equnix LD4,Windows Server 2016,WS2016,6,False,16,256,PEMIS,None,3803,Replatform → Aurora/RDS,15/08/2024,True
+SRV-063,PAR-MID-063,Middleware,Canary Wharf Colo,Windows Server 2016,Windows Server 2016,6,False,64,256,Aladdin Integration,Vendor DR,2048,Replatform → EKS/Lambda,15-05-2024,True
+SRV-064,PAR-MID-064,Middleware,equinix LD4,RHEL 7,RHEL7,8,True,16,64,OMS Integration,Cold Standby,1211,Replatform → EKS/Lambda,2024-01-15,True
+SRV-065,PAR-MID-065,Middleware,Canary Wharf Colo,Windows Server 2016,WS2016,6,False,8,256,Aladdin Integration,Vendor DR,1302,Replatform → EKS/Lambda,15/04/2024,False
+SRV-066,PAR-MID-066,Middleware,Canaray Wharf,RHEL 7,RHEL 7,7,False,64,256,MQ Broker,Cold standby,2344,Replatform → EKS/Lambda,15-01-2024,True
+SRV-067,PAR-MID-067,Middleware,Equnix LD4,Windows Server 2016,Win 2016,4,False,16,128,ESB Routing,cold_standby,,Replatform → EKS/Lambda,2024-04-15,True
+SRV-068,PAR-MID-068,Middleware,Equinix LD4,Windows Server 2016,WS2016,96 months,True,8,128,PEMIS Feed,Cold Standby,1689,Replatform → EKS/Lambda,15/12/2024,True
+SRV-069,PAR-MID-069,Middleware,equinix LD4,RHEL 7,RHEL 7,7,False,16,256,Bloomberg Feed,Vendor DR,1365,Replatform → EKS/Lambda,15-01-2024,True
+SRV-070,PAR-MID-070,Middleware,Equinix LD4,Windows Server 2016,Win 2016,3,False,64,256,MQ Broker,Cold standby,2049,Replatform → EKS/Lambda,2024-03-15,False
+SRV-071,PAR-MID-071,Middleware,Canary Wharf Colo,RHEL 8,RHEL 8,6,False,64,256,SWIFT Gateway,active-passive,2396,Replatform → EKS/Lambda,15/01/2024,False
+SRV-072,PAR-MID-072,Middleware,Equnix LD4,RHEL 7,RHEL 7,9,True,64,64,Aladdin Integration,VENDOR,1998,Replatform → EKS/Lambda,15-07-2024,True
+SRV-073,PAR-MID-073,Middleware,Canary Wharf Colo,RHEL 7,RHEL7,6,False,16,256,OMS Integration,Cold Standby,1888,Replatform → EKS/Lambda,2024-10-15,True
+SRV-074,PAR-MID-074,Middleware,equinix LD4,RHEL 8,RHEL 8,7,False,8,256,SWIFT Gateway,Active/Passive,1255,Replatform → EKS/Lambda,15/01/2024,False
+SRV-075,PAR-MID-075,Middleware,Equinix LD4,RHEL 7,RHEL 7,3,False,16,256,MQ Broker,cold_standby,1732,Replatform → EKS/Lambda,15-01-2024,True
+SRV-076,PAR-MID-076,Middleware,Equinix LD4,Windows Server 2016,Win 2016,6,False,8,256,ESB Routing,Cold Standby,1769,Replatform → EKS/Lambda,2024-01-15,False
+SRV-077,PAR-MID-077,Middleware,Canary Wharf Colo,Windows Server 2016,WS2016,5,False,8,32,FundSettle,Active-Passive,1659,Replatform → EKS/Lambda,15/03/2024,True
+SRV-078,PAR-MID-078,Middleware,Equinix LD4,RHEL 7,RHEL 7,3,False,64,32,Bloomberg Feed,Vendor-managed,1512,Replatform → EKS/Lambda,15-01-2024,True
+SRV-079,PAR-MID-079,Middleware,equinix LD4,RHEL 7,RHEL7,8,True,8,64,Bloomberg Feed,Vendor DR,1724,Replatform → EKS/Lambda,2024-04-15,True
+SRV-080,PAR-MID-080,Middleware,Canary Wharf colo,RHEL 7,Red Hat 7,3,False,64,64,OMS Integration,Cold Standby,1838,Replatform → EKS/Lambda,15/01/2024,False
+SRV-081,PAR-BAT-081,Batch/ETL,Equinix LD4,RHEL 7,RHEL 7,9,True,8,32,Client Report Gen,Cold Standby,1148,Replatform → Glue/Lambda,15-03-2024,True
+SRV-082,PAR-BAT-082,Batch/ETL,Canaray Wharf,Windows Server 2016,Win 2016,6,False,8,256,Risk Batch,Cold standby,970,Replatform → Glue/Lambda,2024-06-15,True
+SRV-083,PAR-BAT-083,Batch/ETL,Equinix LD4,Windows Server 2016,WS2016,6,False,64,64,Perf Attribution,Not configured,1550,Replatform → Glue/Lambda,15/01/2024,True
+SRV-084,PAR-BAT-084,Batch/ETL,Canary Wharf colo,RHEL 7,RHEL 7,6,False,64,256,Trade Settlement,Cold Standby,1530,Replatform → Glue/Lambda,15-01-2024,True
+SRV-085,PAR-BAT-085,Batch/ETL,Equinix LD4,Windows Server 2016,Win 2016,6,False,32,256,Regulatory Batch,Cold Standby,,Replatform → Glue/Lambda,2024-09-15,True
+SRV-086,PAR-BAT-086,Batch/ETL,Equinix LD4,Windows Server 2016,WS2016,8,True,8,256,Risk Batch,Cold standby,1584,Replatform → Glue/Lambda,15/05/2024,True
+SRV-087,PAR-BAT-087,Batch/ETL,Equnix LD4,Windows Server 2016,Windows Server 2016,5,False,32,128,Risk Batch,cold_standby,1263,Replatform → Glue/Lambda,15-01-2024,True
+SRV-088,PAR-BAT-088,Batch/ETL,Equinix LD4,Windows Server 2016,Win 2016,5,False,64,64,Custody Recon,Cold Standby,987,Replatform → Glue/Lambda,2024-01-15,True
+SRV-089,PAR-BAT-089,Batch/ETL,equinix LD4,RHEL 7,Red Hat 7,84 months,False,32,64,Regulatory Batch,Cold Standby,1358,Replatform → Glue/Lambda,15/01/2024,True
+SRV-090,PAR-BAT-090,Batch/ETL,Equinix LD4,Windows Server 2016,Windows Server 2016,9,True,32,256,Trade Settlement,Cold standby,1495,Replatform → Glue/Lambda,15-01-2024,True
+SRV-091,PAR-BAT-091,Batch/ETL,Equinix LD4,Windows Server 2016,Win 2016,6,True,32,128,Client Report Gen,cold_standby,1619,Replatform → Glue/Lambda,2024-03-15,True
+SRV-092,PAR-BAT-092,Batch/ETL,Canary Wharf colo,RHEL 7,Red Hat 7,6,True,16,64,Perf Attribution,None,1022,Replatform → Glue/Lambda,15/03/2024,True
+SRV-093,PAR-BAT-093,Batch/ETL,Canary Wharf Colo,Windows Server 2016,Windows Server 2016,8,True,8,64,Client Report Gen,Cold Standby,1678,Replatform → Glue/Lambda,15-12-2024,True
+SRV-094,PAR-BAT-094,Batch/ETL,Canaray Wharf,Windows Server 2016,Win 2016,6,True,32,32,Perf Attribution,N/A,914,Replatform → Glue/Lambda,2024-01-15,True
+SRV-095,PAR-BAT-095,Batch/ETL,Canary Wharf Colo,Windows Server 2016,WS2016,9,True,8,32,Trade Settlement,cold_standby,1029,Replatform → Glue/Lambda,15/04/2024,True
+SRV-096,PAR-BAT-096,Batch/ETL,Equinix LD4,Windows Server 2016,Windows Server 2016,7,True,32,256,ETL Nightly,Cold Standby,1248,Replatform → Glue/Lambda,15-12-2024,False
+SRV-097,PAR-MON-097,Monitoring,Canary Wharf Colo,RHEL 7,RHEL7,5,False,16,64,Nagios Core,Cold Standby,675,Replace → CloudWatch/Grafana,2024-01-15,True
+SRV-098,PAR-MON-098,Monitoring,Equinix LD4,Ubuntu 20.04,Ubuntu 20.04,2,False,16,256,SNMP Collector,Cold standby,,Replace → CloudWatch/Grafana,15/11/2024,True
+SRV-099,PAR-MON-099,Monitoring,equinix LD4,RHEL 7,RHEL 7,6,True,8,64,Nagios Core,cold_standby,1039,Replace → CloudWatch/Grafana,15-01-2024,True
+SRV-100,PAR-MON-100,Monitoring,Equinix LD4,RHEL 7,RHEL7,2,False,8,64,Jenkins CI,Cold Standby,760,Replace → CloudWatch/Grafana,2024-03-15,False
+SRV-101,PAR-MON-101,Monitoring,Equinix LD4,RHEL 7,Red Hat 7,6,True,16,128,Nagios Core,Cold Standby,1081,Replace → CloudWatch/Grafana,15/05/2024,True
+SRV-102,PAR-MON-102,Monitoring,Canaray Wharf,RHEL 8,Red Hat Enterprise Linux 8,5,False,32,64,Puppet Master,Cold standby,672,Replace → CloudWatch/Grafana,15-01-2024,True
+SRV-103,PAR-MON-103,Monitoring,Equinix LD4,RHEL 8,RHEL8,3,False,8,64,Splunk Forwarder,cold_standby,872,Replace → CloudWatch/Grafana,2024-05-15,True
+SRV-104,PAR-MON-104,Monitoring,equinix LD4,RHEL 8,RHEL 8,6,False,64,128,Splunk Forwarder,Cold Standby,895,Replace → CloudWatch/Grafana,15/06/2024,True
+SRV-105,PAR-MON-105,Monitoring,Equinix LD4,Ubuntu 20.04,ubuntu20,6,False,8,32,Patch Manager,Cold Standby,1152,Replace → CloudWatch/Grafana,15-04-2024,True
+SRV-106,PAR-MON-106,Monitoring,Equinix LD4,RHEL 8,RHEL8,6,False,16,32,Splunk Forwarder,Cold standby,856,Replace → CloudWatch/Grafana,2024-08-15,True
+SRV-107,PAR-MON-107,Monitoring,Equnix LD4,RHEL 8,RHEL 8,4,False,64,256,Jenkins CI,cold_standby,1190,Replace → CloudWatch/Grafana,15/09/2024,True
+SRV-108,PAR-MON-108,Monitoring,Canary Wharf colo,RHEL 7,RHEL 7,6,True,8,256,Patch Manager,Cold Standby,1046,Replace → CloudWatch/Grafana,15-11-2024,True
+SRV-109,PAR-DEV-109,Dev/Test,equinix LD4,Windows Server 2019,Win 2019,1,False,64,128,CI Runner,Cold Standby,582,Rehost → EC2 (short-term),2024-03-15,True
+SRV-110,PAR-DEV-110,Dev/Test,Equinix LD4,Windows Server 2019,Windows Server 2019,1,False,32,128,Test Data Gen,Cold standby,732,Rehost → EC2 (short-term),15/01/2024,False
+SRV-111,PAR-DEV-111,Dev/Test,Canary Wharf Colo,RHEL 8,Red Hat Enterprise Linux 8,1,False,64,32,Staging,cold_standby,836,Rehost → EC2 (short-term),15-11-2024,False
+SRV-112,PAR-DEV-112,Dev/Test,Equnix LD4,Windows Server 2019,Win 2019,4,False,16,128,Dev Environment,Cold Standby,820,Rehost → EC2 (short-term),2024-01-15,True
+SRV-113,PAR-DEV-113,Dev/Test,Equinix LD4,Ubuntu 20.04,Ubuntu 20.04,48 months,False,8,64,Test Env,Cold Standby,857,Rehost → EC2 (short-term),15/01/2024,True
+SRV-114,PAR-DEV-114,Dev/Test,equinix LD4,Windows Server 2019,WS2019,1,False,16,32,Test Env,Cold standby,782,Rehost → EC2 (short-term),15-08-2024,True
+SRV-115,PAR-DEV-115,Dev/Test,Canary Wharf Colo,Windows Server 2019,Win 2019,2,False,32,256,Dev DB,cold_standby,755,Rehost → EC2 (short-term),2024-10-15,True
+SRV-116,PAR-DEV-116,Dev/Test,Canary Wharf colo,Ubuntu 20.04,Ubuntu 20.04,2,False,64,64,UAT,Cold Standby,,Rehost → EC2 (short-term),15/03/2024,True
+SRV-117,PAR-DR/-117,DR/Standby,Equnix LD4,RHEL 7,RHEL 7,6,True,32,128,DR Market Data,Active-Passive,871,Decommission (DR via AWS),15-02-2024,True
+SRV-118,PAR-DR/-118,DR/Standby,Canaray Wharf,Windows Server 2016,Win 2016,7,True,16,256,DR Market Data,Active/Passive,1393,Decommission (DR via AWS),2024-01-15,True
+SRV-119,PAR-DR/-119,DR/Standby,equinix LD4,Windows Server 2016,WS2016,8,True,16,256,DR PEMIS,active-passive,1266,Decommission (DR via AWS),15/07/2024,True
+SRV-120,PAR-DR/-120,DR/Standby,Canary Wharf colo,RHEL 7,RHEL 7,5,False,64,256,DR Market Data,Active-Passive,1125,Decommission (DR via AWS),15-06-2024,True
+SRV-047,PAR-DB-047,Database,Equnix LD4,RHEL 8,RHEL 8,5,False,16,256,Market Data,active-passive,5484,Replatform → Aurora/RDS,01/03/2024,False
