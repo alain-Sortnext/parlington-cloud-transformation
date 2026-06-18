@@ -1,0 +1,39 @@
+# kubernetes/gitops/argocd-app.yaml
+# Parlington Ltd — ArgoCD Application Definition
+# Status: INCOMPLETE — sync policy missing, incorrect repoURL, missing health checks
+# Phase 5: Fix and complete this configuration
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: parlington-payments
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: parlington
+
+  source:
+    # BUG: repoURL is a placeholder — must be updated with real repo URL
+    repoURL: https://github.com/YOUR-ORG/parlington-cloud-transformation
+    targetRevision: HEAD
+    path: kubernetes/deployments
+
+  destination:
+    # BUG: server should reference the actual EKS cluster endpoint
+    server: https://kubernetes.default.svc
+    namespace: parlington-payments
+
+  syncPolicy:
+    # MISSING: automated sync policy
+    # Production requires:
+    # automated:
+    #   prune: true
+    #   selfHeal: true
+    # syncOptions:
+    #   - CreateNamespace=true
+    #   - PrunePropagationPolicy=foreground
+    {}
+
+  # MISSING: ignoreDifferences for fields managed by other controllers
+  # MISSING: health checks for custom resources
