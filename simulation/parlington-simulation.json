@@ -203,7 +203,6 @@
         "description": "Master reference document: company overview, business problem, FCA compliance context, technology estate summary, key metrics, regulatory glossary, stakeholder profiles, and programme mandate.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/company-brief.md",
-        "available_from_phase": "phase_1",
         "title": "Parlington Ltd \u2014 Company Brief"
       },
       {
@@ -211,7 +210,6 @@
         "description": "Incomplete handover document from the outgoing architect. Covers Stages 1\u20133 only. Contains critical gap markers, buried hints about the cost driver analysis, unresolved open questions, and a final note flagging the three most urgent actions.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/process-notes.md",
-        "available_from_phase": "phase_1",
         "title": "Process Notes \u2014 Handover from Craig Whitfield"
       },
       {
@@ -219,7 +217,6 @@
         "description": "Asset inventory of all 120 servers: category, OS, age, EOL status, DR status, application hosted, monthly cost, migration target. Contains intentional data quality issues: 8 missing costs, 1 duplicate row (SRV-047), inconsistent date formats, and inconsistent OS naming. Use application-portfolio.csv as authoritative DR source.",
         "file_type": "csv",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/data/server-estate.csv",
-        "available_from_phase": "phase_1",
         "title": "Server Estate CSV \u2014 120 Servers"
       },
       {
@@ -227,7 +224,6 @@
         "description": "Full application inventory: criticality, DR status, migration strategy, dependency mapping, complexity scoring, licence costs, tech stack, and migration wave assignment. Contains intentional issues: mixed dependency delimiters, inconsistent complexity formats, 6 blank licence costs, 1 duplicate (APP-019). Authoritative source for DR status.",
         "file_type": "csv",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/data/application-portfolio.csv",
-        "available_from_phase": "phase_1",
         "title": "Application Portfolio CSV \u2014 42 Applications"
       },
       {
@@ -235,7 +231,6 @@
         "description": "Weekly infrastructure operations data: cost breakdown by tier, patch compliance, incident counts (P1/P2/P3), MTTR, server uptime, change requests. Key cross-reference file that resolves cost driver analysis. Contains: 1 duplicate week (Week 3 revised), Week 7 blank DB cost, Week 9 TBC incident count, Week 6 billing anomaly.",
         "file_type": "csv",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/data/operational-report.csv",
-        "available_from_phase": "phase_1",
         "title": "Operational Report CSV \u2014 12 Weeks"
       },
       {
@@ -243,7 +238,6 @@
         "description": "Standard template for Architecture Decision Records used throughout the programme. All major architecture decisions must be documented as ADRs committed to /docs/adrs/ in the GitHub repository.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/adrs/ADR-000-template.md",
-        "available_from_phase": "phase_2",
         "title": "ADR Template \u2014 Architecture Decision Records"
       },
       {
@@ -251,39 +245,34 @@
         "description": "Draft ADR for the multi-account AWS Organisation structure. The rationale section is intentionally incomplete \u2014 candidate must complete it in Phase 2 with specific justification for Control Tower over alternatives.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/adrs/ADR-001-multi-account-structure.md",
-        "available_from_phase": "phase_2",
         "title": "ADR-001 \u2014 Multi-Account Structure (Draft)"
       },
       {
         "file_id": "file_terraform_vpc",
         "description": "Partially complete Terraform VPC module. Known bugs: wrong default CIDR (172.16.0.0/16), missing route tables, missing VPC Flow Logs, missing EKS subnet tags. Candidate must identify and fix all issues in Phase 4.",
-        "file_type": "md",
+        "file_type": "other",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/terraform/vpc/main.tf",
-        "available_from_phase": "phase_4",
         "title": "Terraform VPC Module \u2014 Incomplete (Phase 4)"
       },
       {
         "file_id": "file_cfn_security",
         "description": "CloudFormation template for security baseline (CloudTrail, GuardDuty, SNS alerts). Contains one syntax error (CloudWatchLogsLogGroupArnRef \u2192 CloudWatchLogsLogGroupArn) and one logical error (GuardDuty SIX_HOURS \u2192 FIFTEEN_MINUTES). Candidate must identify and fix both.",
-        "file_type": "md",
+        "file_type": "other",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/cloudformation/security-baseline.yaml",
-        "available_from_phase": "phase_4",
         "title": "CloudFormation Security Baseline \u2014 Broken (Phase 4)"
       },
       {
         "file_id": "file_k8s_manifests",
         "description": "Starter Kubernetes manifests for customer-service and payments-service. Known issues: wrong containerPort (3000 \u2192 8080), forbidden 'latest' image tag, missing resource limits, single replica, no liveness/readiness probes, no securityContext. Candidate must fix all issues and add remaining two microservices.",
-        "file_type": "md",
+        "file_type": "other",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/kubernetes/deployments/customer-service.yaml",
-        "available_from_phase": "phase_5",
         "title": "Kubernetes Manifests \u2014 Incomplete (Phase 5)"
       },
       {
         "file_id": "file_cicd_pipeline",
         "description": "Broken CI/CD deployment pipeline. Known issues: long-lived AWS credentials (must replace with OIDC), docker push :latest (prohibited), no production approval gate, no security scanning (SAST/DAST/image scan), no rollback on failure. Candidate must identify all issues and fix them in Phase 6.",
-        "file_type": "md",
+        "file_type": "other",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/.github/workflows/deploy.yml",
-        "available_from_phase": "phase_6",
         "title": "GitHub Actions Pipeline \u2014 Broken (Phase 6)"
       },
       {
@@ -291,7 +280,6 @@
         "description": "Internal verification document showing all locked answer key figures calculated from the data files. 35/35 checks pass. For simulation admin use only \u2014 do not share with candidates.",
         "file_type": "md",
         "url": "https://github.com/alain-Sortnext/parlington-cloud-transformation/blob/main/docs/answer-key-verification.md",
-        "available_from_phase": "phase_1",
         "title": "Answer Key Verification \u2014 Internal Reference"
       }
     ],
