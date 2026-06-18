@@ -378,7 +378,7 @@
         "signup_steps": [
           "Go to github.com/signup and create a free account",
           "Fork the parlington-cloud-transformation repository to your account",
-          "Clone your fork locally: git clone https://github.com/YOUR-USERNAME/parlington-cloud-transformation",
+          "Clone your fork locally: `git clone [github.com/YOUR-USERNAME/parlington-cloud-transformation](https://github.com/YOUR-USERNAME/parlington-cloud-transformation)`",
           "Create a branch for each phase: git checkout -b feature/phase-1-discovery",
           "Commit your evidence to the correct directory after each phase",
           "Open a pull request to main when each phase is complete"
@@ -427,7 +427,7 @@
           "Go to grafana.com/auth/sign-up/create-user",
           "Sign up with your email \u2014 choose the Free plan",
           "Create a new Grafana stack (give it a name like 'parlington-monitoring')",
-          "Note your Grafana URL (format: https://YOUR-STACK.grafana.net)",
+          "Note your Grafana URL (format: [your-stack.grafana.net](https://YOUR-STACK.grafana.net))",
           "For Phase 6: connect CloudWatch as a data source using your AWS credentials",
           "Build dashboards using the requirements in the Phase 6 observability section"
         ],
@@ -691,7 +691,7 @@
               "counts_for_score": false
             },
             "content": {
-              "text": "## Set up your tools before Phase 2\n\nAll tools below are free. Set them up now \u2014 some phases require tools to be ready before you start.\n\n---\n\n## 1. AWS Free Tier \u2014 Used in Phases 2\u20139\n\n**Sign up:** [aws.amazon.com/free](https://aws.amazon.com/free/)\n\n1. Click **Create a Free Account**\n2. Enter your email and choose an account name (e.g. `parlington-simulation`)\n3. Add payment details (required \u2014 Free Tier won't charge for covered services)\n4. Complete phone verification\n5. Choose **Basic Support** (free)\n6. Set your region to **eu-west-2 (London)** in the top-right dropdown\n\n> \ud83d\udca1 Set up now. Phase 2 starts in AWS.\n\n---\n\n## 2. GitHub \u2014 Used in All Phases\n\n**Sign up:** [github.com/signup](https://github.com/signup)\n\n1. Create a free GitHub account\n2. Fork the **parlington-cloud-transformation** repository\n3. Clone your fork locally: `git clone https://github.com/YOUR-USERNAME/parlington-cloud-transformation`\n4. You will commit evidence to this repository in every phase\n\n> \ud83d\udca1 Fork the repo before Phase 1 ends.\n\n---\n\n## 3. Draw.io \u2014 Used in Phases 1, 2, 3, 7, 8, 9\n\n**Open:** [app.diagrams.net](https://app.diagrams.net) \u2014 no account needed\n\n1. Click **Create New Diagram**\n2. Enable AWS shape library: click the **+** in the shape panel, search **AWS**, enable it\n3. Save diagrams to GitHub or Google Drive\n4. Export as PNG for submissions: **File \u2192 Export As \u2192 PNG**\n\n> \ud83d\udca1 Open it now and create a blank diagram to confirm it works.\n\n---\n\n## 4. Terraform \u2014 Used in Phase 4\n\n**Download:** [developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install)\n\n1. Install for your OS and run `terraform --version` to confirm\n2. Navigate to `/terraform` in your cloned repository\n3. You will fix and extend the modules already there\n\n> \ud83d\udca1 Install before Phase 4. You do not need it yet.\n\n---\n\n## 5. Docker Desktop \u2014 Used in Phases 5, 6\n\n**Download:** [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/)\n\n1. Install and run `docker --version` to confirm\n2. Sign up for a free Docker Hub account at [hub.docker.com](https://hub.docker.com)\n\n> \ud83d\udca1 Install before Phase 5.\n\n---\n\n## 6. Grafana Cloud Free \u2014 Used in Phase 6\n\n**Sign up:** [grafana.com/auth/sign-up/create-user](https://grafana.com/auth/sign-up/create-user)\n\n1. Choose the **Free** plan\n2. Create a stack named `parlington-monitoring`\n3. Note your Grafana URL (format: `https://YOUR-STACK.grafana.net`)\n\n> \ud83d\udca1 Sign up before Phase 6.\n\n---\n\n## 7. Python + Boto3 \u2014 Used in Phase 4\n\n**Download:** [python.org/downloads](https://www.python.org/downloads/)\n\n1. Install Python 3.11+ and run `python3 --version`\n2. Install Boto3: `pip3 install boto3`\n3. Configure AWS credentials: `aws configure`\n\n> \ud83d\udca1 Install before Phase 4."
+              "text": "## Set up your tools before Phase 2\n\nAll tools below are free. Set them up now \u2014 some phases require tools to be ready before you start.\n\n---\n\n## 1. AWS Free Tier \u2014 Used in Phases 2\u20139\n\n**Sign up:** [aws.amazon.com/free](https://aws.amazon.com/free/)\n\n1. Click **Create a Free Account**\n2. Enter your email and choose an account name (e.g. `parlington-simulation`)\n3. Add payment details (required \u2014 Free Tier won't charge for covered services)\n4. Complete phone verification\n5. Choose **Basic Support** (free)\n6. Set your region to **eu-west-2 (London)** in the top-right dropdown\n\n> \ud83d\udca1 Set up now. Phase 2 starts in AWS.\n\n---\n\n## 2. GitHub \u2014 Used in All Phases\n\n**Sign up:** [github.com/signup](https://github.com/signup)\n\n1. Create a free GitHub account\n2. Fork the **parlington-cloud-transformation** repository\n3. Clone your fork locally: `git clone [https://github.com/YOUR-USERNAME/parlington-cloud-transformation](https://github.com/YOUR-USERNAME/parlington-cloud-transformation)`\n4. You will commit evidence to this repository in every phase\n\n> \ud83d\udca1 Fork the repo before Phase 1 ends.\n\n---\n\n## 3. Draw.io \u2014 Used in Phases 1, 2, 3, 7, 8, 9\n\n**Open:** [app.diagrams.net](https://app.diagrams.net) \u2014 no account needed\n\n1. Click **Create New Diagram**\n2. Enable AWS shape library: click the **+** in the shape panel, search **AWS**, enable it\n3. Save diagrams to GitHub or Google Drive\n4. Export as PNG for submissions: **File \u2192 Export As \u2192 PNG**\n\n> \ud83d\udca1 Open it now and create a blank diagram to confirm it works.\n\n---\n\n## 4. Terraform \u2014 Used in Phase 4\n\n**Download:** [developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install)\n\n1. Install for your OS and run `terraform --version` to confirm\n2. Navigate to `/terraform` in your cloned repository\n3. You will fix and extend the modules already there\n\n> \ud83d\udca1 Install before Phase 4. You do not need it yet.\n\n---\n\n## 5. Docker Desktop \u2014 Used in Phases 5, 6\n\n**Download:** [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/)\n\n1. Install and run `docker --version` to confirm\n2. Sign up for a free Docker Hub account at [hub.docker.com](https://hub.docker.com)\n\n> \ud83d\udca1 Install before Phase 5.\n\n---\n\n## 6. Grafana Cloud Free \u2014 Used in Phase 6\n\n**Sign up:** [grafana.com/auth/sign-up/create-user](https://grafana.com/auth/sign-up/create-user)\n\n1. Choose the **Free** plan\n2. Create a stack named `parlington-monitoring`\n3. Note your Grafana URL (format: `[https://YOUR-STACK.grafana.net](https://YOUR-STACK.grafana.net)`)\n\n> \ud83d\udca1 Sign up before Phase 6.\n\n---\n\n## 7. Python + Boto3 \u2014 Used in Phase 4\n\n**Download:** [python.org/downloads](https://www.python.org/downloads/)\n\n1. Install Python 3.11+ and run `python3 --version`\n2. Install Boto3: `pip3 install boto3`\n3. Configure AWS credentials: `aws configure`\n\n> \ud83d\udca1 Install before Phase 4."
             }
           },
           {
@@ -1457,7 +1457,7 @@
                     "repository"
                   ],
                   "points_if_pass": 20,
-                  "failure_feedback": "Submit your GitHub commit URL pointing to /architecture/current-state/ in your forked repository. Commit both the .drawio source file and a .png export. The URL format should be: https://github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/architecture/current-state/"
+                  "failure_feedback": "Submit your GitHub commit URL pointing to /architecture/current-state/ in your forked repository. Commit both the .drawio source file and a .png export. The URL format should be: [github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/architecture/current-state/](https://github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/architecture/current-state/)"
                 },
                 {
                   "check_id": "p2_d_c5",
@@ -1874,7 +1874,7 @@
                 "hint_id": "p3_d_h3",
                 "order": 3,
                 "point_penalty": 20,
-                "text": "Submit a structured text description if the diagram is not ready. Include all account names, OU hierarchy, CIDR ranges, and TGW connectivity.\n\n\ud83d\udccb EXPERT SAMPLE \u2014 text HLD:\n\nAWS Landing Zone \u2014 Parlington Ltd\nControl Tower: eu-west-2 (primary), eu-west-1 (DR)\n\nAccounts:\n- Management (root): parlington-management\n- Audit: parlington-audit | 172.16.1.0/24\n- Log Archive: parlington-log-archive | S3 only\n- Shared Services: parlington-shared-svcs | 172.16.0.0/16 | TGW hub\n- Payments-Prod: 172.17.0.0/16\n- Trading-Prod: 172.18.0.0/16\n- Core-Prod: 172.19.0.0/16\n- Dev: 172.20.0.0/16\n- Test: 172.21.0.0/16\n- Data-Platform: 172.22.0.0/16\n- Innovation (Sandbox): 172.23.0.0/16\n\nConnectivity: Transit Gateway in Shared Services. Direct Connect ordered via Equinix LD4 (cage PAR-LD4-C12). VPN failover.\n\nGitHub: https://github.com/[YOUR-USERNAME]/parlington-cloud-transformation/blob/main/architecture/target-state/"
+                "text": "Submit a structured text description if the diagram is not ready. Include all account names, OU hierarchy, CIDR ranges, and TGW connectivity.\n\n\ud83d\udccb EXPERT SAMPLE \u2014 text HLD:\n\nAWS Landing Zone \u2014 Parlington Ltd\nControl Tower: eu-west-2 (primary), eu-west-1 (DR)\n\nAccounts:\n- Management (root): parlington-management\n- Audit: parlington-audit | 172.16.1.0/24\n- Log Archive: parlington-log-archive | S3 only\n- Shared Services: parlington-shared-svcs | 172.16.0.0/16 | TGW hub\n- Payments-Prod: 172.17.0.0/16\n- Trading-Prod: 172.18.0.0/16\n- Core-Prod: 172.19.0.0/16\n- Dev: 172.20.0.0/16\n- Test: 172.21.0.0/16\n- Data-Platform: 172.22.0.0/16\n- Innovation (Sandbox): 172.23.0.0/16\n\nConnectivity: Transit Gateway in Shared Services. Direct Connect ordered via Equinix LD4 (cage PAR-LD4-C12). VPN failover.\n\nGitHub: [github.com/YOUR-USERNAME/parlington-cloud-transformation](https://github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/architecture/target-state/)"
               }
             ],
             "rubric": [
@@ -2700,7 +2700,7 @@
             "tool_task": {
               "tool_id": "tool_terraform",
               "tool_name": "Terraform",
-              "tool_url": "https://developer.hashicorp.com/terraform/install",
+              "tool_url": "[developer.hashicorp.com](https://developer.hashicorp.com/terraform/install)",
               "action": "Fix and validate the broken Terraform VPC module, then commit the corrected file to GitHub",
               "step_by_step": [
                 {
@@ -2747,7 +2747,7 @@
               },
               "anti_fake_markers": [
                 "terraform validate output must show 'Success! The configuration is valid.' \u2014 this only appears if the file is actually syntactically valid Terraform",
-                "GitHub commit URL must be a real atlassian.net... wait \u2014 GitHub URL format: https://github.com/USERNAME/parlington-cloud-transformation/commit/COMMIT-SHA \u2014 the SHA is system-generated and only exists if the commit was actually made"
+                "GitHub commit URL must be a real atlassian.net... wait \u2014 GitHub URL format: [github.com/USERNAME/parlington-cloud-transformation/commit/COMMIT-SHA](https://github.com/USERNAME/parlington-cloud-transformation/commit/COMMIT-SHA) \u2014 the SHA is system-generated and only exists if the commit was actually made"
               ]
             },
             "hints": [
@@ -2899,7 +2899,7 @@
                     "main.tf"
                   ],
                   "points_if_pass": 10,
-                  "failure_feedback": "Commit your fixed main.tf to GitHub and paste the commit URL: https://github.com/YOUR-USERNAME/parlington-cloud-transformation/commit/COMMIT-SHA"
+                  "failure_feedback": "Commit your fixed main.tf to GitHub and paste the commit URL: [github.com/YOUR-USERNAME/parlington-cloud-transformation/commit/COMMIT-SHA](https://github.com/YOUR-USERNAME/parlington-cloud-transformation/commit/COMMIT-SHA)"
                 }
               ]
             }
@@ -2937,7 +2937,7 @@
                 "hint_id": "p5_cfn_h3",
                 "order": 3,
                 "point_penalty": 20,
-                "text": "Complete incident report for PAR-DB-012:\n\n\ud83d\udccb EXPERT SAMPLE:\n\n## PAR-DB-012 Incident Report\n**Incident ID:** INC-2024-009 | **Severity:** P1 | **Status:** Resolved\n\n**Timeline:**\n- 02:14: PAR-DB-012 (PEMIS database server, 128 cores, \u00a39,200/month) became unresponsive\n- 02:19: Nagios alert fired \u2014 server unreachable\n- 02:24: Ben Hartley paged (on-call)\n- 02:41: Ben remotely restarted the server\n- 02:55: Server back online; PEMIS reconnecting\n- 03:12: PEMIS fully operational. Total outage: 58 minutes\n\n**Impact:** PEMIS (APP-001) \u2014 312 UK Equities team members lost portfolio access for 58 minutes. No client-facing impact (outside business hours). No data loss confirmed.\n\n**Root Cause:** Under investigation. Server was at 94% CPU utilisation in weeks prior (Ben Hartley flagged this). Hypothesis: memory pressure triggered OOM killer on the Oracle process. Kernel logs requested from Ben.\n\n**Recommendations:**\n1. Immediate: Set up CloudWatch alerting on CPU > 80% for PAR-DB-012\n2. Short-term: DR design for APP-001 PEMIS (already in Phase 4 risk register)\n3. Medium-term: Migrate PEMIS to EKS with Aurora (Phase 5 \u2014 removes single-server dependency)\n\n**GitHub Runbook:** https://github.com/[username]/parlington-cloud-transformation/blob/main/docs/runbook.md"
+                "text": "Complete incident report for PAR-DB-012:\n\n\ud83d\udccb EXPERT SAMPLE:\n\n## PAR-DB-012 Incident Report\n**Incident ID:** INC-2024-009 | **Severity:** P1 | **Status:** Resolved\n\n**Timeline:**\n- 02:14: PAR-DB-012 (PEMIS database server, 128 cores, \u00a39,200/month) became unresponsive\n- 02:19: Nagios alert fired \u2014 server unreachable\n- 02:24: Ben Hartley paged (on-call)\n- 02:41: Ben remotely restarted the server\n- 02:55: Server back online; PEMIS reconnecting\n- 03:12: PEMIS fully operational. Total outage: 58 minutes\n\n**Impact:** PEMIS (APP-001) \u2014 312 UK Equities team members lost portfolio access for 58 minutes. No client-facing impact (outside business hours). No data loss confirmed.\n\n**Root Cause:** Under investigation. Server was at 94% CPU utilisation in weeks prior (Ben Hartley flagged this). Hypothesis: memory pressure triggered OOM killer on the Oracle process. Kernel logs requested from Ben.\n\n**Recommendations:**\n1. Immediate: Set up CloudWatch alerting on CPU > 80% for PAR-DB-012\n2. Short-term: DR design for APP-001 PEMIS (already in Phase 4 risk register)\n3. Medium-term: Migrate PEMIS to EKS with Aurora (Phase 5 \u2014 removes single-server dependency)\n\n**GitHub Runbook:** [github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/docs/runbook.md](https://github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/docs/runbook.md)"
               }
             ],
             "rubric": [
@@ -3263,7 +3263,7 @@
                 "hint_id": "p6_k8s_h2",
                 "order": 2,
                 "point_penalty": 15,
-                "text": "Fix the ArgoCD application and add the payments NetworkPolicy.\n\n\ud83d\udccb EXPERT SAMPLE \u2014 fixed argocd-app.yaml:\n```yaml\napiVersion: argoproj.io/v1alpha1\nkind: Application\nmetadata:\n  name: parlington-apps\n  namespace: argocd\nspec:\n  project: default\n  source:\n    repoURL: https://github.com/YOUR-USERNAME/parlington-cloud-transformation  # Fix 1: was placeholder\n    targetRevision: main\n    path: kubernetes/deployments\n  destination:\n    server: https://kubernetes.default.svc\n    namespace: trading-prod\n  syncPolicy:           # Fix 2: was missing\n    automated:\n      prune: true\n      selfHeal: true\n    syncOptions:\n    - CreateNamespace=true\n```\n\n\ud83d\udccb Payments NetworkPolicy:\n```yaml\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: payments-isolation\n  namespace: payments-prod\nspec:\n  podSelector: {}\n  policyTypes: [Ingress, Egress]\n  ingress:\n  - from:\n    - namespaceSelector:\n        matchLabels:\n          kubernetes.io/metadata.name: api-gateway\n  egress:\n  - to:\n    - ipBlock:\n        cidr: 172.17.20.0/24  # Aurora data subnet\n    ports:\n    - port: 5432\n```"
+                "text": "Fix the ArgoCD application and add the payments NetworkPolicy.\n\n\ud83d\udccb EXPERT SAMPLE \u2014 fixed argocd-app.yaml:\n```yaml\napiVersion: argoproj.io/v1alpha1\nkind: Application\nmetadata:\n  name: parlington-apps\n  namespace: argocd\nspec:\n  project: default\n  source:\n    repoURL: [https://github.com/YOUR-USERNAME/parlington-cloud-transformation](https://github.com/YOUR-USERNAME/parlington-cloud-transformation)  # Fix 1: was placeholder\n    targetRevision: main\n    path: kubernetes/deployments\n  destination:\n    server: KUBERNETES_CLUSTER_API_ENDPOINT  # in-cluster API server address\n    namespace: trading-prod\n  syncPolicy:           # Fix 2: was missing\n    automated:\n      prune: true\n      selfHeal: true\n    syncOptions:\n    - CreateNamespace=true\n```\n\n\ud83d\udccb Payments NetworkPolicy:\n```yaml\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: payments-isolation\n  namespace: payments-prod\nspec:\n  podSelector: {}\n  policyTypes: [Ingress, Egress]\n  ingress:\n  - from:\n    - namespaceSelector:\n        matchLabels:\n          kubernetes.io/metadata.name: api-gateway\n  egress:\n  - to:\n    - ipBlock:\n        cidr: 172.17.20.0/24  # Aurora data subnet\n    ports:\n    - port: 5432\n```"
               },
               {
                 "hint_id": "p6_k8s_h3",
@@ -4784,7 +4784,7 @@
                 "hint_id": "p9_ai_h3",
                 "order": 3,
                 "point_penalty": 20,
-                "text": "Access control and cost model.\n\n\ud83d\udccb EXPERT SAMPLE:\nAccess control:\n- Lake Formation tag 'AIAccess=approved' applied to curated zone datasets\n- Bedrock Knowledge Base IAM role assumes data-reader role with Lake Formation GetTagValues permission\n- Analysts access AI portal via Cognito (federated to Active Directory)\n- Analysts only see Knowledge Base responses from datasets their Lake Formation tag allows\n- Compliance team: access to CLIENT_PII-tagged data via separate Knowledge Base (MFA required)\n\nCost model (estimated):\n- 42 analysts \u00d7 20 queries/day \u00d7 250 working days = 210,000 queries/year\n- Average query: 1,000 input tokens + 500 output tokens\n- Claude 3 Sonnet pricing (2026 est): ~$0.003/1K input, ~$0.015/1K output\n- Annual cost: (210,000 \u00d7 1,000 \u00d7 $0.003/1000) + (210,000 \u00d7 500 \u00d7 $0.015/1000) = $630 + $1,575 = ~$2,205/year\n- OpenSearch Serverless: ~$200/month (OCU at light usage) = $2,400/year\n- Total AI platform cost: ~$4,605/year (~\u00a33,680) vs \u00a3455,000 analyst time saving \u2192 ROI: 123:1\n\nGitHub diagram: https://github.com/[username]/parlington-cloud-transformation/blob/main/architecture/ai-platform/bedrock-rag.drawio"
+                "text": "Access control and cost model.\n\n\ud83d\udccb EXPERT SAMPLE:\nAccess control:\n- Lake Formation tag 'AIAccess=approved' applied to curated zone datasets\n- Bedrock Knowledge Base IAM role assumes data-reader role with Lake Formation GetTagValues permission\n- Analysts access AI portal via Cognito (federated to Active Directory)\n- Analysts only see Knowledge Base responses from datasets their Lake Formation tag allows\n- Compliance team: access to CLIENT_PII-tagged data via separate Knowledge Base (MFA required)\n\nCost model (estimated):\n- 42 analysts \u00d7 20 queries/day \u00d7 250 working days = 210,000 queries/year\n- Average query: 1,000 input tokens + 500 output tokens\n- Claude 3 Sonnet pricing (2026 est): ~$0.003/1K input, ~$0.015/1K output\n- Annual cost: (210,000 \u00d7 1,000 \u00d7 $0.003/1000) + (210,000 \u00d7 500 \u00d7 $0.015/1000) = $630 + $1,575 = ~$2,205/year\n- OpenSearch Serverless: ~$200/month (OCU at light usage) = $2,400/year\n- Total AI platform cost: ~$4,605/year (~\u00a33,680) vs \u00a3455,000 analyst time saving \u2192 ROI: 123:1\n\nGitHub diagram: [github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/architecture/ai-platform/bedrock-rag.drawio](https://github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/architecture/ai-platform/bedrock-rag.drawio)"
               }
             ],
             "rubric": [
@@ -4953,7 +4953,7 @@
                 "hint_id": "p9_arb_h3",
                 "order": 3,
                 "point_penalty": 20,
-                "text": "Slide 7 (DR and FCA compliance) and Slide 8 (AI and next steps) are the slides Priya and the technical NED will scrutinise most.\n\n\ud83d\udccb EXPERT SAMPLE:\nSlide 7 \u2014 DR and FCA PS21/3 Compliance:\nKey message: 'After Phase 8, all FCA Important Business Services meet their impact tolerance. The 14-month compliance breach is resolved.'\n\nEvidence:\n- IBS-001 (Trade Execution): 4hr tolerance \u2192 Aurora Multi-AZ RTO 15min \u2705\n- IBS-002 (Client Portal): 8hr tolerance \u2192 Pilot Light RTO 2hr \u2705\n- IBS-003 (Regulatory Reporting): 4hr tolerance \u2192 Active-Passive RTO 15min \u2705\n- 17 apps with no DR \u2192 post Phase 8: 0 apps with no DR \u2705\n- DR testing schedule: quarterly runbook exercises, annual full failover test (FCA requirement)\n\nSlide 8 \u2014 AI Platform and Next Steps:\nKey message: 'Bedrock RAG gives our analysts AI assistance within the FCA regulatory boundary. Cost: \u00a33,680/year. Productivity saving: \u00a3455,000/year. ROI: 123:1.'\n\nNext steps (post-ARB):\n- Wave 1 migration begins Week 37\n- Data centre exit Week 76\n- AI platform pilot with 5 analysts Week 40, full rollout Week 48\n- Annual Well-Architected Review scheduled\n- FCA notification of PS21/3 compliance completion: Week 36 (today)\n\nGitHub ARB pack: https://github.com/[username]/parlington-cloud-transformation/blob/main/docs/arb/"
+                "text": "Slide 7 (DR and FCA compliance) and Slide 8 (AI and next steps) are the slides Priya and the technical NED will scrutinise most.\n\n\ud83d\udccb EXPERT SAMPLE:\nSlide 7 \u2014 DR and FCA PS21/3 Compliance:\nKey message: 'After Phase 8, all FCA Important Business Services meet their impact tolerance. The 14-month compliance breach is resolved.'\n\nEvidence:\n- IBS-001 (Trade Execution): 4hr tolerance \u2192 Aurora Multi-AZ RTO 15min \u2705\n- IBS-002 (Client Portal): 8hr tolerance \u2192 Pilot Light RTO 2hr \u2705\n- IBS-003 (Regulatory Reporting): 4hr tolerance \u2192 Active-Passive RTO 15min \u2705\n- 17 apps with no DR \u2192 post Phase 8: 0 apps with no DR \u2705\n- DR testing schedule: quarterly runbook exercises, annual full failover test (FCA requirement)\n\nSlide 8 \u2014 AI Platform and Next Steps:\nKey message: 'Bedrock RAG gives our analysts AI assistance within the FCA regulatory boundary. Cost: \u00a33,680/year. Productivity saving: \u00a3455,000/year. ROI: 123:1.'\n\nNext steps (post-ARB):\n- Wave 1 migration begins Week 37\n- Data centre exit Week 76\n- AI platform pilot with 5 analysts Week 40, full rollout Week 48\n- Annual Well-Architected Review scheduled\n- FCA notification of PS21/3 compliance completion: Week 36 (today)\n\nGitHub ARB pack: [github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/docs/arb/](https://github.com/YOUR-USERNAME/parlington-cloud-transformation/blob/main/docs/arb/)"
               }
             ],
             "rubric": [
@@ -5672,58 +5672,10 @@
                 "Produced ARB Decision Log with 6+ architectural decisions, alternatives considered, and risk acceptance documented"
               ],
               "target_roles": [
-                {
-                  "title": "Senior AWS Solutions Architect",
-                  "salary_range": "\u00a390,000\u2013\u00a3125,000",
-                  "employers": [
-                    "KPMG",
-                    "Deloitte",
-                    "Accenture",
-                    "AWS Professional Services",
-                    "Lloyds Banking Group",
-                    "Barclays",
-                    "HSBC"
-                  ],
-                  "why_you_qualify": "You have evidence of end-to-end enterprise AWS transformation \u2014 Landing Zone, IaC, EKS, DevSecOps, data platform, migration strategy, and ARB presentation \u2014 all in a regulated financial services context."
-                },
-                {
-                  "title": "Lead Cloud Architect",
-                  "salary_range": "\u00a395,000\u2013\u00a3130,000",
-                  "employers": [
-                    "NatWest",
-                    "Nationwide",
-                    "Aviva",
-                    "Legal & General",
-                    "M&G Investments",
-                    "abrdn"
-                  ],
-                  "why_you_qualify": "You can design and defend multi-year cloud transformation programmes at board level, navigate FCA regulatory requirements, and produce HLD/LLD/ADR documentation to enterprise standard."
-                },
-                {
-                  "title": "Principal Cloud Architect",
-                  "salary_range": "\u00a3110,000\u2013\u00a3145,000",
-                  "employers": [
-                    "Goldman Sachs Engineering",
-                    "JP Morgan Cloud",
-                    "BlackRock Technology",
-                    "Schroders",
-                    "Man Group"
-                  ],
-                  "why_you_qualify": "Bedrock RAG architecture + FCA AI governance + ARB presentation capability is a rare combination at this level. Generative AI architecture for regulated FS is the most in-demand skill in this salary band (Q2 2026)."
-                },
-                {
-                  "title": "Cloud Security Architect",
-                  "salary_range": "\u00a385,000\u2013\u00a3120,000",
-                  "employers": [
-                    "Barclays Cybersecurity",
-                    "NatWest Security",
-                    "Lloyds Digital Risk",
-                    "AWS Security Practice",
-                    "KPMG Cyber",
-                    "Deloitte Cyber"
-                  ],
-                  "why_you_qualify": "NCSC-aligned security architecture, GuardDuty/Security Hub multi-account design, KMS key hierarchy, Bedrock Guardrails, and FCA SS2/21 compliance documentation \u2014 all at production scale."
-                }
+                "Senior AWS Solutions Architect \u2014 \u00a390,000\u2013\u00a3125,000 \u2014 KPMG, Deloitte, Accenture, AWS Professional Services, Lloyds Banking Group, Barclays, HSBC",
+                "Lead Cloud Architect \u2014 \u00a395,000\u2013\u00a3130,000 \u2014 NatWest, Nationwide, Aviva, Legal & General, M&G Investments, abrdn",
+                "Principal Cloud Architect \u2014 \u00a3110,000\u2013\u00a3145,000 \u2014 Goldman Sachs Engineering, JP Morgan Cloud, BlackRock Technology, Schroders, Man Group",
+                "Cloud Security Architect \u2014 \u00a385,000\u2013\u00a3120,000 \u2014 Barclays Cybersecurity, NatWest Security, Lloyds Digital Risk, AWS Security Practice, KPMG Cyber"
               ],
               "interview_questions_prepared": [
                 "Walk me through a cloud transformation programme you have led from discovery to ARB.",
@@ -5737,6 +5689,68 @@
                 "Walk me through an incident report you have written. What was the root cause?",
                 "How do you align AWS security architecture to the NCSC Cloud Security Principles?"
               ]
+            }
+          },
+          {
+            "section_id": "p11_s2_takeaways",
+            "type": "key_takeaways",
+            "title": "Key Skills Gained \u2014 Senior AWS Solutions Architect",
+            "order_index": "2",
+            "is_hard_dependency": false,
+            "is_required_for_progression": false,
+            "runtime_contract": {
+              "completion_mode": "display_only",
+              "requires_database_record": false,
+              "counts_for_progression": false,
+              "counts_for_score": false
+            },
+            "content": {
+              "takeaways": [
+                "AWS multi-account governance: Control Tower Landing Zone, OU structure, SCP guardrails, account vending",
+                "Enterprise estate assessment: 120-server analysis with data quality resolution and cross-file cost driver identification",
+                "Terraform IaC debugging: identified and fixed 5 bugs in VPC module including missing route tables, Flow Logs, and EKS subnet tags",
+                "CloudFormation repair: fixed syntax error (CloudWatchLogsLogGroupArnRef) and logical error (GuardDuty SIX_HOURS \u2192 FIFTEEN_MINUTES with FCA justification)",
+                "Production Kubernetes: fixed 5 manifest bugs, deployed 4 microservices, ArgoCD GitOps, PCI-DSS NetworkPolicy isolation",
+                "DevSecOps: OIDC replacing long-lived credentials, SAST+container scanning, production approval gates, rollback",
+                "SLI/SLO: 99.95% Payments SLO, error budget calculation (21.9 min/month), Grafana dashboards with multi-burn-rate alerting",
+                "Database migration: Oracle\u2192Aurora PostgreSQL with SCT+DMS+CDC, 6-week parallel run, cutover procedure",
+                "Amazon Bedrock RAG: Knowledge Bases, OpenSearch Serverless vector store, Guardrails for FCA COBS compliance",
+                "ARB presentation: 12-minute executive delivery to CTO, CFO, CRO, and NEDs; ARB Decision Log with 6+ decisions",
+                "Stakeholder conflict resolution: Priya vs Marcus DR conflict resolved with operational data (5 P1 incidents, 6.7-hour outage, 4-hour FCA tolerance)",
+                "FCA regulatory framework: PS21/3 (operational resilience), SS2/21 (cloud outsourcing), SYSC 13 (operational risk), Consumer Duty, NCSC Cloud Security Principles"
+              ]
+            }
+          },
+          {
+            "section_id": "p11_s3_certification",
+            "type": "certification",
+            "title": "Senior AWS Solutions Architect \u2014 Parlington Transformation Certificate",
+            "order_index": "3",
+            "is_hard_dependency": false,
+            "is_required_for_progression": false,
+            "runtime_contract": {
+              "completion_mode": "display_only",
+              "requires_database_record": false,
+              "counts_for_progression": false,
+              "counts_for_score": false
+            },
+            "content": {
+              "certificate_title": "Senior AWS Solutions Architect",
+              "certificate_subtitle": "Enterprise Cloud Transformation \u2014 Financial Services",
+              "simulation_name": "Parlington Ltd \u2014 AWS Cloud Transformation",
+              "what_was_demonstrated": "Led a \u00a32.4M, 9-phase enterprise AWS cloud transformation for an FCA-regulated asset manager: estate discovery (120 servers, 42 applications), multi-account Landing Zone design, security architecture (NCSC-aligned), IaC debugging (Terraform, CloudFormation, Python), EKS platform with GitOps, DevSecOps pipeline with OIDC, SLI/SLO observability, Oracle\u2192Aurora database migration, Amazon Bedrock RAG architecture, and Architecture Review Board executive presentation.",
+              "skills_certified": [
+                "AWS Organizations, Control Tower, Landing Zone",
+                "Terraform, CloudFormation, Python Boto3",
+                "Amazon EKS, Kubernetes, ArgoCD, GitOps",
+                "DevSecOps, GitHub Actions OIDC, Semgrep, Trivy",
+                "Amazon Bedrock, RAG, Guardrails",
+                "FCA PS21/3, SS2/21, Consumer Duty, NCSC Cloud Security Principles",
+                "Architecture Review Board presentation and Decision Log",
+                "Migration strategy, DR architecture, FinOps, SLI/SLO"
+              ],
+              "certification_level": "senior",
+              "pass_requirement": "Phase 5 certification gate passed at 75%+ plus all 9 programme phases completed"
             }
           }
         ]
