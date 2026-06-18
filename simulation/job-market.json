@@ -1,0 +1,589 @@
+{
+  "job_market_records": [
+    {
+      "id": "jm_parlington_001",
+      "job_title": "Senior AWS Solutions Architect \u2014 Cloud Transformation Practice",
+      "company": "Leading Global Professional Services Organisation",
+      "company_type": "Big Four Consulting (Deloitte / KPMG / Accenture tier)",
+      "location": "London, UK (Hybrid \u2014 2\u20133 days onsite)",
+      "salary_min": 90000,
+      "salary_max": 125000,
+      "salary_currency": "GBP",
+      "salary_display": "Up to \u00a3125,000",
+      "contract_type": "Permanent",
+      "source": "Jobsite.co.uk",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "AWS Organizations and Control Tower Landing Zone",
+        "Terraform Infrastructure as Code",
+        "AWS networking \u2014 VPC, Transit Gateway, Direct Connect, Route 53",
+        "AWS security \u2014 GuardDuty, Security Hub, IAM, KMS, WAF",
+        "HLD/LLD architecture documentation",
+        "Cloud migration strategy (rehost/replatform/refactor)",
+        "EKS / Kubernetes",
+        "Stakeholder and executive communication"
+      ],
+      "skills_preferred": [
+        "SC Clearance or eligibility (5-year UK address history required)",
+        "AWS Solutions Architect Professional certification",
+        "FCA/PRA regulatory compliance experience",
+        "Amazon Bedrock / Generative AI architecture"
+      ],
+      "responsibilities_verbatim": [
+        "Define cloud strategy, governance frameworks, and AWS architecture standards",
+        "Designing and delivering cloud-native and migration solutions on AWS",
+        "Lead AWS Landing Zone and Control Tower implementations",
+        "Drive Terraform Infrastructure as Code and DevOps automation",
+        "Design AWS networking solutions including Transit Gateway, Direct Connect, Route 53, and hybrid connectivity",
+        "AWS governance and multi-account management (AWS Organisations, SCPs, Landing Zones)",
+        "HLD/LLD production and architecture governance",
+        "AWS security and compliance including GuardDuty, Security Hub, IAM, KMS, and AWS Config"
+      ],
+      "simulation_match": {
+        "match_percentage": 97,
+        "matched_phases": [
+          "phase_2",
+          "phase_3",
+          "phase_4",
+          "phase_5",
+          "phase_6",
+          "phase_8",
+          "phase_9"
+        ],
+        "key_evidence": [
+          "Completed ADR-001 and designed 10-account Control Tower Landing Zone with 4 OUs and 3 SCP guardrails",
+          "Fixed and extended Terraform VPC module (5 bugs) \u2014 committed to GitHub",
+          "Designed hub-and-spoke network with Transit Gateway, Direct Connect, WAF, GuardDuty across all accounts",
+          "Produced HLD + LLD + Governance Framework for FCA-regulated environment",
+          "Delivered 12-minute executive ARB presentation to CTO, CFO, CRO, and 2 NEDs"
+        ],
+        "gap": "SC Clearance eligibility depends on candidate's 5-year UK address history \u2014 not demonstrable through simulation"
+      }
+    },
+    {
+      "id": "jm_parlington_002",
+      "job_title": "Platform Architect \u2014 AWS / EKS",
+      "company": "Growing UK SaaS Business",
+      "company_type": "Scale-up / Product Company (via specialist recruiter)",
+      "location": "London or Remote (Hybrid)",
+      "salary_min": 70000,
+      "salary_max": 100000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a370,000\u2013\u00a3100,000",
+      "contract_type": "Permanent",
+      "source": "Jobsite.co.uk",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "Amazon EKS and Kubernetes",
+        "AWS IAM, networking, KMS, RDS, multi-account architecture",
+        "SLI/SLO monitoring and incident management",
+        "DR/BCP planning and operational resilience",
+        "Infrastructure automation \u2014 Terraform, GitHub Actions",
+        "Microservices architecture"
+      ],
+      "skills_preferred": [
+        "ArgoCD / GitOps",
+        "Prometheus and Grafana",
+        "Service mesh (Istio or Linkerd)",
+        "Post-mortem facilitation"
+      ],
+      "responsibilities_verbatim": [
+        "Own the AWS platform architecture and modernisation roadmap, including migration from a Java monolith to microservices on EKS",
+        "Define standards for containers, runtime environments, observability, tenancy, security, and infrastructure automation",
+        "Lead SRE practices including SLI/SLOs, incident management, DR/BCP planning, post-mortems, and operational resilience",
+        "Strong AWS expertise including EKS, IAM, networking, KMS, RDS, and multi-account architecture",
+        "Own design, security, reliability, and operational management of AWS platform",
+        "Provide technical leadership across project lifecycles, from inception to deployment"
+      ],
+      "simulation_match": {
+        "match_percentage": 95,
+        "matched_phases": [
+          "phase_5",
+          "phase_6",
+          "phase_7",
+          "phase_8"
+        ],
+        "key_evidence": [
+          "Deployed 4 microservices on EKS with ArgoCD GitOps \u2014 fixed 5 manifest bugs including PCI-DSS NetworkPolicy isolation for Payments Service",
+          "Built Grafana SLI/SLO dashboards with 99.95% Payments SLO and error budget tracking (21.9 min/month)",
+          "Wrote PAR-DB-012 incident report with root cause, impact (312 users, 58 min), and preventive recommendations",
+          "Produced SLO runbook with FCA PS21/3 operational resilience alignment",
+          "Designed DR architecture with Aurora Multi-AZ (RTO 15min, RPO 0) for all 4 P1 Critical no-DR apps"
+        ],
+        "gap": "No post-mortem facilitation section in simulation \u2014 candidate should describe their PAR-DB-012 incident report as equivalent experience"
+      }
+    },
+    {
+      "id": "jm_parlington_003",
+      "job_title": "Solutions Architect, AWS Financial Services",
+      "company": "Amazon Web Services (AWS EMEA SARL \u2014 UK Branch)",
+      "company_type": "Cloud Provider \u2014 Direct Employer",
+      "location": "London, UK",
+      "salary_min": 90000,
+      "salary_max": 130000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a390,000\u2013\u00a3130,000 (estimated for UK SA band)",
+      "contract_type": "Permanent",
+      "source": "Indeed UK / Totaljobs",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "Cloud migration and transformation experience",
+        "Data architecture \u2014 Redshift, Glue, S3, Lake Formation",
+        "Amazon Bedrock and generative AI",
+        "Financial services industry knowledge",
+        "C-suite stakeholder management",
+        "BI, data modelling, and lineage"
+      ],
+      "skills_preferred": [
+        "AWS certifications (Solutions Architect Professional preferred)",
+        "Pre-sales and post-sales architecture experience",
+        "FCA/PRA regulatory knowledge"
+      ],
+      "responsibilities_verbatim": [
+        "Experience migrating or transforming legacy customer solutions to the cloud",
+        "Work directly with customers to accelerate complex projects",
+        "Support the Full Customer Lifecycle: Engage with customer architecture and security teams during pre-sales and post-sales phases, acting as the technical bridge",
+        "Building relationships with customers including C-suite and Line of Business stakeholders",
+        "Deep experience in cloud data architecture (AWS, Redshift, Glue, S3, Lambda, Bedrock)",
+        "Hands-on understanding of BI, modelling, lineage",
+        "Act as an incubator for modernisation of application, technical and security services through adoption of cloud-native solutions"
+      ],
+      "simulation_match": {
+        "match_percentage": 88,
+        "matched_phases": [
+          "phase_8",
+          "phase_9",
+          "phase_2"
+        ],
+        "key_evidence": [
+          "Designed enterprise data platform: S3 data lake (raw/processed/curated), Glue ETL, Athena, Redshift Serverless, Lake Formation GDPR governance",
+          "Designed Amazon Bedrock RAG architecture with Knowledge Bases, OpenSearch Serverless vector store, and Guardrails for FCA COBS compliance",
+          "Delivered 12-minute executive ARB presentation to CTO, CFO, CRO, and 2 NEDs including a non-technical finance NED",
+          "Migrated Oracle 12c to Aurora PostgreSQL with SCT + DMS + CDC \u2014 saving \u00a3340k/year in licence costs"
+        ],
+        "gap": "AWS SA Professional role typically requires pre-sales experience \u2014 simulation does not cover customer discovery/pre-sales process. Candidate should supplement with real AWS consulting experience."
+      }
+    },
+    {
+      "id": "jm_parlington_004",
+      "job_title": "Lead Cloud Architect \u2014 Financial Services",
+      "company": "Lloyds Banking Group",
+      "company_type": "UK Retail and Commercial Bank (FTSE 100)",
+      "location": "London or Edinburgh (Hybrid)",
+      "salary_min": 95000,
+      "salary_max": 130000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a395,000\u2013\u00a3130,000",
+      "contract_type": "Permanent",
+      "source": "LinkedIn Jobs UK",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "AWS multi-account architecture and Control Tower",
+        "Security architecture for regulated financial services",
+        "Terraform IaC at enterprise scale",
+        "EKS / Kubernetes / container orchestration",
+        "FCA/PRA regulatory compliance \u2014 PS21/3, SS2/21",
+        "Hybrid cloud connectivity \u2014 Direct Connect",
+        "Architecture Review Board facilitation"
+      ],
+      "skills_preferred": [
+        "NCSC Cloud Security Principles alignment",
+        "ISO 27001 implementation experience",
+        "Well-Architected Framework reviews",
+        "Amazon Bedrock / generative AI governance"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 96,
+        "matched_phases": [
+          "phase_2",
+          "phase_3",
+          "phase_4",
+          "phase_5",
+          "phase_9"
+        ],
+        "key_evidence": [
+          "Designed and documented FCA PS21/3-aligned architecture across all 9 programme phases",
+          "Produced formal Risk Register with FCA/PRA regulatory references, SMCR accountable individuals, and remediation phases \u2014 signed off by CRO",
+          "Mapped security architecture to 12 of 14 NCSC Cloud Security Principles",
+          "Chaired no ARB (candidate is presenter) but produced full ARB pack and Decision Log with 6+ decisions",
+          "Resolved PS21/3 breach (14 months overdue) \u2014 all IBS now meet impact tolerances after Phase 8"
+        ],
+        "gap": "No banking-sector product knowledge (mortgages, current accounts, payments regulation). Parlington is asset management not retail banking. Candidate should note FCA/PRA regulatory framework is transferable."
+      }
+    },
+    {
+      "id": "jm_parlington_005",
+      "job_title": "Principal Cloud Architect",
+      "company": "Goldman Sachs Engineering \u2014 London",
+      "company_type": "Global Investment Bank",
+      "location": "London, UK (Hybrid)",
+      "salary_min": 110000,
+      "salary_max": 145000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a3110,000\u2013\u00a3145,000",
+      "contract_type": "Permanent",
+      "source": "LinkedIn Jobs UK / Goldman Sachs Careers",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "Enterprise cloud architecture at scale (1000+ cloud resources)",
+        "Multi-account AWS governance with Control Tower",
+        "EKS/Kubernetes production operations",
+        "DevSecOps pipeline design \u2014 OIDC, SAST, container scanning",
+        "Amazon Bedrock / generative AI for financial services",
+        "FCA/PRA regulatory compliance at board level",
+        "Executive stakeholder management"
+      ],
+      "skills_preferred": [
+        "GCP or Azure multi-cloud experience",
+        "FinOps at enterprise scale (\u00a310M+ cloud spend)",
+        "AI governance frameworks \u2014 EU AI Act, DP23/5",
+        "Architecture guild leadership"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 85,
+        "matched_phases": [
+          "phase_2",
+          "phase_5",
+          "phase_7",
+          "phase_9"
+        ],
+        "key_evidence": [
+          "Designed Amazon Bedrock RAG with FCA COBS-compliant Guardrails \u2014 denied investment advice, PII redaction, Consumer Duty alignment",
+          "Replaced long-lived GitHub Actions credentials with OIDC federation \u2014 added SAST (Semgrep), Trivy container scanning, production approval gates",
+          "Designed ARB Decision Log with 6 decisions covering alternatives considered and risks accepted",
+          "Led 9-phase enterprise transformation with board-level accountability (ARB at Week 36)"
+        ],
+        "gap": "Goldman operates at significantly larger scale (\u00a3100M+ cloud spend). Parlington is \u00a33.8M run-rate. Candidate should be prepared to discuss scalability of their architecture patterns to 10x or 100x scale."
+      }
+    },
+    {
+      "id": "jm_parlington_006",
+      "job_title": "Cloud Security Architect \u2014 AWS",
+      "company": "Barclays Technology",
+      "company_type": "UK Universal Bank (FTSE 100)",
+      "location": "London, Canary Wharf (Hybrid)",
+      "salary_min": 85000,
+      "salary_max": 120000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a385,000\u2013\u00a3120,000",
+      "contract_type": "Permanent",
+      "source": "Barclays Careers / Totaljobs",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "AWS security services \u2014 GuardDuty, Security Hub, WAF, Inspector, Macie",
+        "IAM governance and IRSA for EKS",
+        "KMS key hierarchy and encryption strategy",
+        "NCSC Cloud Security Principles \u2014 all 14",
+        "FCA SS2/21 and PCI-DSS compliance",
+        "UK GDPR and data classification",
+        "Security incident response"
+      ],
+      "skills_preferred": [
+        "CISSP or CCSP certification",
+        "CBEST and TIBER-UK familiarity",
+        "Zero Trust architecture",
+        "Bedrock Guardrails and AI security"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 92,
+        "matched_phases": [
+          "phase_3",
+          "phase_4",
+          "phase_6"
+        ],
+        "key_evidence": [
+          "Mapped security architecture to 12 NCSC Cloud Security Principles with specific AWS service controls",
+          "Defined KMS CMK hierarchy (RESTRICTED data, audit logs, EBS encryption) with annual rotation and key policies",
+          "Designed GuardDuty across 10 accounts (delegated admin in Audit account), Security Hub with PCI-DSS and CIS standards enabled",
+          "Replaced long-lived credentials with OIDC \u2014 eliminated last long-lived credential vector in production",
+          "Resolved UK GDPR Article 33 potential breach from 3 public S3 buckets \u2014 DPO assessment documented"
+        ],
+        "gap": "No CBEST or TIBER-UK adversary simulation experience in simulation. Candidate should note these require a separate programme of work beyond cloud architecture."
+      }
+    },
+    {
+      "id": "jm_parlington_007",
+      "job_title": "AWS Data Solutions Architect",
+      "company": "Capital One UK",
+      "company_type": "Digital Bank / Financial Services",
+      "location": "Nottingham or London (Hybrid)",
+      "salary_min": 85000,
+      "salary_max": 115000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a385,000\u2013\u00a3115,000",
+      "contract_type": "Permanent",
+      "source": "Capital One UK Careers / Indeed",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "AWS data platform \u2014 Glue, Athena, Redshift, Lake Formation",
+        "Aurora PostgreSQL / RDS design and migration",
+        "Data governance and UK GDPR compliance",
+        "Lake Formation fine-grained access control",
+        "DynamoDB design patterns",
+        "Python data engineering \u2014 PySpark, Boto3",
+        "Data lineage and catalogue"
+      ],
+      "skills_preferred": [
+        "Redshift Serverless",
+        "AWS Bedrock Knowledge Bases",
+        "Apache Iceberg / Delta Lake",
+        "dbt (data build tool)"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 90,
+        "matched_phases": [
+          "phase_8"
+        ],
+        "key_evidence": [
+          "Designed S3 data lake with raw/processed/curated zones, S3 lifecycle policies, and 7-year FCA retention",
+          "Designed Oracle 12c \u2192 Aurora PostgreSQL migration with SCT + DMS + CDC replication \u2014 90% auto-conversion, 4 stored procedures manual",
+          "Implemented Lake Formation fine-grained access control with tag-based policies \u2014 RESTRICTED, CLIENT_PII, TRADE_DATA, RESEARCH_EXEMPT tags",
+          "Designed Glue ETL jobs replacing 16 legacy batch servers (trade-normalisation, position-aggregation, risk-metrics)",
+          "Aligned data governance to UK GDPR Article 89 research exemption for Amara's data science team"
+        ],
+        "gap": "No hands-on PySpark experience evidenced in simulation (Glue ETL was designed not built in real code). Candidate should supplement with a Glue ETL lab or personal project."
+      }
+    },
+    {
+      "id": "jm_parlington_008",
+      "job_title": "DevSecOps Architect \u2014 AWS / GitHub Actions",
+      "company": "NatWest Group \u2014 Digital Engineering",
+      "company_type": "UK Retail and Business Bank (FTSE 100)",
+      "location": "Edinburgh or London (Hybrid)",
+      "salary_min": 85000,
+      "salary_max": 115000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a385,000\u2013\u00a3115,000",
+      "contract_type": "Permanent",
+      "source": "NatWest Careers / LinkedIn",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "GitHub Actions CI/CD \u2014 OIDC, environment protection",
+        "SAST \u2014 Semgrep, CodeQL",
+        "Container scanning \u2014 Trivy, Amazon Inspector",
+        "Dependency scanning \u2014 Snyk, OWASP Dependency-Check",
+        "Kubernetes security \u2014 network policies, RBAC, PSA",
+        "FCA SS2/21 supply chain security requirements",
+        "SLI/SLO and error budget design"
+      ],
+      "skills_preferred": [
+        "Cosign / Sigstore supply chain signing",
+        "Falco runtime security",
+        "DAST tooling \u2014 OWASP ZAP",
+        "FinOps integration in pipelines"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 93,
+        "matched_phases": [
+          "phase_6",
+          "phase_7"
+        ],
+        "key_evidence": [
+          "Fixed GitHub Actions pipeline: replaced long-lived credentials with OIDC, removed :latest tag, added manual production approval gate with infra-team as required reviewers",
+          "Added Semgrep SAST, Trivy container scanning, and rollback on deployment failure",
+          "Designed 99.95% Payments SLO with 21.9-minute monthly error budget, multi-burn-rate alerting, and PagerDuty escalation",
+          "Linked FCA PS21/3 operational resilience to SLO breach response \u2014 Priya Anand notified within 15 minutes, FCA notification assessed at 4-hour outage threshold"
+        ],
+        "gap": "No DAST tooling experience evidenced. Candidate should note DAST was not in scope for Phase 7 (no running application endpoints to test) and supplement with knowledge of OWASP ZAP configuration."
+      }
+    },
+    {
+      "id": "jm_parlington_009",
+      "job_title": "Senior AWS Solutions Architect \u2014 Contract",
+      "company": "UBDS Group UK",
+      "company_type": "UK Technology Services Firm",
+      "location": "London, UK (Remote-First)",
+      "salary_min": 570,
+      "salary_max": 800,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a3570\u2013\u00a3800/day",
+      "contract_type": "Contract (Inside IR35)",
+      "source": "Jobsite.co.uk",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "AWS Solutions Architect \u2014 5+ years hands-on",
+        "Terraform IaC \u2014 module design and state management",
+        "EKS / Kubernetes production deployment",
+        "AWS networking \u2014 VPC, TGW, Direct Connect",
+        "Python Boto3 automation",
+        "Financial services regulatory context"
+      ],
+      "skills_preferred": [
+        "SC Clearance (or eligibility)",
+        "GitOps / ArgoCD",
+        "AWS certified \u2014 SAP or DevOps Professional"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 91,
+        "matched_phases": [
+          "phase_4",
+          "phase_5"
+        ],
+        "key_evidence": [
+          "Fixed 5 bugs in Terraform VPC module (wrong CIDR, missing route tables, missing Flow Logs, missing EKS tags, missing mandatory tags) \u2014 terraform validate PASS evidenced",
+          "Fixed 2 CloudFormation bugs (syntax + logic) and 2 Python Boto3 bugs (KeyError, no pagination)",
+          "Deployed 4 microservices on EKS with ArgoCD GitOps and PCI-DSS NetworkPolicy isolation"
+        ],
+        "gap": "Contract roles typically require demonstrated previous contracting experience or Ltd company. Simulation demonstrates technical capability but not contracting track record."
+      }
+    },
+    {
+      "id": "jm_parlington_010",
+      "job_title": "AI/ML Platform Architect \u2014 Amazon Bedrock",
+      "company": "HSBC Technology \u2014 AI Centre of Excellence",
+      "company_type": "Global Bank (FTSE 100)",
+      "location": "London, Canary Wharf (Hybrid)",
+      "salary_min": 95000,
+      "salary_max": 135000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a395,000\u2013\u00a3135,000",
+      "contract_type": "Permanent",
+      "source": "HSBC Careers / LinkedIn",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "Amazon Bedrock \u2014 Knowledge Bases, Guardrails, Agents",
+        "RAG architecture \u2014 vector stores, embedding models",
+        "FCA Consumer Duty (PS22/9) and AI governance",
+        "Data security for LLM applications \u2014 prompt injection defence",
+        "AWS Lake Formation for AI data access control",
+        "Python for LLM application development"
+      ],
+      "skills_preferred": [
+        "LangChain or LlamaIndex",
+        "Fine-tuning / RLHF experience",
+        "EU AI Act and DP23/5 familiarity",
+        "OpenSearch Serverless"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 86,
+        "matched_phases": [
+          "phase_9"
+        ],
+        "key_evidence": [
+          "Designed Bedrock RAG architecture: Knowledge Bases with OpenSearch Serverless vector store, Titan Embeddings, Claude 3 Sonnet \u2014 nightly sync from S3 curated zone",
+          "Configured Bedrock Guardrails: denied topics (investment advice \u2014 FCA COBS), PII redaction (UK GDPR), grounding for Consumer Duty fairness",
+          "Aligned to FCA Consumer Duty (PS22/9), COBS 9A investment advice restriction, and DP23/5 voluntary AI governance principles",
+          "Integrated Lake Formation tag-based access control with Bedrock Knowledge Base IAM roles \u2014 analysts see only data they are authorised for",
+          "Calculated ROI: \u00a33,680/year AI platform cost vs \u00a3455,000/year analyst productivity saving = 123:1 ROI"
+        ],
+        "gap": "No LangChain, LlamaIndex, or fine-tuning experience in simulation. Candidate should note Bedrock is a managed service that abstracts orchestration \u2014 comparable in practice to LangChain usage for RAG."
+      }
+    },
+    {
+      "id": "jm_parlington_011",
+      "job_title": "Head of Cloud Platform Engineering \u2014 AWS / EKS",
+      "company": "Monzo Bank",
+      "company_type": "Digital Bank (Challenger Bank)",
+      "location": "London, UK (Hybrid)",
+      "salary_min": 100000,
+      "salary_max": 140000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a3100,000\u2013\u00a3140,000",
+      "contract_type": "Permanent",
+      "source": "Monzo Careers / LinkedIn",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "Production EKS platform operations at scale",
+        "GitOps with ArgoCD \u2014 app-of-apps pattern, multi-cluster",
+        "Developer experience design \u2014 namespace RBAC, self-service",
+        "FinOps \u2014 Kubernetes cost allocation, Kubecost",
+        "SRE practices \u2014 SLI/SLO, error budget policies",
+        "Microservices architecture \u2014 service mesh, observability",
+        "FCA Operational Resilience and payment system compliance"
+      ],
+      "skills_preferred": [
+        "Cilium or Calico CNI",
+        "Crossplane for infrastructure-from-Kubernetes",
+        "OpenTelemetry",
+        "Go or Rust for platform tooling"
+      ],
+      "responsibilities_verbatim": [],
+      "simulation_match": {
+        "match_percentage": 89,
+        "matched_phases": [
+          "phase_5",
+          "phase_6",
+          "phase_7"
+        ],
+        "key_evidence": [
+          "Designed namespace-RBAC model resolving Rachel vs David developer self-service vs infra-control conflict \u2014 developers own namespace, infra owns cluster",
+          "Deployed 4 microservices with ArgoCD GitOps automated sync (prune: true, selfHeal: true)",
+          "Designed 99.95% Payments SLO with Grafana multi-burn-rate alerting and FCA PS21/3 escalation",
+          "PCI-DSS NetworkPolicy isolating payments-prod namespace from all other namespaces",
+          "EKS cluster design: system, trading, payments node groups with IRSA per microservice"
+        ],
+        "gap": "Monzo operates at scale (millions of transactions/day). Parlington has 4 microservices. Candidate should discuss scalability approach and Kubernetes autoscaling design."
+      }
+    },
+    {
+      "id": "jm_parlington_012",
+      "job_title": "Cloud Migration Architect \u2014 Financial Services",
+      "company": "Deloitte UK \u2014 Cloud Practice",
+      "company_type": "Big Four Professional Services",
+      "location": "London, UK (Hybrid \u2014 3 days client site)",
+      "salary_min": 85000,
+      "salary_max": 120000,
+      "salary_currency": "GBP",
+      "salary_display": "\u00a385,000\u2013\u00a3120,000",
+      "contract_type": "Permanent",
+      "source": "Deloitte Careers UK / Totaljobs",
+      "source_date": "June 2026",
+      "domain": "software_engineer",
+      "skills_required": [
+        "AWS Migration Hub and migration strategy (6Rs)",
+        "Database migration \u2014 Oracle to Aurora (SCT + DMS)",
+        "AWS Well-Architected Framework reviews",
+        "Application discovery and portfolio assessment",
+        "Wave sequencing and migration planning",
+        "DR architecture and FCA operational resilience",
+        "FinOps and cost modelling"
+      ],
+      "skills_preferred": [
+        "AWS Application Migration Service (MGN)",
+        "AWS Database Migration Service certification",
+        "DMS CDC replication at scale",
+        "Client-facing consulting presentation skills"
+      ],
+      "responsibilities_verbatim": [
+        "Leading AWS cloud migration engagements for financial services clients",
+        "Conducting cloud readiness assessments and producing migration strategies",
+        "Designing and delivering DR architectures aligned to FCA PS21/3",
+        "Presenting technical architecture to C-suite and Architecture Review Boards"
+      ],
+      "simulation_match": {
+        "match_percentage": 94,
+        "matched_phases": [
+          "phase_2",
+          "phase_8",
+          "phase_9"
+        ],
+        "key_evidence": [
+          "Conducted 120-server, 42-application estate assessment with data quality resolution and cross-file cost driver identification",
+          "Planned Oracle 12c \u2192 Aurora PostgreSQL migration with SCT + DMS + CDC: 6-week parallel run, 4-hour maintenance window cutover, rollback procedure",
+          "Produced six-wave migration strategy sequenced by dependency count, cost reduction opportunity, and criticality tier",
+          "Completed AWS Well-Architected Assessment across all 6 pillars with specific findings and recommendations per pillar",
+          "Delivered 12-minute ARB executive presentation \u2014 board approved full programme through to Week 76 data centre exit"
+        ],
+        "gap": "Deloitte consulting roles require client-facing delivery experience and typically require previous Big Four or equivalent consulting background. Simulation demonstrates technical depth but not consulting methodology (PRINCE2, Agile at Enterprise)."
+      }
+    }
+  ]
+}
