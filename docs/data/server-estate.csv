@@ -10,7 +10,7 @@ SRV-008,PAR-WEB-008,Web/App,Equinix LD4,Windows Server 2019,Windows Server 2019,
 SRV-009,PAR-WEB-009,Web/App,equinix LD4,Windows Server 2016,Windows Server 2016,4,False,16,128,Perf Attribution,none,966,Replatform → EKS,15-01-2024,True
 SRV-010,PAR-WEB-010,Web/App,Canaray Wharf,RHEL 8,RHEL8,2,False,16,64,Client Portal,N/A,1423,Replatform → EKS,2024-09-15,True
 SRV-011,PAR-WEB-011,Web/App,Canary Wharf Colo,Windows Server 2019,Windows Server 2019,84 months,False,32,32,CRP,Not configured,1504,Replatform → EKS,15/01/2024,True
-SRV-012,PAR-WEB-012,Web/App,Equnix LD4,Windows Server 2019,WS2019,4,False,128,512,OMS,NO DR,9200,Replatform → EKS,15-01-2024,False
+SRV-012,PAR-DB-012,Database,Equnix LD4,Windows Server 2016,WS2016,4,False,128,512,PEMIS,NO DR,9200,Replatform → Aurora/RDS,15-01-2024,False
 SRV-013,PAR-WEB-013,Web/App,Equinix LD4,Windows Server 2016,Win 2016,7,False,16,64,Compliance Mon,Cold Standby,1269,Replatform → EKS,2024-12-15,True
 SRV-014,PAR-WEB-014,Web/App,equinix LD4,Windows Server 2016,WS2016,7,False,64,128,Market Data,Active/Passive,1398,Replatform → EKS,15/08/2024,False
 SRV-015,PAR-WEB-015,Web/App,Equinix LD4,RHEL 7,RHEL 7,6,False,8,32,Finance (EBS),none,1305,Replatform → EKS,15-01-2024,False
