@@ -1,0 +1,39 @@
+# kubernetes/deployments/payments-service.yaml
+# Parlington Ltd — Payments Service Microservice
+# Status: STUB — candidate to complete in Phase 5
+# This is the most critical service — PCI-DSS scoped
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments-service
+  namespace: parlington-payments
+  labels:
+    app: payments-service
+    version: v1
+    pci-scope: "true"
+    # PCI-DSS: This service is in-scope for cardholder data
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: payments-service
+  template:
+    metadata:
+      labels:
+        app: payments-service
+        version: v1
+    spec:
+      # TODO: Complete this manifest in Phase 5
+      # Must include:
+      # - Resource limits (required)
+      # - Liveness and readiness probes (required)
+      # - Non-root security context (PCI-DSS requirement)
+      # - Network policy to isolate from non-PCI workloads
+      # - Secrets via External Secrets Operator (not env vars)
+      containers:
+        - name: payments-service
+          image: parlington/payments-service:1.0.0
+          ports:
+            - containerPort: 8080
+          # TODO: Add resources, probes, securityContext, env
