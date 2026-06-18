@@ -1,0 +1,35 @@
+{
+  "_comment": "Parlington Ltd — SCP: Deny all regions except eu-west-2 and eu-west-1",
+  "_status": "DRAFT — candidate to review and validate in Phase 2/3",
+  "_compliance": "NCSC Cloud Security Principle 2: Asset protection and resilience",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyNonEURegions",
+      "Effect": "Deny",
+      "NotAction": [
+        "cloudfront:*",
+        "iam:*",
+        "route53:*",
+        "support:*",
+        "sts:*",
+        "waf:*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": [
+            "eu-west-2",
+            "eu-west-1"
+          ]
+        }
+      }
+    }
+  ],
+  "_todo": [
+    "Validate exemptions list with David Osei (Head of Infrastructure)",
+    "Confirm eu-west-1 is needed for DR or remove",
+    "Add SCP to restrict instance types to approved list",
+    "Add SCP to require MFA for sensitive actions"
+  ]
+}
