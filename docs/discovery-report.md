@@ -1,7 +1,6 @@
 # Parlington Ltd — Discovery Report
 **Status:** DRAFT — Phase 1 in progress
-**Author:** [Your Name]
-**Date:** [Date]
+**Author:** [Your Name] | **Date:** [Date]
 
 ---
 
@@ -25,59 +24,44 @@
 | Data centres | 2 |
 | Average server age | 6.4 years |
 
-> ⚠️ NOTE: 17 applications have NO disaster recovery provision — FCA PS21/3 non-compliant
+> ⚠️ 17 applications have NO disaster recovery — FCA PS21/3 non-compliant
 
 ---
 
 ## 2. Application Portfolio Summary
 
 > TODO: Complete application portfolio analysis
-> See /docs/application-portfolio.md for full inventory
 
-Categories identified:
-- [ ] Retain (run as-is)
-- [ ] Retire (decommission)
-- [ ] Rehost (lift and shift)
-- [ ] Replatform (lift and reshape)
-- [ ] Refactor (re-architect)
-- [ ] Replace (SaaS/PaaS)
+Categories to assess:
+- [ ] Retain  - [ ] Retire  - [ ] Rehost  - [ ] Replatform  - [ ] Refactor  - [ ] Replace
 
 ---
 
 ## 3. Infrastructure Estate
 
 ### Servers by Category
-> TODO: Populate after discovery workshops with infrastructure team
+> TODO: Populate after discovery workshops
 
 ### Network Estate
-> TODO: Populate after network discovery with networking team
+> TODO: Populate after network discovery
 
 ### Database Estate
-> TODO: Populate after database discovery with DBA team
+> TODO: Populate after DBA sessions
 
 ---
 
 ## 4. Key Risks Identified
 
-> TODO: Complete risk assessment
-
 | Risk ID | Description | Severity | Owner |
 |---------|-------------|----------|-------|
 | R001 | 17 apps without DR — FCA PS21/3 breach | CRITICAL | CTO |
-| R002 | [TBC] | | |
-| R003 | [TBC] | | |
+| R002 | [TBC from discovery] | | |
 
 ---
 
 ## 5. Dependencies Identified
 
 > TODO: Map application dependencies after workshops
-
----
-
-## 6. Recommendations
-
-> TODO: Complete after full discovery
 
 ---
 
